@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "medium",
+      "location": "Pricing Approach",
+      "description": "The proposed total fixed fee of $200,000 is below the client's stated budget range of $250,000 to $400,000 outlined in the Client Matrix.",
+      "suggested_fix": "Adjust pricing or milestone allocation to fall within the client's $250,000 to $400,000 budget range while preserving the fixed-fee structure."
+    },
+    {
+      "severity": "medium",
+      "location": "Approach - Strategic Technical Design",
+      "description": "The proposal presents the incremental enhancement strategy as a settled approach in the main body, despite the Client Matrix identifying a contradiction between VP of Operations Sarah Chen (incremental change) and CTO Marcus Patel (full system rebuild). Stating this as a settled fact prior to the Open Questions section risks alienating technical leadership.",
+      "suggested_fix": "Softly frame the decoupled integration layer in the Approach section as a non-disruptive Phase 1 enabler designed to achieve Q3 targets while preserving architectural options for future core platform evolution in collaboration with the CTO."
+    }
+  ],
+  "risks": [
+    "CTO Marcus Patel may push back against the proposal if he perceives the incremental strategy as overriding his architectural vision for a full Routemaster rebuild.",
+    "Setting the proposal price below the client's $250,000 minimum budget threshold may leave margin on the table or create perception issues regarding project depth and team capacity."
+  ],
+  "recommendation": "revise"
+}

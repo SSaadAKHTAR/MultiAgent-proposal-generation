@@ -1,0 +1,168 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Invoicing is three weeks delayed due to data mismatches between dispatch and CRM/accounting, freezing cash flow in unbilled receivables.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "There is a disagreement on the authorized budget range for the Phase 1 engagement between the CFO and VP of Operations.",
+        "confidence": "contradicted",
+        "source_excerpt": "Rita, the budget I approved is $300,000. That's the cap... Rita, that's not what we discussed. We discussed a six-month Phase 1 in the $250 to $400 range",
+        "contradiction_note": "CFO Rita Donovan strictly insists the budget cap is $300,000, whereas VP of Operations Sarah Chen believed the approved range was $250,000 to $400,000."
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Structure the consulting project as a fixed-fee engagement with clear milestone-based payments.",
+        "confidence": "high",
+        "source_excerpt": "I'll give you a fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Restore invoicing timelines back to industry-standard Days Sales Outstanding (DSO).",
+        "confidence": "high",
+        "source_excerpt": "return to industry-standard DSO on the invoicing side.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce dispatch overhead to avoid hiring four new dispatchers, saving approximately $320,000 annually.",
+        "confidence": "high",
+        "source_excerpt": "a 30% reduction in dispatch time means we don't need to hire four additional dispatchers next year, which is about $320k in fully-loaded comp.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Free up approximately $1.4 million in working capital by achieving a 5-day DSO.",
+        "confidence": "high",
+        "source_excerpt": "return to five-day DSO from where we are now frees up about $1.4M in working capital that's currently stuck in unbilled receivables.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is highly cautious and skeptical of external consultants due to a negative vendor experience in 2023.",
+        "confidence": "high",
+        "source_excerpt": "Skeptical of consulting engagements; got burned by a previous vendor in 2023.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Stakeholders disagree on whether the core issue is an operational workflow problem or a legacy technology platform failure.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem.",
+        "contradiction_note": "CTO Marcus Patel advocates for replacing the 7-year-old custom Rails tool (Routemaster) with a $600k SaaS platform, while VP Sarah Chen advocates for incremental workflow improvements on the existing stack."
+      },
+      {
+        "statement": "The custom dispatch tool Routemaster suffers from heavy technical debt, making code fragile and feature delivery slow.",
+        "confidence": "high",
+        "source_excerpt": "We can't ship features anymore because the codebase is too fragile. Every change takes three times as long as it should.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Build workflow automation in a modular layer above Routemaster so the majority of logic remains portable during future platform replacements.",
+        "confidence": "medium",
+        "source_excerpt": "workflow logic in a layer on top of Routemaster, talking to Salesforce and the driver app through clean integration points... I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Establish clean, maintainable integration points between Routemaster, Salesforce, and the driver app.",
+        "confidence": "high",
+        "source_excerpt": "talking to Salesforce and the driver app through clean integration points",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Two previous internal projects attempting to fix the exact same workflow and technical issues failed.",
+        "confidence": "high",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend excessive time manually cross-entering data between the custom dispatch tool and Salesforce.",
+        "confidence": "high",
+        "source_excerpt": "Our dispatcher workflow is killing us. Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Contracted drivers express dissatisfaction with the current mobile application user experience.",
+        "confidence": "high",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Prioritize solving invoicing data reconciliation first, followed by streamlining the upstream dispatcher workflow.",
+        "confidence": "high",
+        "source_excerpt": "focus on the invoicing reconciliation first because that's directly affecting cash flow, and then the dispatcher workflow because it's the upstream cause of the bad invoicing data.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieve a 30% reduction in average dispatch processing time per load.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "An upcoming federal ELD compliance mandate on November 15th may impact driver app requirements and risk operations if missed.",
+        "confidence": "high",
+        "source_excerpt": "The ELD compliance deadline in November is real. The federal mandate update changes how we have to log driver hours and report them.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "There is a contradiction between leadership regarding the target delivery timeline for the pilot implementation.",
+        "confidence": "contradicted",
+        "source_excerpt": "We have a Q3 pilot commitment... Q3 was your commitment, not mine. I never agreed to Q3. I think Q4 is more realistic if we're doing it right.",
+        "contradiction_note": "CFO Rita Donovan and VP Sarah Chen insist on an end-of-Q3 pilot launch, whereas CTO Marcus Patel claims Q4 is the realistic timeline and rejects the Q3 date."
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Deploy a functional pilot into production by the end of Q3 to protect project funding from reallocation.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated. That part isn't negotiable.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Deliver Phase 1 outcomes prior to September 30th within the $300,000 budget cap.",
+        "confidence": "high",
+        "source_excerpt": "Pilot in production by end of Q3 (Sept 30).",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The company risks making short-term operational fixes that conflict with long-term technology platform strategy under tight deadline constraints.",
+        "confidence": "high",
+        "source_excerpt": "We should not be making a multi-year platform decision under an artificial six-month deadline.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

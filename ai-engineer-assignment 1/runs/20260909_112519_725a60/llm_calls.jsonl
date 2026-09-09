@@ -1,0 +1,4 @@
+{"timestamp": "2026-09-09T11:26:35.658259", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 3766, "completion_tokens": 1310, "cost": 0.0112575}
+{"timestamp": "2026-09-09T11:26:52.716967", "agent": "ProposalAgent", "iteration": 0, "prompt_tokens": 1078, "completion_tokens": 1084, "cost": 0.006767499999999999}
+{"timestamp": "2026-09-09T11:26:58.341346", "agent": "UnknownAgent", "iteration": 0, "prompt_tokens": 1144, "completion_tokens": 79, "cost": 0.001825}
+ 

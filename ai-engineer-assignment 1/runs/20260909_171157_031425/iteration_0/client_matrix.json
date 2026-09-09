@@ -1,0 +1,138 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to data discrepancies between systems, leaving approximately $1.4M stuck in unbilled receivables.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Establish a predictable, milestone-based consulting engagement within budget to resolve core financial and operational bottlenecks.",
+        "confidence": "high",
+        "source_excerpt": "I'll give you a fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieve an industry-standard 5-day DSO to unlock $1.4M in working capital currently tied up in unbilled receivables.",
+        "confidence": "high",
+        "source_excerpt": "a return to five-day DSO from where we are now frees up about $1.4M in working capital",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Stakeholders disagree on the total Phase 1 budget limit and available funding.",
+        "confidence": "contradicted",
+        "source_excerpt": "Rita: Marcus, the budget I approved is $300,000. That's the cap. / Sarah: Rita, that's not what we discussed. We discussed a six-month Phase 1 in the $250 to $400 range",
+        "contradiction_note": "Rita insists on a hard cap of $300,000 for Phase 1, whereas Sarah recalled a approved range of $250,000 to $400,000."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The custom dispatch platform (Routemaster) suffers from heavy technical debt and a fragile codebase, hindering feature development.",
+        "confidence": "high",
+        "source_excerpt": "Technical debt in Routemaster. We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Leadership disagrees on whether to fix existing workflows incrementally or completely replace the dispatch platform.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem. Routemaster is seven years old... and it's at the end of its useful life.",
+        "contradiction_note": "Marcus wants to spend $600k in Year 1 to replace Routemaster with a SaaS solution, while Sarah wants incremental workflow fixes built on top of the existing platform within a lower budget."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Ensure architectural design isolates workflow logic so 60-70% of Phase 1 work is portable if Routemaster is replaced later.",
+        "confidence": "high",
+        "source_excerpt": "I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Unclear technical overlap between deferred mobile driver app updates and mandatory ELD compliance work.",
+        "confidence": "medium",
+        "source_excerpt": "The ELD work is in the driver app, which Alex just said he's deferring.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers face severe productivity losses due to extensive manual double-entry between Salesforce and the custom dispatch tool.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Streamline dispatcher workflows and fix upstream data generation to automate invoicing reconciliation.",
+        "confidence": "high",
+        "source_excerpt": "focus on the invoicing reconciliation first... and then the dispatcher workflow because it's the upstream cause",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce dispatch time per load by 30%, preventing the need to hire 4 additional dispatchers next year ($320k savings).",
+        "confidence": "high",
+        "source_excerpt": "a 30% reduction in dispatch time means we don't need to hire four additional dispatchers next year, which is about $320k in fully-loaded comp.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Operational teams are skeptical because two prior internal efforts to solve dispatcher workflow issues failed.",
+        "confidence": "medium",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Rapid 40% business growth through acquisitions in 2024 has resulted in incomplete technology and operational integration.",
+        "confidence": "high",
+        "source_excerpt": "Northwind grew 40% in 2024 by acquiring two smaller brokerages. Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Leadership disagrees on the target delivery schedule for the initial pilot deployment.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah: We have a Q3 pilot commitment. / Marcus: Q3 was your commitment, not mine. I never agreed to Q3. I think Q4 is more realistic",
+        "contradiction_note": "Sarah and Rita require a Q3 pilot deployment to prevent funding reallocation, while Marcus believes a Q4 deadline is necessary for realistic implementation."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Deliver a production pilot by end of Q3 (September 30) to secure executive support and retain capital allocation.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated. That part isn't negotiable.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "An impending November 15 federal ELD compliance mandate could risk state operating authority if not properly addressed.",
+        "confidence": "high",
+        "source_excerpt": "The ELD compliance deadline in November is real... Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

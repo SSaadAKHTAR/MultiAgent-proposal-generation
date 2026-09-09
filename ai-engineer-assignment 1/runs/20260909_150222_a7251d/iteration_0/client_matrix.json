@@ -1,0 +1,138 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing because load and operational data across systems do not line up.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Establish a fixed-fee Phase 1 engagement with milestone payments tied to measurable outcomes.",
+        "confidence": "high",
+        "source_excerpt": "I'll give you a fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Return to 5-day DSO freeing $1.4M in working capital and eliminate the need for 4 new dispatcher hires saving $320k.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time means we don't need to hire four additional dispatchers next year, which is about $320k in fully-loaded comp. And a return to five-day DSO from where we are now frees up about $1.4M in working capital",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Stakeholders disagree on the total budget cap for the Phase 1 consulting engagement.",
+        "confidence": "contradicted",
+        "source_excerpt": "Rita, the budget I approved is $300,000. That's the cap... Rita, that's not what we discussed. We discussed a six-month Phase 1 in the $250 to $400 range",
+        "contradiction_note": "CFO Rita mandates a strict $300,000 budget cap, whereas VP of Operations Sarah understood Phase 1 to be budgeted between $250,000 and $400,000."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The custom Rails dispatch tool (Routemaster) is 7 years old with severe technical debt, making feature delivery slow and fragile.",
+        "confidence": "high",
+        "source_excerpt": "We can't ship features anymore because the codebase is too fragile. Every change takes three times as long as it should.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Disagreement over whether to replace Routemaster with a SaaS platform or build an overlay workflow fix.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem... We could be live on it in nine months... $600k in year one",
+        "contradiction_note": "CTO Marcus advocates replacing Routemaster with a $600k/year SaaS platform, whereas VP of Operations Sarah advocates fixing workflows incrementally within current budget constraints."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Ensure 60-70% of Phase 1 workflow logic and integrations remain portable if Routemaster is replaced later.",
+        "confidence": "medium",
+        "source_excerpt": "I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Two previous internal projects attempting to fix the dispatch-invoicing technical workflows ended in failure.",
+        "confidence": "high",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers perform redundant manual data entries between Routemaster and Salesforce, while drivers dislike the mobile app.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce, drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Streamline dispatcher workflows to eliminate double-entry and improve load processing speed.",
+        "confidence": "high",
+        "source_excerpt": "fix three specific operational pain points — dispatcher double-entry, the driver app, and invoicing",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieve a 30% reduction in dispatch processing time per load.",
+        "confidence": "high",
+        "source_excerpt": "Sarah and I talked about a 30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Uncertainty surrounding driver app updates and integration requirements for the November 15 federal ELD compliance mandate.",
+        "confidence": "medium",
+        "source_excerpt": "The ELD compliance deadline in November is real. The federal mandate update changes how we have to log driver hours and report them.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Rapid growth via acquisitions in 2024 left core operational technology integrations incomplete.",
+        "confidence": "high",
+        "source_excerpt": "Northwind grew 40% in 2024 by acquiring two smaller brokerages. Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Disagreement on the Phase 1 pilot release timeline between end of Q3 and Q4.",
+        "confidence": "contradicted",
+        "source_excerpt": "We have a Q3 pilot commitment... Q3 was your commitment, not mine. I never agreed to Q3. I think Q4 is more realistic",
+        "contradiction_note": "CFO Rita and VP Sarah mandate a Q3 end-of-quarter pilot launch to prevent budget reallocation, while CTO Marcus insists Q4 is a realistic timeframe for proper delivery."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Deploy a production pilot by September 30 (end of Q3) to retain allocated executive funding.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Executive trust risk caused by CFO's negative past experience with an outside consulting firm in 2023.",
+        "confidence": "high",
+        "source_excerpt": "Skeptical of consulting engagements; got burned by a previous vendor in 2023.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

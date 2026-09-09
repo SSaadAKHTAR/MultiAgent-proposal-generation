@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "Explicitly refer to the custom dispatch tool by its name, 'Routemaster', across all sections to align with client terminology.",
+    "Directly address CFO Rita Donovan's skepticism stemming from a burnt 2023 vendor experience by highlighting fixed-fee milestone governance and concrete sign-off gates.",
+    "Explicitly address the two prior failed internal workflow attempts at Northwind, explaining how this solution avoids those failure modes.",
+    "Align the 16-week timeline explicitly with the end-of-Q3 pilot mandate demanded by leadership while providing risk mitigation for CTO Marcus Patel's Q4 concerns.",
+    "Define a clear integration and decoupling strategy for the driver mobile app to ensure the November 15 federal ELD compliance mandate is fully met without disrupting operations."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to data discrepancies across systems, stalling cash flow.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Automated reconciliation between delivery records and financial records to eliminate invoicing backlogs.",
+        "confidence": "high",
+        "source_excerpt": "if we fix invoicing reconciliation, the secondary metric is days-sales-outstanding, which should drop from where we are now back to industry standard",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce Days Sales Outstanding (DSO) from 3 weeks behind to the industry standard of approximately 5 days.",
+        "confidence": "high",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard, which is about five days.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "CFO skepticism from a past bad vendor experience puts strict constraints on budget release and milestone performance.",
+        "confidence": "high",
+        "source_excerpt": "We've been burned by vendors who quoted big and delivered late.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers are forced to manually act as the integration layer between Routemaster, Salesforce, and the mobile driver app.",
+        "confidence": "high",
+        "source_excerpt": "So it's three systems for one assignment, and the dispatcher is the integration layer.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "An integrated technical workflow linking Routemaster, Salesforce, and driver communication built incrementally.",
+        "confidence": "high",
+        "source_excerpt": "I need a partner who can help me make the case for incremental change instead of a full rebuild.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Data sync accuracy across Routemaster, Salesforce, and driver PODs to prevent manual detective work in finance.",
+        "confidence": "medium",
+        "source_excerpt": "The driver might mark a load delivered at 2pm in the app, but the actual proof of delivery shows 4pm... so finance is doing detective work on every single invoice.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Stakeholders disagree on whether to perform an incremental upgrade or a complete system rebuild of Routemaster.",
+        "confidence": "contradicted",
+        "source_excerpt": "Marcus will want to dig into the technical approach — he has strong opinions about Routemaster because he built half of it... He's been pushing for that for a year.",
+        "contradiction_note": "CTO Marcus Patel wants a full custom rebuild of Routemaster (a 12-month minimum effort), whereas VP of Operations Sarah Chen mandates an incremental approach to achieve a Q3 pilot."
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend 2 to 3 hours daily on phone calls with drivers due to a feature-deficient mobile app.",
+        "confidence": "high",
+        "source_excerpt": "Every dispatcher tells me they spend two to three hours a day on the phone with drivers because the app doesn't do what they need.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Streamlined dispatcher workflow that reduces processing friction and enables drivers to handle updates directly in-app.",
+        "confidence": "high",
+        "source_excerpt": "They can't take photos, they can't flag issues, they can't message the dispatcher.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce average load processing time per dispatcher from 12 minutes down to 8 minutes.",
+        "confidence": "high",
+        "source_excerpt": "Right now our average dispatcher takes about twelve minutes to fully process a load through all three systems. If we can get that to eight minutes — call it a thirty percent reduction",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "An upcoming federal ELD compliance update in November owned by compliance may introduce unforeseen workflow constraints.",
+        "confidence": "medium",
+        "source_excerpt": "There's an ELD compliance deadline in November — federal mandate update. Rajiv, our head of compliance, owns it.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Incomplete technical integration from 2024 acquisitions combined with 40% growth creates severe operational bottlenecks.",
+        "confidence": "medium",
+        "source_excerpt": "Northwind grew 40% in 2024 by acquiring two smaller brokerages. Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Implement operational efficiencies through Phase 1 to avoid adding dispatcher headcount next year while scaling.",
+        "confidence": "high",
+        "source_excerpt": "that's a real productivity win and it pays for itself in headcount we don't have to hire next year.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Deploy a measurable pilot into production by the end of Q3 (September 30) to secure continued Phase 1 funding.",
+        "confidence": "high",
+        "source_excerpt": "Q3 is because Rita — our CFO — agreed to the budget on the condition that we have something measurable in production by end of September.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Failure to demonstrate measurable progress by Q3 will cause the CFO to pull funding and reallocate it to other initiatives.",
+        "confidence": "high",
+        "source_excerpt": "Otherwise the funding gets pulled into other projects.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to inaccurate load data, tying up critical cash flow.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "An automated or streamlined invoicing reconciliation process that eliminates data detective work for finance.",
+        "confidence": "high",
+        "source_excerpt": "invoicing is the bleeding wound. We need to fix that first.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce Days Sales Outstanding (DSO) from 3 weeks behind down to the industry standard of approximately 5 days.",
+        "confidence": "high",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard, which is about five days.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Execute Phase 1 within a fixed-fee budget range of $250,000 to $400,000 tied to milestone payments.",
+        "confidence": "high",
+        "source_excerpt": "I've earmarked $250,000 to $400,000 for Phase 1, depending on scope.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is highly skeptical of external consultants due to a failed engagement with a vendor in 2023.",
+        "confidence": "high",
+        "source_excerpt": "Skeptical of consulting engagements; got burned by a previous vendor in 2023.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Systems are fragmented across a legacy Rails app, Salesforce, NetSuite, and an outdated driver mobile app with no automated integration.",
+        "confidence": "high",
+        "source_excerpt": "So it's three systems for one assignment, and the dispatcher is the integration layer.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Stakeholders disagree on technical execution: Marcus wants a full 12-month rebuild of the custom Rails app, whereas Sarah requires incremental updates.",
+        "confidence": "contradicted",
+        "source_excerpt": "He's been pushing for that for a year... making the case for incremental change instead of a full rebuild.",
+        "contradiction_note": "CTO Marcus Patel advocates for a complete system rebuild of Routemaster, but VP Ops Sarah Chen opposes a full rebuild due to time constraints and demands incremental changes."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Automate data sync between Routemaster, Salesforce, and driver interfaces to prevent manual data entry errors.",
+        "confidence": "medium",
+        "source_excerpt": "dispatcher double-entry between Routemaster, Salesforce, and the driver app",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Tech integration from past acquisitions remains incomplete and no formal TMS vendor selection has been made yet.",
+        "confidence": "high",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "An upcoming federal ELD compliance deadline in November may impact data or system architecture requirements.",
+        "confidence": "medium",
+        "source_excerpt": "There's an ELD compliance deadline in November — federal mandate update.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers waste significant time manually duplicating load details across three separate systems for 60-90 loads per day.",
+        "confidence": "high",
+        "source_excerpt": "Right now our average dispatcher takes about twelve minutes to fully process a load through all three systems.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The mobile driver app lacks messaging, photo capture, and issue flagging, driving 2-3 hours of phone calls per dispatcher daily.",
+        "confidence": "high",
+        "source_excerpt": "Every dispatcher tells me they spend two to three hours a day on the phone with drivers because the app doesn't do what they need.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "A consolidated dispatcher workflow and upgraded driver communication channel that reduces manual coordination.",
+        "confidence": "high",
+        "source_excerpt": "Our dispatcher workflow is killing us. Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce average load processing time per dispatcher from 12 minutes to 8 minutes (a 30% reduction).",
+        "confidence": "high",
+        "source_excerpt": "If we can get that to eight minutes — call it a thirty percent reduction — that's a real productivity win",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Contracted drivers dislike the current mobile app and may resist adopting operational workflow updates.",
+        "confidence": "medium",
+        "source_excerpt": "drivers hate the mobile app... ping the driver through our mobile app — which the driver may or may not see.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Rapid corporate growth of 40% via acquisitions is threatened by operational bottlenecks and lack of technology integration.",
+        "confidence": "high",
+        "source_excerpt": "Northwind grew 40% in 2024 by acquiring two smaller brokerages. Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Scale operational capacity to support revenue growth without needing proportional headcount growth in dispatch or finance.",
+        "confidence": "high",
+        "source_excerpt": "it pays for itself in headcount we don't have to hire next year.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Deploy a measurable pilot into production by the end of Q3 (September 30) to secure continued board/CFO funding.",
+        "confidence": "high",
+        "source_excerpt": "Rita — our CFO — agreed to the budget on the condition that we have something measurable in production by end of September.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The project timeline is constrained by CFO funding rules demanding a Q3 delivery, conflicting with proposed multi-year IT plans.",
+        "confidence": "contradicted",
+        "source_excerpt": "The rebuild is a 12-month project minimum and we don't have 12 months.",
+        "contradiction_note": "CFO funding requires a working pilot by Sept 30 (Q3), directly conflicting with Marcus's proposed 12-month minimum project scope."
+      }
+    ]
+  }
+}
