@@ -73,6 +73,41 @@ def eval_loop_regression():
     else:
         console.print("[bold red]FAIL[/bold red]: Proposal Agent ignored the feedback.")
 
+def eval_proposal_coherence():
+    console.print("\n[bold yellow]Running Eval 3: Proposal Coherence[/bold yellow]")
+    
+    with open("data/intake.md", "r") as f:
+        intake_text = f.read()
+    with open("data/transcript_b.md", "r") as f:
+        transcript_text = f.read()
+        
+    debrief = DebriefAgent()
+    matrix = debrief.generate_matrix(intake_text, transcript_text)
+    
+    proposal = ProposalAgent()
+    proposal_text = proposal.generate_proposal(intake_text, matrix)
+    
+    llm = LLMProvider()
+    judge_prompt = (
+        "Evaluate the following Proposal based on the provided Client Matrix.\n\n"
+        f"=== CLIENT MATRIX ===\n{matrix.model_dump_json(indent=2)}\n\n"
+        f"=== PROPOSAL ===\n{proposal_text}\n\n"
+        "Check three things:\n"
+        "1. Are the required sections present? (Executive Summary, Understanding, Approach, Phases & Timeline, Pricing Approach, Open Questions)\n"
+        "2. Does the proposal address every 'high' confidence matrix item somewhere?\n"
+        "3. Are all 'contradicted' or 'low' confidence items placed explicitly in the 'Open Questions' section?\n\n"
+        "Output 'PASS' if all three are met, or 'FAIL' if any are violated, followed by a brief explanation."
+    )
+    
+    judgment = llm.generate_text(judge_prompt, system_instruction="You are an expert evaluator.")
+    
+    console.print(f"Judgment Result:\n{judgment}")
+    if "PASS" in judgment.upper():
+        console.print("[bold green]PASS[/bold green]: Proposal coherence checks passed.")
+    else:
+        console.print("[bold red]FAIL[/bold red]: Proposal coherence checks failed.")
+
 if __name__ == "__main__":
     eval_contradiction_recall()
     eval_loop_regression()
+    eval_proposal_coherence()

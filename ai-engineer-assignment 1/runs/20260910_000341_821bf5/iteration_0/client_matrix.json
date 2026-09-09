@@ -1,0 +1,162 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Invoicing processes are severely delayed due to data discrepancies across systems.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Finance requires a fixed-fee agreement with milestone payments tied directly to specific outcomes.",
+        "confidence": "high",
+        "source_excerpt": "I'll give you a fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieving a 30% reduction in dispatch time avoids $320k in hiring costs, while normalizing DSO unlocks $1.4M in working capital.",
+        "confidence": "high",
+        "source_excerpt": "frees up about $1.4M in working capital that's currently stuck in unbilled receivables.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is a fundamental disagreement on the approved Phase 1 budget amount.",
+        "confidence": "contradicted",
+        "source_excerpt": "the budget I approved is $300,000. That's the cap.",
+        "contradiction_note": "Rita explicitly states the approved budget is capped at $300,000, whereas Sarah believes they had agreed on a range of $250,000 to $400,000."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The core dispatch software Routemaster has significant technical debt and a fragile codebase that slows feature delivery.",
+        "confidence": "high",
+        "source_excerpt": "the codebase is too fragile. Every change takes three times as long as it should.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "There is excessive manual data entry required between Salesforce and the custom dispatch tool.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The CTO prefers replacing the custom platform entirely with a third-party SaaS dispatch platform.",
+        "confidence": "medium",
+        "source_excerpt": "dispatch-as-a-service, full SaaS platform, integrates with Salesforce out of the box",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The integration layer built in Phase 1 should ensure 60-70% of the solution remains viable after a platform transition.",
+        "confidence": "medium",
+        "source_excerpt": "I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Previous internal initiatives to fix the integration and technical workflow problems have failed twice.",
+        "confidence": "high",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Manual operational processes severely hinder dispatcher efficiency.",
+        "confidence": "high",
+        "source_excerpt": "Our dispatcher workflow is killing us.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers are dissatisfied with the performance and usability of the mobile application.",
+        "confidence": "high",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Phase 1 will focus on resolving invoicing data reconciliation and streamlining dispatcher workflows.",
+        "confidence": "medium",
+        "source_excerpt": "focus on the invoicing reconciliation first because that's directly affecting cash flow",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Operationally reduce load dispatch time by 30% and return invoicing turnaround to industry standards.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time per load and a return to industry-standard DSO",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Stakeholders hold conflicting commitments regarding the operational target delivery date.",
+        "confidence": "contradicted",
+        "source_excerpt": "I think Q4 is more realistic if we're doing it right.",
+        "contradiction_note": "Rita and Sarah require a Q3 pilot completion to protect funding, whereas Marcus explicitly rejects Q3 and targets Q4."
+      },
+      {
+        "statement": "Upcoming ELD compliance regulations on November 15 present legal and operational risks if not accounted for.",
+        "confidence": "medium",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Leadership disagrees on whether the core strategic focus should be workflow optimization or software replacement.",
+        "confidence": "high",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Acquisitions made during rapid company growth remain incompletely integrated.",
+        "confidence": "high",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Implement modular workflow improvements designed to remain functional regardless of future system replacement decisions.",
+        "confidence": "medium",
+        "source_excerpt": "building this with an explicit eye toward whatever Routemaster's eventual replacement looks like",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Launch a production pilot before the end of September to prevent budget reallocation.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Scoping short-term workflow fixes without replacing legacy platforms risks squandering capital on temporary solutions.",
+        "confidence": "medium",
+        "source_excerpt": "We're scoping a band-aid because we set a budget that only buys a band-aid.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

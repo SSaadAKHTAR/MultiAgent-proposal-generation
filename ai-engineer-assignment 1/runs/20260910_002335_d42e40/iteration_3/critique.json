@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary & Pricing Approach",
+      "description": "The proposal states the $300,000 fixed fee aligns with 'CFO Rita Donovan's strict budget cap' as an agreed-upon fact. However, the Client Matrix marks the budget cap as 'contradicted' (Rita insists on $300k, but Sarah discussed up to $400k). Contradicted items must not be presented as settled facts.",
+      "suggested_fix": "Remove the assertion that the $300k cap is strictly approved by all parties. Frame the $300k pricing as satisfying the lower end of the discussed budget range, and add a new item to the 'Open Questions' section to formally resolve the budget discrepancy between Rita and Sarah."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding (or Approach)",
+      "description": "The proposal completely omits a high-confidence risk from the Client Matrix: 'Previous internal attempts to fix the workflow have failed twice.' Failing to acknowledge this misses a crucial opportunity to validate their past struggles and explain why this external approach will succeed.",
+      "suggested_fix": "Add a bullet point in the 'Understanding' section acknowledging the two previous failed internal attempts, and briefly note in the 'Approach' section how a dedicated, decoupled architecture mitigates the risks that derailed those past efforts."
+    },
+    {
+      "severity": "medium",
+      "location": "Open Questions (Question 3)",
+      "description": "The proposal asks the CTO to define reusability targets but fails to include the specific low-confidence metric provided in the Client Matrix ('60-70% of the Phase 1 work survives a future platform change'). Low-confidence items should be explicitly stated as hypotheses to be validated.",
+      "suggested_fix": "Update Open Question 3 to explicitly mention the '60-70% reusability' figure as the current working hypothesis that needs to be formally validated and defined by the CTO."
+    }
+  ],
+  "risks": [
+    "Proposing a fixed-fee, milestone-based engagement is highly risky when fundamental project pillars (budget, Q3 vs Q4 timeline, and incremental vs SaaS replacement strategy) are actively disputed among the client's leadership team. Scope creep or project stalling is highly likely if these aren't resolved before signing.",
+    "The hard regulatory deadline for the November ELD mandate leaves very little room for error. If the internal misalignment delays the Phase 1A discovery and architecture sign-offs, the compliance rollout will be jeopardized, threatening Northwind's operating authority."
+  ],
+  "recommendation": "revise"
+}

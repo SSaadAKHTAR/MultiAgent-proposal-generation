@@ -1,0 +1,39 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Executive Summary",
+      "description": "The proposal includes hallucinated business context not found in the Client Matrix, including revenue figures (~$85M), growth metrics (40% following two acquisitions), and a fabricated peer reference (Cascade Freight).",
+      "suggested_fix": "Remove all hallucinated metrics, growth narratives, and peer references. Restrict the background context strictly to the facts provided in the Client Matrix."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding",
+      "description": "The section contains multiple hallucinated technical details, such as 'React Native mobile app (last updated in 2023)', 'maintained internally by 2 engineers', 'Sales Cloud', and 'Excel exports for BI reporting'.",
+      "suggested_fix": "Delete these fabricated technical specifics. Describe the architecture and pain points using only the provided details (e.g., custom Rails app, Salesforce, NetSuite, driver app)."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding / Approach",
+      "description": "A high-confidence technical risk is missing: 'Previous internal attempts to fix the workflow have failed twice.' Omitting this misses critical context regarding the client's technical debt and risk profile.",
+      "suggested_fix": "Add a point acknowledging the past failed internal attempts and explicitly state how the proposed modular approach mitigates the risks that derailed those previous efforts."
+    },
+    {
+      "severity": "critical",
+      "location": "Phases & Timeline",
+      "description": "The proposal definitively commits to a '6-month roadmap' (which aligns with a Q3 delivery if starting in March). Because the Q3 vs. Q4 delivery timeline is explicitly marked as 'contradicted' in the Client Matrix, it cannot be stated as a definitive factual plan in the core proposal.",
+      "suggested_fix": "Soften the language in the timeline section to present the 6-month roadmap as an 'illustrative timeline' or 'proposed scenario', explicitly noting that the final schedule is pending executive alignment on the Q3 vs. Q4 target."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions (Item 5)",
+      "description": "The proposal hallucinates a specific stakeholder name and title ('Rajiv Mehta, Head of Compliance') who does not exist in the Client Matrix.",
+      "suggested_fix": "Remove the fabricated name and refer generally to 'Northwind's compliance leadership' or 'the internal compliance team'."
+    }
+  ],
+  "risks": [
+    "Rampant hallucination of financial metrics, technical specifics, and stakeholder names severely undermines the credibility of the firm and would embarrass the team in front of the client.",
+    "The client has deep, fundamental internal disagreements on budget caps, technical strategy (SaaS vs. incremental), and delivery timelines. Proposing a definitive structure before these are resolved risks alienating key decision-makers (e.g., Marcus vs. Sarah/Rita)."
+  ],
+  "recommendation": "escalate_to_human"
+}

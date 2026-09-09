@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Approach (Point 4. Architecture Portability)",
+      "description": "The proposal guarantees that business logic will remain fully portable to any future infrastructure. However, the Client Matrix lists the 60-70% survival rate of Phase 1 work as low confidence. Stating this as a guaranteed fact violates the matrix constraints.",
+      "suggested_fix": "Remove the guarantee of full portability. State that the architecture is designed to maximize reusability and reference the Open Questions section regarding the 60-70% survival target."
+    },
+    {
+      "severity": "critical",
+      "location": "Pricing Approach (Budget Commitment)",
+      "description": "The proposal explicitly commits to scoping the project strictly within the $300,000 budget cap. The budget cap is a contradicted item between Rita ($300k) and Sarah (up to $400k). Committing to one side in the pricing section prematurely resolves the contradiction.",
+      "suggested_fix": "Remove the strict commitment to the $300,000 cap in the Pricing section. State that the final fixed fee will be determined once the budget range is clarified, pointing to the Open Questions section."
+    },
+    {
+      "severity": "high",
+      "location": "Executive Summary (Bullet 3)",
+      "description": "The proposal definitively promises to deploy an operational production pilot by September 30. The feasibility of this Q3 deadline is a contradicted item (Marcus believes Q4 is realistic). Promising it as a certainty risks alienating the CTO.",
+      "suggested_fix": "Adjust the wording to state that the proposal outlines a targeted plan for a Q3 pilot, noting that final timeline feasibility will be confirmed with technical leadership during kickoff."
+    }
+  ],
+  "risks": [
+    "Prematurely resolving contradicted items (budget and timeline) in the main proposal body risks alienating key stakeholders like Sarah and Marcus.",
+    "Overpromising on technical portability sets unrealistic expectations that conflict with the low-confidence 60-70% survival estimate."
+  ],
+  "recommendation": "revise"
+}

@@ -1,2 +1,0 @@
-{"timestamp": "2026-09-09T14:07:22.122688", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 2695, "completion_tokens": 1797, "latency_seconds": 32.96, "cost": 0.01235375}
-{"timestamp": "2026-09-09T14:08:14.647053", "agent": "ProposalAgent", "iteration": 1, "prompt_tokens": 3521, "completion_tokens": 1989, "latency_seconds": 52.5, "cost": 0.014346249999999998}

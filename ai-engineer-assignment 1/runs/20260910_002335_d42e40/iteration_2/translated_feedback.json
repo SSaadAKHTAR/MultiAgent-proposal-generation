@@ -1,0 +1,8 @@
+{
+  "directives": [
+    "Update the Pricing Approach to state a definitive fixed fee of exactly $300,000, aligning with CFO Rita Donovan's strict cap. Remove Open Question 1, as the CFO's approved budget overrides the VP's exploratory range.",
+    "Revise the Executive Summary and Phase 1C Timeline to frame the Q3 (September 30) pilot as a target dependent on scope resolution. Explicitly flag in Open Questions that Sarah and Rita's Q3 funding mandate conflicts with CTO Marcus's assessment that Q4 is the realistic timeline.",
+    "In the 'System & Regulatory Landscape' section, explicitly state the severe business risks of missing the November ELD mandate: potential fines and the loss of operating authority in certain states.",
+    "Remove the low-confidence '60-70%' metric regarding codebase survival rate from Open Question 4. Instead, ask CTO Marcus Patel to define the required reusability target for Phase 1 work in the event of a future SaaS migration."
+  ]
+}

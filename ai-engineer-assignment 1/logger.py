@@ -60,10 +60,14 @@ class PipelineLogger:
         with open(raw_log_file, "w") as f:
             f.write(f"=== PROMPT ===\n{prompt}\n\n=== RESPONSE ===\n{response_text}\n")
             
-    def log_llm_call(self, agent_name: str, prompt_tokens: int, completion_tokens: int, latency: float):
+    def log_llm_call(self, agent_name: str, model_name: str, prompt_tokens: int, completion_tokens: int, latency: float):
         """Logs the tokens, cost, and latency for a specific agent call."""
-        # Approximate Gemini 2.5 Pro pricing
-        cost = (prompt_tokens / 1_000_000) * 1.25 + (completion_tokens / 1_000_000) * 5.00
+        if "flash" in model_name.lower():
+            # Approximate Flash pricing
+            cost = (prompt_tokens / 1_000_000) * 0.075 + (completion_tokens / 1_000_000) * 0.30
+        else:
+            # Approximate Pro pricing
+            cost = (prompt_tokens / 1_000_000) * 1.25 + (completion_tokens / 1_000_000) * 5.00
         
         self.total_prompt_tokens += prompt_tokens
         self.total_completion_tokens += completion_tokens

@@ -1,0 +1,162 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is 3 weeks behind on invoicing because data does not align across systems, tying up $1.4M in working capital in unbilled receivables.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Stakeholders disagree on the approved budget for Phase 1, with the CFO setting a strict $300k cap while the VP of Operations recalled an approved range of $250k to $400k.",
+        "confidence": "contradicted",
+        "source_excerpt": "Rita: Marcus, the budget I approved is $300,000. That's the cap. Sarah: Rita, that's not what we discussed. We discussed a six-month Phase 1 in the $250 to $400 range",
+        "contradiction_note": "CFO Rita insists the approved budget cap is $300,000, whereas VP Ops Sarah believed they had agreed on a $250,000 to $400,000 range."
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Establish a fixed-fee engagement structure with outcome-based milestone payments to manage financial risk.",
+        "confidence": "high",
+        "source_excerpt": "I'll give you a fixed-fee proposal with milestone payments tied to specific outcomes, and if we miss the milestones you don't pay for them.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Return invoicing cycle time to an industry-standard 5-day DSO, freeing up $1.4M in working capital.",
+        "confidence": "high",
+        "source_excerpt": "return to five-day DSO from where we are now frees up about $1.4M in working capital that's currently stuck in unbilled receivables.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Achieve a 30% reduction in dispatch time, avoiding $320k in annual compensation by eliminating the need to hire four additional dispatchers.",
+        "confidence": "high",
+        "source_excerpt": "a 30% reduction in dispatch time means we don't need to hire four additional dispatchers next year, which is about $320k in fully-loaded comp.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Executive skepticism is high due to a poor vendor experience in 2023 and two failed internal initiatives targeting the same issues.",
+        "confidence": "high",
+        "source_excerpt": "I have been burned by this exact conversation before. ... We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Routemaster suffers from severe technical debt as a 7-year-old custom app, slowing feature delivery by 3x and causing codebase fragility.",
+        "confidence": "high",
+        "source_excerpt": "Technical debt in Routemaster. We can't ship features anymore because the codebase is too fragile. Every change takes three times as long as it should.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "High volume of manual data re-entry between the custom Rails dispatch tool and Salesforce CRM.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Stakeholders disagree on technical strategy: the CTO favors replacing Routemaster with a $600k/year SaaS platform, while VP Ops favors building an incremental workflow layer on existing infrastructure.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem. Routemaster is seven years old... We can put a band-aid on the dispatcher workflow but in two years we'll be back here",
+        "contradiction_note": "CTO Marcus advocates replacing Routemaster with a full SaaS platform costing $600k in Year 1, whereas VP Ops Sarah wants to solve operational workflow bottlenecks immediately within existing architecture."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Ensure that 60-70% of Phase 1 workflow architecture is portable and reusable if Routemaster is eventually replaced.",
+        "confidence": "medium",
+        "source_excerpt": "I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Upcoming federal ELD compliance mandate updates on November 15th require unassessed system integration work.",
+        "confidence": "high",
+        "source_excerpt": "The ELD compliance deadline in November is real. The federal mandate update changes how we have to log driver hours and report them.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Manual dispatcher data entry creates severe operational friction across 40 dispatchers handling 600 contracted drivers.",
+        "confidence": "high",
+        "source_excerpt": "Our dispatcher workflow is killing us. Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers dislike the custom React Native mobile app, which has not received major updates since 2023.",
+        "confidence": "high",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Focus Phase 1 strictly on invoicing reconciliation and dispatcher workflow automation, deferring driver mobile app changes to Phase 2.",
+        "confidence": "high",
+        "source_excerpt": "focus on the invoicing reconciliation first... and then the dispatcher workflow... The driver app I'd defer.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce dispatcher manual workload per load by 30%.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Incomplete technology integration following 40% acquisition growth in 2024 poses unknown operational integration obstacles.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Internal executive disconnect exists between Operations and Technology regarding core problem definition and priority.",
+        "confidence": "high",
+        "source_excerpt": "Sarah and I have been having a parallel conversation about this for months and we don't agree on what the problem is.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Target pilot timeline is disputed: VP Ops and CFO mandate a Q3 (Sept 30) production release to maintain budget allocation, whereas the CTO considers Q4 realistic.",
+        "confidence": "contradicted",
+        "source_excerpt": "Pilot in production by end of Q3 (Sept 30). / Marcus: Q3 was your commitment, not mine. I never agreed to Q3. I think Q4 is more realistic",
+        "contradiction_note": "CFO Rita and VP Ops Sarah require a production pilot by September 30 (end of Q3) to prevent reallocation of budget funds, while CTO Marcus argues Q4 is the realistic timeframe."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Deploy a pilot to production by September 30 (Q3) to prevent the loss and reallocation of corporate funding.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated. That part isn't negotiable.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Missing the November 15 ELD compliance deadline risks regulatory fines and potential loss of operating authority in certain states.",
+        "confidence": "high",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

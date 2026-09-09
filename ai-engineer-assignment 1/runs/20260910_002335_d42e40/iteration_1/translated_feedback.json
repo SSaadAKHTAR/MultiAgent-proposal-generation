@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Update the Pricing Approach section to remove the generic '$150k–$250k' benchmark. Replace it with a statement that the fixed-fee engagement will be scoped to fit within the strict $300,000 budget cap approved by the CFO, while acknowledging the $250k-$400k range discussed with the VP of Operations.",
+    "Revise the 'Phases & Timeline' section to explicitly schedule Phase 1C (Production Pilot Deployment) to be completed by the end of Q3 (September 30), as the Client Matrix indicates this is a high-confidence requirement to prevent funding reallocation.",
+    "In the 'Understanding' section, add a bullet point acknowledging that two previous internal attempts to fix these workflows have failed, and emphasize how the proposed decoupled architecture and external expertise will mitigate the risks that caused those past failures."
+  ]
+}

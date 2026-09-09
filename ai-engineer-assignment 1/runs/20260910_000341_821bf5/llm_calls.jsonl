@@ -1,0 +1,3 @@
+{"timestamp": "2026-09-10T00:04:17.439674", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 4076, "completion_tokens": 1685, "latency_seconds": 35.7, "cost": 0.0008112}
+{"timestamp": "2026-09-10T00:07:08.257625", "agent": "ProposalAgent", "iteration": 1, "prompt_tokens": 3393, "completion_tokens": 2363, "latency_seconds": 45.03, "cost": 0.000963375}
+{"timestamp": "2026-09-10T00:09:57.133951", "agent": "ReviewAgent_Critique", "iteration": 1, "prompt_tokens": 4437, "completion_tokens": 315, "latency_seconds": 31.85, "cost": 0.000427275}

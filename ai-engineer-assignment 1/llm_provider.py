@@ -24,7 +24,7 @@ class LLMProvider:
             raise ValueError("GEMINI_API_KEY not set in .env")
         self.client = genai.Client(api_key=api_key)
         self.model_complex = "gemini-3.6-flash"
-        self.model_simple = "gemini-3.5-flash-lite"
+        self.model_simple = "gemini-3.6-flash"
 
     def get_model_for_tier(self, tier: str, override: Optional[str] = None) -> str:
         if override:
@@ -49,34 +49,43 @@ class LLMProvider:
         agent_name: str = "UnknownAgent"
     ) -> T:
         _model = self.get_model_for_tier(model_tier, model)
-        start_time = time.time()
+        current_prompt = prompt
+        max_retries = 3
         
-        response = self.client.models.generate_content(
-            model=_model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=system_instruction,
-                response_mime_type="application/json",
-                response_schema=schema,
-                temperature=0.2,
+        for attempt in range(max_retries):
+            start_time = time.time()
+            
+            response = self.client.models.generate_content(
+                model=_model,
+                contents=current_prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_instruction,
+                    response_mime_type="application/json",
+                    response_schema=schema,
+                    temperature=0.2,
+                )
             )
-        )
-        
-        latency = time.time() - start_time
-        if response.usage_metadata:
-            current_logger.log_llm_call(
-                agent_name,
-                response.usage_metadata.prompt_token_count,
-                response.usage_metadata.candidates_token_count,
-                latency
-            )
-        current_logger.log_raw_payload(agent_name, prompt, response.text)
-        
-        try:
-            data = json.loads(response.text)
-            return schema.model_validate(data)
-        except Exception as e:
-            raise ValueError(f"Schema validation failed: {e}\nRaw response: {response.text}")
+            
+            latency = time.time() - start_time
+            if response.usage_metadata:
+                current_logger.log_llm_call(
+                    agent_name,
+                    _model,
+                    response.usage_metadata.prompt_token_count,
+                    response.usage_metadata.candidates_token_count,
+                    latency
+                )
+            current_logger.log_raw_payload(agent_name, current_prompt, response.text)
+            
+            try:
+                data = json.loads(response.text)
+                return schema.model_validate(data)
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise ValueError(f"Schema validation failed after {max_retries} attempts: {e}\nRaw response: {response.text}")
+                
+                print(f"[{agent_name}] Schema validation failed, feeding error back to LLM (Attempt {attempt+1}/{max_retries})...")
+                current_prompt += f"\n\n[SYSTEM NOTIFICATION: Your previous response failed schema validation. Error: {e}. Please provide a corrected JSON response.]"
 
     @retry(
         wait=wait_fixed(65),
@@ -112,6 +121,7 @@ class LLMProvider:
         if response.usage_metadata:
             current_logger.log_llm_call(
                 agent_name,
+                _model,
                 response.usage_metadata.prompt_token_count,
                 response.usage_metadata.candidates_token_count,
                 latency
@@ -145,6 +155,7 @@ class LLMProvider:
                 if final_response.usage_metadata:
                     current_logger.log_llm_call(
                         agent_name + "_tool_response",
+                        _model,
                         final_response.usage_metadata.prompt_token_count,
                         final_response.usage_metadata.candidates_token_count,
                         final_latency

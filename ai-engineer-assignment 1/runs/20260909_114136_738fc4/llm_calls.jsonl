@@ -1,6 +1,0 @@
-{"timestamp": "2026-09-09T11:43:07.005737", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 2695, "completion_tokens": 2068, "cost": 0.01370875}
-{"timestamp": "2026-09-09T11:44:27.124114", "agent": "ProposalAgent", "iteration": 1, "prompt_tokens": 3661, "completion_tokens": 2541, "cost": 0.017281249999999998}
-{"timestamp": "2026-09-09T11:44:51.368742", "agent": "ReviewAgent", "iteration": 1, "prompt_tokens": 4738, "completion_tokens": 374, "cost": 0.0077925}
-{"timestamp": "2026-09-09T11:59:53.848740", "agent": "ReviewAgent", "iteration": 1, "prompt_tokens": 4722, "completion_tokens": 131, "cost": 0.0065575}
-{"timestamp": "2026-09-09T12:00:24.111242", "agent": "ProposalAgent", "iteration": 2, "prompt_tokens": 3841, "completion_tokens": 2745, "cost": 0.01852625}
-{"timestamp": "2026-09-09T12:00:36.630872", "agent": "ReviewAgent", "iteration": 2, "prompt_tokens": 4942, "completion_tokens": 309, "cost": 0.0077225}

@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "medium",
+      "location": "Pricing Approach",
+      "description": "The pricing section provides a benchmark range ($150,000 to $250,000) rather than a single definitive fixed-fee total for the agreement.",
+      "suggested_fix": "Specify the exact total fixed-fee dollar amount within the proposed $150,000–$250,000 band once the initial scope alignment is completed with leadership."
+    },
+    {
+      "severity": "low",
+      "location": "Phases & Timeline",
+      "description": "The timeline uses relative month labels (Month 1 through Month 6) rather than explicit calendar months, making it less obvious how Month 3 aligns directly with the September 30 Q3 pilot deadline.",
+      "suggested_fix": "Overlay explicit calendar target months (e.g., April–September or July–December) onto the Phase diagram to clarify alignment with the Q3 September 30 funding deadline."
+    }
+  ],
+  "risks": [
+    "Tight alignment needed between Month 3 delivery and the September 30 deadline to prevent organizational budget reallocation.",
+    "Technical dependencies on Northwind's two internal Rails engineers for legacy Routemaster codebase knowledge transfer could create scheduling bottlenecks."
+  ],
+  "recommendation": "approve"
+}

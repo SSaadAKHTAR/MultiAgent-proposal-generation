@@ -103,8 +103,8 @@ def run_pipeline(intake_file: str, transcript_file: str, resume_file: str = None
         
         # Termination checks
         if critique.recommendation == "approve":
-            print("\n*** Proposal approved by Review Agent! ***")
-            break
+            print("\n*** Proposal approved by Review Agent, but passing to Human for final sign-off! ***")
+            # Intentionally NOT breaking here so the human still gets a say.
             
         # Repeat-issue detection (Termination logic)
         repeated = current_issues.intersection(previous_issues)
