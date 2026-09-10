@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Pricing Approach > Fixed Price",
+      "description": "The proposal hallucinates external benchmark data ('typically ranging from $150,000 to $250,000 for discovery and MVP builds') that is not present in the Client Matrix. Presenting fabricated data to a CFO who is already highly skeptical of consultants is a major credibility risk.",
+      "suggested_fix": "Remove the reference to benchmark data. Justify the $250,000 fixed fee based solely on the proposed scope of work and its alignment with the client's stated budget constraints."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding > Business & Financial Impact",
+      "description": "The proposal mentions the need to 'mitigate vendor risk' but fails to capture the specific context from the matrix: the CFO is highly skeptical because she got burned by a previous vendor in 2023.",
+      "suggested_fix": "Explicitly acknowledge the CFO's past negative experience in 2023 to demonstrate a deep understanding of her skepticism and to strongly reinforce why the fixed-fee, milestone-based approach was chosen."
+    },
+    {
+      "severity": "low",
+      "location": "Executive Summary & Understanding > Operational Challenges",
+      "description": "The proposal mentions preventing the need for 'additional dispatcher headcount' but misses the specific, quantifiable metric provided in the matrix (avoiding the hiring of exactly four dispatchers).",
+      "suggested_fix": "Change 'additional dispatcher headcount' to 'four additional dispatchers' to make the operational ROI more concrete and accurate to the client's business case."
+    },
+    {
+      "severity": "low",
+      "location": "Throughout (e.g., Understanding > Technical Landscape)",
+      "description": "The proposal refers generically to the 'custom dispatch tool' but misses the opportunity to use its actual internal name, 'Routemaster', which was provided in the matrix.",
+      "suggested_fix": "Replace generic references to the 'custom dispatch tool' with 'Routemaster' to demonstrate closer attention to the client's specific technical environment."
+    }
+  ],
+  "risks": [
+    "Fabricating pricing benchmarks severely undermines trust, which is especially dangerous given the CFO's existing skepticism of consulting vendors.",
+    "While the proposal successfully navigates the contradictions by placing them in the Open Questions section, proposing a definitive $250k price might prematurely anchor the budget conversation if the final agreed-upon scope (e.g., hitting the Q3 pilot) requires utilizing the full $300k approved cap."
+  ],
+  "recommendation": "revise"
+}

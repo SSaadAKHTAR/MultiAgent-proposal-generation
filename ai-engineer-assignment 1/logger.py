@@ -51,7 +51,6 @@ class PipelineLogger:
                 f.write(content)
                 
     def log_raw_payload(self, agent_name: str, prompt: str, response_text: str):
-        """Logs the raw prompt and response for deep debugging."""
         iter_dir = os.path.join(self.run_dir, f"iteration_{self.iteration}")
         os.makedirs(iter_dir, exist_ok=True)
         
@@ -61,7 +60,6 @@ class PipelineLogger:
             f.write(f"=== PROMPT ===\n{prompt}\n\n=== RESPONSE ===\n{response_text}\n")
             
     def log_llm_call(self, agent_name: str, model_name: str, prompt_tokens: int, completion_tokens: int, latency: float):
-        """Logs the tokens, cost, and latency for a specific agent call."""
         if "flash" in model_name.lower():
             # Approximate Flash pricing
             cost = (prompt_tokens / 1_000_000) * 0.075 + (completion_tokens / 1_000_000) * 0.30
@@ -104,5 +102,5 @@ class PipelineLogger:
         
         self._write_summary(summary)
 
-# A global/singleton logger instance for the current run
+# A global logger for the current run
 current_logger = PipelineLogger()

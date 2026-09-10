@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Document Structure",
+      "description": "The required 'Open Questions' section is entirely missing from the proposal.",
+      "suggested_fix": "Add an 'Open Questions' section at the end of the document to address unresolved, contradicted, or low-confidence items."
+    },
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal states a strict $300,000 budget cap as a fact, ignoring the contradiction in the Client Matrix where Sarah claims the range is $250k to $400k while Rita insists on a $300k cap.",
+      "suggested_fix": "Remove the definitive $300,000 cap commitment. Present a proposed cost or range, and move the budget cap discrepancy to the 'Open Questions' section for client alignment."
+    },
+    {
+      "severity": "critical",
+      "location": "Executive Summary & Approach (Section 2)",
+      "description": "The proposal presents the portable logic layer as the 'definitive strategy', ignoring the fundamental contradiction between Marcus (who wants a platform replacement) and Sarah/Rita (who want a short-term workflow fix).",
+      "suggested_fix": "Frame the portable architecture as a proposed compromise rather than a 'definitive strategy', and add the platform replacement vs. short-term fix debate to the 'Open Questions' section."
+    },
+    {
+      "severity": "critical",
+      "location": "Executive Summary, Understanding, & Phases & Timeline",
+      "description": "The proposal commits to a Q3 (September 30) pilot deployment as a definitive target, ignoring Marcus's explicit disagreement regarding the feasibility of a Q3 deadline.",
+      "suggested_fix": "Remove the hard commitment to the Q3 deadline. Frame it as an aggressive target to be evaluated during Phase 1, and add the timeline feasibility to the 'Open Questions' section."
+    }
+  ],
+  "risks": [
+    "By stating contradicted items (budget, timeline, and technical strategy) as agreed-upon facts, the proposal risks alienating key stakeholders (like Marcus) who hold opposing views, potentially derailing the pitch.",
+    "The complete omission of the 'Open Questions' section prevents the consulting team from facilitating necessary alignment discussions among the client's divided leadership team."
+  ],
+  "recommendation": "revise"
+}

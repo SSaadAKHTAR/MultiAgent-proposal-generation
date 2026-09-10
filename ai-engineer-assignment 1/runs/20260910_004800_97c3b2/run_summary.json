@@ -1,0 +1,26 @@
+{
+  "run_id": "20260910_004800_97c3b2",
+  "start_time": "2026-09-10T00:48:00.092330",
+  "iterations": 5,
+  "total_cost": 0.08456265,
+  "metrics": {
+    "DebriefAgent": {
+      "calls": 1,
+      "cost": 0.013444999999999999
+    },
+    "ProposalAgent": {
+      "calls": 5,
+      "cost": 0.00424515
+    },
+    "ReviewAgent_Critique": {
+      "calls": 5,
+      "cost": 0.03725
+    },
+    "ReviewAgent_Translate": {
+      "calls": 5,
+      "cost": 0.029622500000000003
+    }
+  },
+  "total_prompt_tokens": 61272,
+  "total_completion_tokens": 14896
+}

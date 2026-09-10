@@ -1,0 +1,150 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is significantly delayed on invoicing due to data discrepancies.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client wants a fixed-fee engagement with milestone-based payments.",
+        "confidence": "high",
+        "source_excerpt": "fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project should free up $1.4M in working capital by improving DSO.",
+        "confidence": "medium",
+        "source_excerpt": "frees up about $1.4M in working capital that's currently stuck in unbilled receivables.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Reduce dispatch time to avoid hiring four additional dispatchers, saving $320k.",
+        "confidence": "medium",
+        "source_excerpt": "we don't need to hire four additional dispatchers next year, which is about $320k",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is disagreement on the approved budget for the Phase 1 engagement.",
+        "confidence": "contradicted",
+        "source_excerpt": "I approved a six-month engagement up to $300k.",
+        "contradiction_note": "Rita states the cap is $300k, while Sarah claims they discussed a $250k to $400k range."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The custom dispatch tool is old and has severe technical debt.",
+        "confidence": "medium",
+        "source_excerpt": "We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers are highly dissatisfied with the current mobile app.",
+        "confidence": "medium",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "There is disagreement on whether to fix the current workflows or replace the entire platform.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem.",
+        "contradiction_note": "Sarah wants to fix workflows incrementally, while Marcus wants to replace Routemaster entirely with a SaaS platform."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A majority of the Phase 1 workflow logic should survive a future platform change.",
+        "confidence": "low",
+        "source_excerpt": "I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Previous internal attempts to fix the workflow issues have failed.",
+        "confidence": "medium",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers suffer from excessive manual double-entry between systems.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Resolve the upstream dispatcher workflow to fix downstream invoicing data.",
+        "confidence": "medium",
+        "source_excerpt": "dispatcher workflow because it's the upstream cause of the bad invoicing data.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieve a 30% reduction in dispatch time per load.",
+        "confidence": "high",
+        "source_excerpt": "a 30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Changes to the driver app must coordinate with the upcoming ELD compliance mandate.",
+        "confidence": "medium",
+        "source_excerpt": "if we touch the driver app at all in Phase 2, we need to do it in a way that supports ELD.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Technology integration from recent company acquisitions remains unfinished.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "There is disagreement on the timeline for delivering the pilot.",
+        "confidence": "contradicted",
+        "source_excerpt": "Q3 was your commitment, not mine. I never agreed to Q3.",
+        "contradiction_note": "Sarah and Rita require a Q3 pilot for budget reasons, but Marcus believes Q4 is more realistic."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A pilot must be in production by the end of September to secure funding.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Missing the November ELD compliance deadline could result in losing operating authority.",
+        "confidence": "medium",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

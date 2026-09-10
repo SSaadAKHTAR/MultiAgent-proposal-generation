@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "Replace all generic references to the 'custom Ruby on Rails dispatch application' or 'custom dispatch tool' with its specific name, 'Routemaster', throughout the document.",
+    "Revise the Pricing Approach section to propose a fixed-fee structure capped at $300,000 to match the CFO's explicitly approved budget, and remove the $150,000–$250,000 benchmark.",
+    "Remove Open Question 1 regarding 'Phase 1 Budget Target Alignment', as the CFO's $300,000 budget cap is a confirmed fact rather than an open question.",
+    "Update the 'Regulatory Compliance' bullet in the Understanding section to explicitly state the business risks of missing the ELD mandate: potential fines and the possible loss of operating authority in some states.",
+    "In the 'Phases & Timeline' section, add a note to Phase 1C explicitly flagging the internal stakeholder conflict regarding the pilot launch date (Operations and Finance mandate Q3/Sept 30, while Engineering expects Q4)."
+  ]
+}

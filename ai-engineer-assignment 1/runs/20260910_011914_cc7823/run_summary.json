@@ -1,0 +1,22 @@
+{
+  "run_id": "20260910_011914_cc7823",
+  "start_time": "2026-09-10T01:19:14.517109",
+  "iterations": 0,
+  "total_cost": 0.05243125,
+  "metrics": {
+    "DebriefAgent": {
+      "calls": 2,
+      "cost": 0.026285
+    },
+    "ProposalAgent": {
+      "calls": 2,
+      "cost": 0.01935875
+    },
+    "UnknownAgent": {
+      "calls": 2,
+      "cost": 0.006787499999999999
+    }
+  },
+  "total_prompt_tokens": 18161,
+  "total_completion_tokens": 5946
+}

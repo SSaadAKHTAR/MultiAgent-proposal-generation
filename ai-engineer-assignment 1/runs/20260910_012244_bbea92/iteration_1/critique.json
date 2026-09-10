@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary & Understanding (Business & Financial Impact, Operational Challenges)",
+      "description": "The proposal hallucinates specific financial and operational metrics not present in the Client Matrix, including \"$85M in annual revenue\", \"growing 40% in 2024\", \"40 dispatchers\", and \"~600 contracted drivers\". Presenting fabricated business metrics to a client is a critical risk that would severely damage the firm's credibility.",
+      "suggested_fix": "Remove all fabricated metrics. Replace them with qualitative descriptions supported by the matrix (e.g., \"following recent acquisitions\") and strictly use only the provided numbers ($1.4M working capital, $320k savings, avoiding 4 additional dispatchers)."
+    },
+    {
+      "severity": "high",
+      "location": "Throughout the proposal (Understanding, Approach, Phases)",
+      "description": "The proposal invents specific technologies and third-party systems not mentioned in the matrix, specifically \"NetSuite\", \"Rails 5\", and \"React Native\". Guessing the client's tech stack and accounting software could embarrass the firm if incorrect.",
+      "suggested_fix": "Replace \"NetSuite\" with \"accounting/finance system\", \"Rails 5\" with \"legacy dispatch system\", and \"React Native\" with \"mobile application\"."
+    },
+    {
+      "severity": "high",
+      "location": "Phases & Timeline (Phase 1A) & Open Questions (Item 4)",
+      "description": "The proposal hallucinates a stakeholder name and title (\"Head of Compliance Rajiv Mehta\") that does not exist in the Client Matrix.",
+      "suggested_fix": "Remove the fabricated name and refer generically to \"the compliance team\" or \"relevant compliance stakeholders.\""
+    },
+    {
+      "severity": "high",
+      "location": "Understanding (Technical Environment)",
+      "description": "The proposal completely omits a high-confidence fact from the matrix: previous internal attempts to fix the workflow issues have failed twice. Omitting this misses a key opportunity to justify the external engagement and address a major historical risk.",
+      "suggested_fix": "Add a bullet point in the Technical Environment section acknowledging the two previous failed internal attempts, and briefly note in the Approach section how the proposed methodology mitigates the risk of a third failure."
+    }
+  ],
+  "risks": [
+    "The Proposal Agent is heavily hallucinating specific client details (financial metrics, tech stack, personnel) to fill in narrative gaps. This poses a severe risk to the firm's credibility if not strictly controlled.",
+    "By failing to acknowledge past internal project failures, the proposal misses an opportunity to build trust and explain why an external consultancy is necessary to succeed where internal teams could not."
+  ],
+  "recommendation": "revise"
+}

@@ -1,0 +1,6 @@
+{"timestamp": "2026-09-10T13:20:53.305127", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 4076, "completion_tokens": 1842, "latency_seconds": 34.38, "cost": 0.014305000000000002}
+{"timestamp": "2026-09-10T13:21:28.683902", "agent": "ProposalAgent", "iteration": 1, "prompt_tokens": 2642, "completion_tokens": 1331, "latency_seconds": 35.37, "cost": 0.0099575}
+{"timestamp": "2026-09-10T13:21:41.171283", "agent": "ReviewAgent_Critique", "iteration": 1, "prompt_tokens": 3562, "completion_tokens": 181, "latency_seconds": 12.48, "cost": 0.00032145000000000003}
+{"timestamp": "2026-09-10T13:22:06.224344", "agent": "ReviewAgent_Translate", "iteration": 1, "prompt_tokens": 3756, "completion_tokens": 65, "latency_seconds": 4.69, "cost": 0.00030119999999999995}
+{"timestamp": "2026-09-10T13:22:26.065993", "agent": "ProposalAgent", "iteration": 2, "prompt_tokens": 4051, "completion_tokens": 1328, "latency_seconds": 19.84, "cost": 0.011703749999999999}
+{"timestamp": "2026-09-10T13:22:40.898130", "agent": "ReviewAgent_Critique", "iteration": 2, "prompt_tokens": 3559, "completion_tokens": 183, "latency_seconds": 14.83, "cost": 0.000321825}

@@ -16,9 +16,7 @@ def eval_contradiction_recall():
         
     debrief = DebriefAgent()
     matrix = debrief.generate_matrix(intake_text, transcript_text)
-    
-    # We are looking for at least one 'contradicted' item in the matrix.
-    # Specifically, they disagreed on budget, timeline, and scope.
+
     contradictions_found = []
     
     # helper to check all items
@@ -43,35 +41,48 @@ def eval_contradiction_recall():
 def eval_loop_regression():
     console.print("\n[bold yellow]Running Eval 2: Loop Regression[/bold yellow]")
     
-    # Mock V1 proposal and translated feedback
-    intake_text = "Standard intake."
+    intake_text = "Standard intake for a software project."
     matrix_json = '{"business": {"pain_points": []}, "technical": {"pain_points": []}, "operational": {"pain_points": []}, "strategic": {"pain_points": []}}'
     
     from schemas import ClientMatrix
     import json
     matrix = ClientMatrix.model_validate(json.loads(matrix_json))
     
+    v1_proposal = (
+        "# Executive Summary\nWe will build this using Agile methodology.\n\n"
+        "# Understanding\nThe client needs a new system.\n\n"
+        "# Approach\nStandard two-week sprints.\n\n"
+        "# Phases & Timeline\n3 months total.\n\n"
+        "# Pricing Approach\n$100k fixed.\n\n"
+        "# Open Questions\nNone."
+    )
+    
     feedback = "- Remove any mention of 'Agile' and use 'Waterfall' instead.\n- Add a section on 'Risk Mitigation'."
     
     proposal = ProposalAgent()
-    v2_proposal = proposal.generate_proposal(intake_text, matrix, feedback)
+    # Pass v1_proposal as the prior_draft
+    v2_proposal = proposal.generate_proposal(intake_text, matrix, feedback_history=feedback, prior_draft=v1_proposal)
     
-    # LLM-as-a-judge to check if it actually complied
+    # LLM-as-a-judge to check if it complied AND didn't rewrite unrelated sections
     llm = LLMProvider()
     judge_prompt = (
-        f"Does the following proposal strictly follow these directives?\n"
-        f"Directives: {feedback}\n\n"
-        f"Proposal:\n{v2_proposal}\n\n"
-        "Answer YES or NO and briefly explain why."
+        f"Compare the V1 Proposal and V2 Proposal.\n\n"
+        f"V1 Proposal:\n{v1_proposal}\n\n"
+        f"Feedback Directives given to create V2:\n{feedback}\n\n"
+        f"V2 Proposal:\n{v2_proposal}\n\n"
+        "Check two things:\n"
+        "1. Did V2 successfully apply the directives (removed Agile/added Waterfall, and added a Risk Mitigation section)?\n"
+        "2. Did V2 keep the rest of the unrelated sections (Pricing, Timeline, Understanding) largely identical to V1 without silently rewriting them?\n\n"
+        "Answer PASS if both are true, or FAIL if it ignored feedback or unnecessarily rewrote unrelated sections. Provide a brief explanation."
     )
     
-    judgment = llm.generate_text(judge_prompt, system_instruction="You are an evaluator.")
+    judgment = llm.generate_text(judge_prompt, system_instruction="You are an expert evaluator.")
     
     console.print(f"Judgment Result:\n{judgment}")
-    if "YES" in judgment.upper():
-        console.print("[bold green]PASS[/bold green]: Proposal Agent addressed the feedback.")
+    if "PASS" in judgment.upper():
+        console.print("[bold green]PASS[/bold green]: Proposal Agent addressed feedback AND preserved unrelated sections.")
     else:
-        console.print("[bold red]FAIL[/bold red]: Proposal Agent ignored the feedback.")
+        console.print("[bold red]FAIL[/bold red]: Proposal Agent failed the regression test.")
 
 def eval_proposal_coherence():
     console.print("\n[bold yellow]Running Eval 3: Proposal Coherence[/bold yellow]")
@@ -90,8 +101,8 @@ def eval_proposal_coherence():
     llm = LLMProvider()
     judge_prompt = (
         "Evaluate the following Proposal based on the provided Client Matrix.\n\n"
-        f"=== CLIENT MATRIX ===\n{matrix.model_dump_json(indent=2)}\n\n"
-        f"=== PROPOSAL ===\n{proposal_text}\n\n"
+        f"CLIENT MATRIX: \n{matrix.model_dump_json(indent=2)}\n\n"
+        f"PROPOSAL: \n{proposal_text}\n\n"
         "Check three things:\n"
         "1. Are the required sections present? (Executive Summary, Understanding, Approach, Phases & Timeline, Pricing Approach, Open Questions)\n"
         "2. Does the proposal address every 'high' confidence matrix item somewhere?\n"

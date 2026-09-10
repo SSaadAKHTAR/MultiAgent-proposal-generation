@@ -1,0 +1,45 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Understanding (Technical & Systems Landscape), Approach, Phases & Timeline",
+      "description": "The proposal hallucinates 'NetSuite' as the core accounting platform and includes it in the integration architecture. The Client Matrix only mentions Salesforce and the custom dispatch tool (Routemaster).",
+      "suggested_fix": "Remove all references to NetSuite. Frame the financial integration around resolving data discrepancies between Routemaster and Salesforce, or state that the specific accounting system integration will be mapped during discovery."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding (Technical & Systems Landscape), Approach, Phases & Timeline",
+      "description": "The proposal hallucinates specific technology stack details, claiming Routemaster is a 'Rails 5' application and the driver app is 'React Native' (last updated in 2023). The Client Matrix does not provide these technical specifics.",
+      "suggested_fix": "Remove references to 'Rails 5', 'React Native', and '2023'. Refer to them generally as the legacy custom dispatch tool and the custom mobile application."
+    },
+    {
+      "severity": "high",
+      "location": "Approach (Driver Experience & ELD Coordination), Open Questions (Item 4)",
+      "description": "The proposal hallucinates a specific client contact name, 'Rajiv Mehta', as the Head of Compliance. This name is not in the Client Matrix and would be highly embarrassing to include.",
+      "suggested_fix": "Remove the name 'Rajiv Mehta' and refer simply to the 'Head of Compliance' or 'Compliance team'."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding (M&A Tech Integration)",
+      "description": "The proposal hallucinates that the acquisitions occurred in '2024' and involved 'two smaller brokerages'. The Client Matrix only notes that tech integration from recent acquisitions is incomplete.",
+      "suggested_fix": "Remove '2024' and 'two smaller brokerages'. State only that technology integration from recent acquisitions remains incomplete."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding (Regulatory Compliance)",
+      "description": "The proposal mentions the ELD compliance deadline but omits the high-confidence risk that missing it could result in fines or losing operating authority.",
+      "suggested_fix": "Update the Regulatory Compliance bullet to explicitly state that missing the ELD deadline could result in fines or the loss of operating authority."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding / Approach",
+      "description": "The proposal fails to acknowledge a high-confidence risk from the matrix: previous internal attempts to fix these exact workflow issues have failed twice.",
+      "suggested_fix": "Add a note in the Understanding section acknowledging the past internal project failures, and briefly highlight in the Approach how the proposed decoupled architecture mitigates the risks that likely derailed those past attempts."
+    }
+  ],
+  "risks": [
+    "The draft contains multiple severe hallucinations regarding the client's tech stack (NetSuite, React Native, Rails), company history (2024 acquisitions), and personnel (Rajiv Mehta). Presenting invented facts to a client severely damages credibility.",
+    "The fundamental internal disagreements at the client regarding budget caps, timeline (Q3 vs Q4), and overarching strategy (fix vs replace) pose a high risk to project kickoff, though the proposal correctly isolates these in the Open Questions section."
+  ],
+  "recommendation": "revise"
+}

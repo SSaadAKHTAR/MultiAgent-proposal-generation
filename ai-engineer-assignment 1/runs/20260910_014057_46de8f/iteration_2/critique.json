@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach - Structure & Budget Alignment",
+      "description": "The proposal states that the budget aligns with both the '$250,000 – $400,000 target discussion range and $300,000 budget cap'. This treats a contradicted item as a resolved fact, directly conflicting with the Client Matrix and undermining the valid point raised in the Open Questions section.",
+      "suggested_fix": "Remove the specific budget numbers from the Pricing Approach. State instead that the final fixed-fee price will be finalized once the internal budget cap discrepancy is resolved."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding - Technical & Systems Landscape",
+      "description": "The proposal claims that 'Business intelligence currently depends on manual Excel exports.' This detail is not present in the Client Matrix and is a hallucinated pain point that could embarrass the firm if presented to the client.",
+      "suggested_fix": "Remove the sentence regarding business intelligence and manual Excel exports."
+    },
+    {
+      "severity": "medium",
+      "location": "Phases & Timeline - Phase 3",
+      "description": "The proposal mentions rolling out the pilot to a cohort of 'contracted drivers'. The Client Matrix does not specify whether the drivers are contractors or employees, making this an unverified assumption.",
+      "suggested_fix": "Change 'contracted drivers' to simply 'drivers' to avoid making assumptions about Northwind's employment model."
+    }
+  ],
+  "risks": [
+    "Claiming alignment with two conflicting budget figures in the Pricing Approach while simultaneously flagging them as a conflict in the Open Questions section creates a disjointed narrative that will confuse the client.",
+    "Inventing specific operational details (such as Excel-based BI) risks damaging the firm's credibility by making it appear as though we are using boilerplate assumptions rather than listening to the client's actual stated problems."
+  ],
+  "recommendation": "revise"
+}

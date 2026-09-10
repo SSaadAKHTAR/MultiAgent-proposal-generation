@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Replace all generic references to the 'custom legacy dispatch system', 'legacy dispatch tool', or 'legacy dispatch platform' with its specific name, 'Routemaster', as identified in the Client Matrix.",
+    "Interpret the vague human feedback ('fix these as well') as a request to resolve the open items. However, because the disagreements regarding Budget, Architecture, and Timeline are confirmed contradictions in the Client Matrix, do not remove them from the Open Questions section. Maintain them as explicit conflicts requiring client resolution.",
+    "Update the Executive Summary, Phases & Timeline, and Pricing Approach sections to explicitly state that the proposed Q3 pilot timeline and $250,000 fixed-fee budget are recommended targets. Add a brief disclaimer in these sections noting that these targets are contingent upon resolving the internal stakeholder disagreements highlighted in the Open Questions."
+  ]
+}

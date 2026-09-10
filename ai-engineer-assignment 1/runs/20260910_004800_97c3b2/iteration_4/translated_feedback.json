@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Rewrite the 'Open Questions' section to remove all internal stakeholder names (e.g., CFO Rita, CTO Marcus, VP of Operations Sarah) and explicit references to their internal political disagreements.",
+    "Revise the 'Budget Cap Alignment' open question to remove the mention of the $400,000 range and internal disputes. Frame it simply as a request for final executive confirmation that the $250,000 fixed fee aligns with the authorized budget.",
+    "Revise the 'Core Platform Strategy' and 'Pilot Launch Timeline' open questions to remove references to specific departmental conflicts (e.g., CTO vs. VP of Operations, technical vs. financial stakeholders). Frame these professionally as final scope, architecture, and timeline decisions that require executive consensus before kickoff."
+  ]
+}

@@ -1,0 +1,1 @@
+fix these all three critical and high level issues and keep other things of the proposal as is

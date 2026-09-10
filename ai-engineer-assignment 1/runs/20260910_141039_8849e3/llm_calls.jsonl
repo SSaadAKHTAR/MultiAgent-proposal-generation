@@ -1,0 +1,6 @@
+{"timestamp": "2026-09-10T14:11:24.064768", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 4076, "completion_tokens": 1863, "latency_seconds": 44.26, "cost": 0.01441}
+{"timestamp": "2026-09-10T14:11:40.496320", "agent": "ProposalAgent", "iteration": 0, "prompt_tokens": 524, "completion_tokens": 95, "latency_seconds": 16.37, "cost": 0.0011300000000000001}
+{"timestamp": "2026-09-10T14:11:48.315028", "agent": "UnknownAgent", "iteration": 0, "prompt_tokens": 309, "completion_tokens": 74, "latency_seconds": 7.77, "cost": 0.00075625}
+{"timestamp": "2026-09-10T14:12:45.114910", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 4076, "completion_tokens": 1312, "latency_seconds": 56.74, "cost": 0.011654999999999999}
+{"timestamp": "2026-09-10T14:13:21.374528", "agent": "ProposalAgent", "iteration": 0, "prompt_tokens": 2699, "completion_tokens": 1367, "latency_seconds": 36.17, "cost": 0.010208749999999999}
+{"timestamp": "2026-09-10T14:13:34.803637", "agent": "UnknownAgent", "iteration": 0, "prompt_tokens": 3396, "completion_tokens": 244, "latency_seconds": 13.39, "cost": 0.005465}

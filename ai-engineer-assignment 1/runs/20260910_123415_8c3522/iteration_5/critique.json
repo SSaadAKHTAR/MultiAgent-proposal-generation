@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Understanding (Paragraph 1)",
+      "description": "The proposal explicitly names VP Ops Sarah Chen but omits CTO Marcus Patel. Given the known contradiction between them regarding the technical approach (incremental vs. rebuild), naming only the VP Ops risks alienating the CTO and appearing biased before discovery.",
+      "suggested_fix": "Update the text to include Marcus Patel or generalize to 'Northwind leadership' to ensure all key stakeholders feel represented."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding (Bullet 3)",
+      "description": "The incomplete technological integration from the two 2024 acquisitions is a medium-confidence item but is stated as an absolute fact.",
+      "suggested_fix": "Soften the statement to reflect medium confidence, such as 'It is our understanding that technological integration... may remain incomplete.'"
+    },
+    {
+      "severity": "medium",
+      "location": "Pricing Approach (Paragraph 1)",
+      "description": "The client's preference for a fixed-fee structure is a medium-confidence item, but it is stated as a definitive fact with strong wording ('strong preference').",
+      "suggested_fix": "Soften the wording to 'We understand Northwind Logistics may prefer a fixed-fee structure...' or 'To align with what we understand is a preference for predictable costs...'"
+    }
+  ],
+  "risks": [
+    "The internal misalignment between the VP Ops (incremental change) and the CTO (full rebuild) poses a significant risk to the Q3 deadline and fixed-fee structure if a full rebuild is ultimately mandated during discovery.",
+    "The competitive nature of the engagement (two other firms) means any perceived bias toward one stakeholder's approach (e.g., omitting the CTO's name) could result in losing the bid."
+  ],
+  "recommendation": "revise"
+}

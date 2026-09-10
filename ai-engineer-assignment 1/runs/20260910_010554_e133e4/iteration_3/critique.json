@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Executive Summary",
+      "description": "The proposal includes fabricated company metrics and client references not found in the Client Matrix, specifically '40% growth', '600 contracted drivers', '40 dispatchers', and a past engagement with 'Cascade Freight'. Presenting hallucinated facts would severely damage the firm's credibility.",
+      "suggested_fix": "Remove all hallucinated metrics and peer references. Restrict the background information strictly to the facts provided in the Client Matrix."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding",
+      "description": "The proposal invents specific technologies for the client's stack ('Rails 5', 'Sales Cloud', 'NetSuite', 'React Native') that are not mentioned in the Client Matrix.",
+      "suggested_fix": "Replace the hallucinated technology names with the exact terms used in the matrix (e.g., 'custom dispatch tool', 'Salesforce', 'driver mobile app')."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal fabricates a past engagement pricing benchmark ('$150,000 to $250,000' for a peer freight brokerage) which is not supported by the Client Matrix.",
+      "suggested_fix": "Remove the fabricated pricing benchmark. Keep the focus on the CFO's requirement for a fixed-fee, milestone-based structure, noting that final pricing will be determined once the budget and scope contradictions are resolved."
+    },
+    {
+      "severity": "medium",
+      "location": "Executive Summary & Phases & Timeline",
+      "description": "Committing to a definitive '6-month Phase 1 engagement' may inadvertently conflict with the unresolved Q3 vs Q4 pilot timeline contradiction correctly identified in the Open Questions section.",
+      "suggested_fix": "Soften the language around the 6-month timeline. Indicate that the exact duration and phase timing will be finalized once the pilot timeline and core technical approach are agreed upon by the leadership team."
+    }
+  ],
+  "risks": [
+    "The inclusion of hallucinated data (metrics, tech stack, past clients, pricing) poses a massive risk to the firm's reputation if this draft were to reach the client.",
+    "There is deep internal misalignment within the client's leadership team regarding the budget cap, technical approach, and timeline. These must be resolved before a binding Statement of Work can be drafted."
+  ],
+  "recommendation": "revise"
+}

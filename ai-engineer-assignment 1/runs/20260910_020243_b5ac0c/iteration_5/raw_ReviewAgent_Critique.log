@@ -1,0 +1,239 @@
+=== PROMPT ===
+Please critique the following proposal.
+
+CLIENT MATRIX: 
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is significantly delayed on invoicing due to data discrepancies.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The engagement should be structured with a fixed fee and milestone-based payments.",
+        "confidence": "high",
+        "source_excerpt": "fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project must free up $1.4M in working capital currently stuck in unbilled receivables.",
+        "confidence": "medium",
+        "source_excerpt": "frees up about $1.4M in working capital",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The operational improvements should save $320k by avoiding the need to hire additional dispatchers.",
+        "confidence": "medium",
+        "source_excerpt": "we don't need to hire four additional dispatchers next year",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is disagreement on the approved budget cap for the Phase 1 engagement.",
+        "confidence": "contradicted",
+        "source_excerpt": "the budget I approved is $300,000",
+        "contradiction_note": "CFO Rita insists on a hard $300k cap, while VP Ops Sarah believed they had a $250k to $400k range."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The legacy Routemaster platform has severe technical debt, making feature development extremely slow and fragile.",
+        "confidence": "high",
+        "source_excerpt": "Technical debt in Routemaster. We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The company needs to decide whether to replace the legacy platform with SaaS or fix existing workflows.",
+        "confidence": "contradicted",
+        "source_excerpt": "I think this is a platform problem.",
+        "contradiction_note": "CTO Marcus wants to replace the platform entirely with a SaaS product, while VP Ops Sarah wants to fix workflows on the existing platform."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A majority of the workflow logic built in Phase 1 must be portable to a future platform.",
+        "confidence": "medium",
+        "source_excerpt": "60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Previous internal attempts to fix the workflow issues have failed, raising skepticism about this project's viability.",
+        "confidence": "medium",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers suffer from excessive manual double-entry between the dispatch tool and Salesforce.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The custom mobile app is highly unpopular with the contracted drivers.",
+        "confidence": "medium",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The company wants to significantly reduce the time it takes to dispatch each load.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The invoicing process must return to an industry-standard Days Sales Outstanding (DSO).",
+        "confidence": "medium",
+        "source_excerpt": "return to five-day DSO from where we are now",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Any changes to the driver app must be carefully coordinated with upcoming ELD compliance updates.",
+        "confidence": "medium",
+        "source_excerpt": "If we're going to touch the driver app, the ELD work has to be coordinated.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Key stakeholders are fundamentally misaligned on the root cause of the company's operational issues.",
+        "confidence": "high",
+        "source_excerpt": "we don't agree on what the problem is.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The new workflow solutions must not interfere with the critical ELD compliance mandate.",
+        "confidence": "high",
+        "source_excerpt": "whatever we build needs to not get in the way of the compliance work.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The pilot must be in production by the end of Q3 to prevent budget reallocation.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is a dispute over whether a Q3 deadline is realistic or if it should be pushed to Q4.",
+        "confidence": "contradicted",
+        "source_excerpt": "Q3 was your commitment, not mine. I never agreed to Q3.",
+        "contradiction_note": "CFO Rita and VP Ops Sarah mandate a Q3 deadline to secure funding, but CTO Marcus believes Q4 is required and refuses to commit to Q3."
+      },
+      {
+        "statement": "Failure to meet the November ELD deadline could result in severe regulatory penalties.",
+        "confidence": "medium",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}
+
+PROPOSAL DRAFT: 
+# Executive Summary
+
+Northwind Logistics has experienced impressive growth, but this rapid scaling has outpaced the current technical infrastructure. Today, operational friction between your custom dispatch tool and Salesforce is forcing manual double-entry, frustrating your dispatchers, and alienating your contracted drivers. More critically, data discrepancies have left Finance 3 weeks behind on invoicing. 
+
+We propose a targeted, 6-month Phase 1 engagement to streamline these workflows. By bridging the gaps between your legacy systems, our goal is to return Northwind to a five-day Days Sales Outstanding (DSO)—freeing up approximately $1.4M in trapped working capital—and generate $320k in operational savings by avoiding the need to hire four additional dispatchers next year. We will deliver this while ensuring that all technical interventions strictly coordinate with your critical November ELD compliance mandate.
+
+# Understanding
+
+Based on our conversations with Northwind leadership, we understand the current landscape and your strategic objectives:
+
+*   **Operational & Financial Pain:** Dispatchers are losing significant time to manual data entry between Routemaster and Salesforce. Because this data frequently fails to align, Finance is 3 weeks behind on invoicing. 
+*   **Technical Context:** The legacy Routemaster platform carries severe technical debt, making feature development fragile and slow. Furthermore, the custom driver app is currently highly unpopular with drivers. Internal attempts to resolve these workflow issues have been tried twice previously and failed, underscoring the complexity of the challenge.
+*   **Compliance Imperative:** A federal ELD mandate update is due in November. Failure to meet this deadline risks severe regulatory penalties, including fines and the potential loss of operating authority in certain states. Any changes to the driver app must be carefully coordinated with this compliance effort.
+*   **Success Criteria:** The engagement aims to achieve a 30% reduction in dispatch time per load, return the business to a five-day DSO, and ensure that 60–70% of the workflow logic built during Phase 1 remains portable to any future platform architecture. Finally, we understand there is a strong funding constraint tied to launching a pilot into production by the end of Q3 to prevent the reallocation of project funding. However, we acknowledge that the engineering feasibility of this target is currently under evaluation, and finalizing this timeline is a key priority for our initial alignment.
+
+# Approach
+
+Our approach is designed to deliver rapid operational relief while safeguarding your long-term technical investments and regulatory standing.
+
+1.  **Workflow & Data Synchronization:** We will focus strictly on eliminating the manual double-entry between Salesforce and Routemaster. By establishing reliable data pipelines, we will ensure that Finance receives accurate, timely data for invoicing.
+2.  **Portable Architecture:** Recognizing the fragility of the current codebase, we will build integration logic externally wherever possible. This guarantees that 60–70% of our Phase 1 deliverables will survive and provide value even if Northwind transitions to a new platform in the future.
+3.  **Compliance-First Driver App Updates:** We will ring-fence the ELD compliance work. Any workflow improvements touching the driver mobile app will be mapped explicitly against compliance requirements to ensure zero interference with the November mandate.
+4.  **Milestone-Driven Delivery:** Given the history of internal project stalls, we will structure our delivery around concrete, verifiable milestones. This de-risks the engagement and provides transparent progress tracking for executive sponsors.
+
+# Phases & Timeline
+
+We propose a 6-month Phase 1 engagement, structured to target your funding requirements and the November compliance mandate:
+
+*   **Phase 1A: Discovery & Alignment (Weeks 1–4)**
+    *   Map data discrepancies between Routemaster, Salesforce, and finance systems.
+    *   Audit the driver app architecture to isolate ELD compliance dependencies.
+*   **Phase 1B: Workflow MVP & Integration (Weeks 5–12)**
+    *   Deploy automated data synchronization between dispatch and CRM.
+    *   Target the 30% reduction in dispatch time through UI/workflow adjustments.
+*   **Phase 1C: Target Pilot Launch (Timing TBD)**
+    *   Release the initial workflow improvements into production. We acknowledge the Q3 funding constraint, but the exact target pilot launch date remains dependent on resolving the engineering feasibility dispute outlined in our Open Questions.
+*   **Phase 1D: Financial Reconciliation & ELD Readiness (Weeks 13–24)**
+    *   Stabilize the invoicing data pipeline to drive toward the five-day DSO target.
+    *   Finalize coordination with the November ELD compliance rollout.
+
+# Pricing Approach
+
+Northwind has expressed a strong preference for a fixed-fee structure with milestone-based payments. We fully support this model, as it aligns our financial incentives with your operational outcomes. 
+
+For this 6-month Phase 1 scope, we will structure the final proposal as a hard fixed fee tied to the specific deliverables outlined in the Phases & Timeline section. The final price will be determined once the budget cap is clarified in the Open Questions below.
+
+# Open Questions
+
+To finalize the scope and provide a binding fixed-fee quote, we must first address three areas where we have identified internal misalignment among Northwind stakeholders:
+
+1.  **Budget Cap Clarification:** There is currently disagreement regarding the approved budget for this Phase 1 engagement. We need to confirm whether there is a strict hard cap of $300,000 (as indicated by Finance) or if the budget extends up to a $400,000 range (as indicated by Operations).
+2.  **Long-Term Platform Strategy:** Stakeholders are fundamentally misaligned on the root cause of the operational issues. Specifically, we need a unified decision on whether the ultimate goal is to replace the legacy Routemaster platform entirely with a SaaS product, or to permanently fix the workflows within the existing proprietary system.
+3.  **Timeline Feasibility:** While Operations and Finance have mandated that a pilot must be in production by the end of Q3 to secure funding, Engineering has indicated that Q3 may be unrealistic and prefers a Q4 target. We must align on a unified, realistic release date before finalizing the project schedule.
+
+
+=== RESPONSE ===
+{
+  "issues": [
+    {
+      "severity": "low",
+      "location": "Understanding, Bullet 2 (Technical Context)",
+      "description": "The phrasing 'Internal attempts to resolve these workflow issues have been tried twice previously and failed' is slightly redundant and clunky.",
+      "suggested_fix": "Revise to 'Internal attempts to resolve these workflow issues have failed twice previously, underscoring the complexity of the challenge.'"
+    },
+    {
+      "severity": "medium",
+      "location": "Pricing Approach",
+      "description": "The proposal states that the final price will be determined once the budget cap is clarified, but it misses an opportunity to explicitly reassure the client that the scope will be tailored to fit whichever budget cap is ultimately approved.",
+      "suggested_fix": "Add a sentence stating: 'We are committed to tailoring the final scope of Phase 1 to fit within your finalized and approved budget constraints, ensuring maximum value delivery regardless of the final cap.'"
+    }
+  ],
+  "risks": [
+    "Severe internal misalignment among Northwind's leadership regarding budget, timeline, and core platform strategy poses a major risk. If these Open Questions are not definitively resolved prior to signing, the engagement is highly likely to stall, mirroring the fate of their previous internal attempts.",
+    "The tight dependency between the proposed workflow improvements and the strict November ELD compliance mandate means that any delays caused by the ongoing Q3 vs. Q4 timeline dispute could jeopardize regulatory compliance, risking severe penalties."
+  ],
+  "recommendation": "approve"
+}

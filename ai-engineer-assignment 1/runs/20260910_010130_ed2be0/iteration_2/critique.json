@@ -1,0 +1,34 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal explicitly states the internal disagreement over the budget ceiling as a resolved fact ('addresses the internal disagreement over the budget ceiling'). Contradicted items must not be stated as facts or used as justification in the pricing section, as this could embarrass stakeholders.",
+      "suggested_fix": "Remove the mention of the internal budget disagreement from the Pricing Approach. Move the budget cap clarification to the 'Open Questions' section to facilitate alignment between the CFO and VP of Ops."
+    },
+    {
+      "severity": "critical",
+      "location": "Executive Summary & Phases & Timeline",
+      "description": "The proposal guarantees a Q3 delivery ('Guaranteed Q3 Delivery', 'We commit to delivering a production pilot by September 30'). The Q3 timeline is a contradicted item in the Client Matrix (the CTO believes Q4 is more realistic). Stating it as a guaranteed fact ignores the technical buyer's concerns.",
+      "suggested_fix": "Change 'Guaranteed Q3 Delivery' to 'Targeted Q3 Delivery' and add the Q3 vs. Q4 timeline feasibility to the 'Open Questions' section to ensure the CTO, CFO, and VP of Ops are aligned before committing."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding (Business & Operational Context)",
+      "description": "The proposal fails to mention the severe consequence of missing the November ELD deadline, which is the potential loss of operating authority and fines. Omitting this misses the existential urgency of the compliance work.",
+      "suggested_fix": "Explicitly state in the Operational Context that any delay or conflict with the ELD mandate risks fines and the loss of operating authority in certain states."
+    },
+    {
+      "severity": "medium",
+      "location": "Executive Summary / Pricing Approach",
+      "description": "The proposal does not explicitly address the CFO's known skepticism of consulting engagements due to past bad experiences, nor does it acknowledge the competitive nature of the bid.",
+      "suggested_fix": "Add a brief statement emphasizing that the milestone-based, fixed-fee structure is specifically designed to provide absolute transparency, accountability, and de-risk the engagement to rebuild trust in external partnerships."
+    }
+  ],
+  "risks": [
+    "Committing to a guaranteed Q3 timeline without CTO buy-in risks alienating the technical buyer and setting the engagement up for failure if Q4 is indeed the realistic timeline.",
+    "Airing internal stakeholder disagreements (like the budget cap discrepancy) in the pricing section is highly unprofessional and risks embarrassing the client sponsors.",
+    "Failing to highlight the existential risk of losing operating authority makes the firm appear disconnected from the true regulatory stakes of the project."
+  ],
+  "recommendation": "revise"
+}

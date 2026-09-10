@@ -1,0 +1,1 @@
+Now focus and solve these 2 issues again make sure to not make anyother changes in the porposal by you self

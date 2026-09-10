@@ -1,0 +1,6 @@
+{
+  "directives": [
+    "Conduct a comprehensive proofread of the entire proposal to identify and correct any spelling, grammatical, or typographical errors, as the human feedback ('fix thses') suggests there may be overlooked typos.",
+    "If the vague feedback ('fix these') is a request to resolve the contradictions currently listed in the Open Questions section (Budget Cap, Core Technical Approach, and Pilot Timeline), do not silently pick a side or override the conflicting stakeholder requirements. Instead, maintain these items in the Open Questions section and add a clear recommendation to schedule a joint alignment meeting with the CFO, CTO, and VP of Operations to formally resolve them."
+  ]
+}

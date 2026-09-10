@@ -1,0 +1,266 @@
+=== PROMPT ===
+Evaluate the following Proposal based on the provided Client Matrix.
+
+=== CLIENT MATRIX ===
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is significantly delayed on invoicing due to data misalignment.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The company wants to return to an industry-standard Days Sales Outstanding (DSO).",
+        "confidence": "high",
+        "source_excerpt": "return to five-day DSO from where we are now",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The CFO requires a fixed-fee engagement with milestone-based payments.",
+        "confidence": "high",
+        "source_excerpt": "fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Free up $1.4M in working capital currently stuck in unbilled receivables.",
+        "confidence": "high",
+        "source_excerpt": "frees up about $1.4M in working capital that's currently stuck",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Avoid hiring four additional dispatchers next year, saving $320k.",
+        "confidence": "high",
+        "source_excerpt": "we don't need to hire four additional dispatchers next year, which is about $320k",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is disagreement on the approved budget for Phase 1.",
+        "confidence": "contradicted",
+        "source_excerpt": "the budget I approved is $300,000. That's the cap.",
+        "contradiction_note": "Rita insists the cap is $300k, while Sarah claims they discussed a $250k to $400k range."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The custom dispatch tool is old and at the end of its useful life.",
+        "confidence": "high",
+        "source_excerpt": "Routemaster is seven years old... and it's at the end of its useful life.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Technical debt prevents the engineering team from shipping features quickly.",
+        "confidence": "high",
+        "source_excerpt": "We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The CTO wants to replace the custom dispatch tool with a full SaaS platform.",
+        "confidence": "medium",
+        "source_excerpt": "replace Routemaster with a SaaS platform",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A majority of the Phase 1 workflow logic must survive a future platform change.",
+        "confidence": "medium",
+        "source_excerpt": "60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Stakeholders disagree on whether the core issue is a workflow problem or a platform problem.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem.",
+        "contradiction_note": "Sarah wants to fix specific operational workflows, while Marcus believes the underlying platform must be replaced."
+      },
+      {
+        "statement": "Previous internal attempts to fix the workflow issues have failed.",
+        "confidence": "high",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers suffer from excessive manual data entry between systems.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers are highly dissatisfied with the current mobile application.",
+        "confidence": "high",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Fix dispatcher double-entry, the driver app, and invoicing incrementally.",
+        "confidence": "high",
+        "source_excerpt": "fix three specific operational pain points... incrementally",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieve a 30% reduction in dispatch time per load.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Touching the driver app may conflict with upcoming ELD compliance work.",
+        "confidence": "high",
+        "source_excerpt": "If we're going to touch the driver app, the ELD work has to be coordinated.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Technology integration from recent company acquisitions remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The business requires a pilot in production by the end of Q3.",
+        "confidence": "high",
+        "source_excerpt": "Pilot in production by end of Q3 (Sept 30).",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Meet the November ELD compliance deadline to maintain operating authority.",
+        "confidence": "high",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is disagreement on the feasibility of the Q3 pilot deadline.",
+        "confidence": "contradicted",
+        "source_excerpt": "Q3 was your commitment, not mine. I never agreed to Q3.",
+        "contradiction_note": "Sarah and Rita require a Q3 pilot for budget reasons, but Marcus believes Q4 is more realistic."
+      },
+      {
+        "statement": "The details of the ELD compliance mandate are currently unclear to the consulting team.",
+        "confidence": "high",
+        "source_excerpt": "I need to learn more about the ELD work before I can speak to that.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}
+
+=== PROPOSAL ===
+# Executive Summary
+
+Northwind Logistics has experienced impressive growth, expanding by 40% in 2024 through organic scaling and strategic acquisitions. However, the operational systems supporting this growth have not kept pace. Dispatchers are burdened by manual data entry, drivers are frustrated with an aging mobile application, and Finance is currently three weeks behind on invoicing due to persistent data misalignment. 
+
+This engagement will focus on eliminating these operational bottlenecks. By streamlining the workflows between your dispatch tools, CRM, and accounting systems, our goal is to free up approximately $1.4M in working capital currently trapped in unbilled receivables and return Northwind to an industry-standard five-day Days Sales Outstanding (DSO). Furthermore, optimizing these processes is projected to save $320,000 next year by eliminating the need to hire four additional dispatchers. We propose a targeted Phase 1 engagement to incrementally resolve these immediate pain points while laying a resilient foundation for Northwind's future technology stack.
+
+# Understanding
+
+Based on our discussions, we recognize that Northwind Logistics operates a complex environment of ~200 employees, 40 dispatchers, and ~600 contracted drivers, generating ~$85M in annual revenue. 
+
+Your current technology ecosystem includes:
+*   **Dispatch:** Routemaster (a custom Rails 5 application, seven years old and at the end of its useful life)
+*   **CRM:** Salesforce (Sales Cloud)
+*   **Accounting:** NetSuite
+*   **Driver Mobile App:** Custom React Native application (last updated in 2023)
+*   **BI/Data:** Excel exports from Salesforce (no centralized data warehouse)
+*   **TMS:** Currently evaluating external vendors
+
+**Key Pain Points & Business Drivers:**
+*   **Financial Delays:** Data misalignment between systems has left Finance three weeks behind on invoicing.
+*   **Operational Inefficiencies:** Dispatchers suffer from excessive manual double-entry between Routemaster and Salesforce. Technology integration from recent acquisitions remains incomplete.
+*   **User Dissatisfaction:** Drivers are highly dissatisfied with the current mobile application.
+*   **Technical Debt:** The fragile codebase of the legacy dispatch tool prevents the engineering team from shipping features quickly. Past internal attempts to resolve these workflow issues have failed.
+*   **Compliance:** An upcoming November ELD compliance deadline is critical; failure to meet it risks fines or the loss of operating authority in certain states.
+
+**Success Criteria for Phase 1:**
+*   Achieve a 30% reduction in dispatch time per load.
+*   Return to a five-day DSO.
+*   Ensure 60-70% of the Phase 1 workflow logic survives a future SaaS platform change.
+
+# Approach
+
+Our approach balances immediate operational relief with responsible, long-term technical architecture. Rather than executing a massive "rip-and-replace" of your systems, we will focus on incremental modernization to address your three primary pain points: dispatcher double-entry, driver app usability, and invoicing data alignment.
+
+1.  **Data Harmonization:** We will map the data models across Salesforce, Routemaster, and NetSuite to establish a single source of truth for load and billing data. This will directly address the data misalignment causing the three-week invoicing delay.
+2.  **Workflow Automation:** We will build resilient integrations to automate the data flow between dispatch and CRM. This eliminates the manual double-entry for dispatchers, directly driving the targeted 30% reduction in dispatch time per load.
+3.  **Future-Proof Design:** Knowing that the CTO intends to eventually replace Routemaster with a SaaS platform, we will decouple the integration logic where possible. We will architect the middleware and data flows so that the targeted 60-70% of our Phase 1 work remains viable and easily adaptable when the core dispatch platform is swapped out.
+
+# Phases & Timeline
+
+We recommend a structured Phase 1 engagement to deliver measurable value quickly. 
+
+*   **Phase 1A: Discovery & Alignment (Weeks 1-3)**
+    *   Map existing workflows across Routemaster, Salesforce, and NetSuite.
+    *   Identify specific points of data failure causing invoicing delays.
+    *   Finalize technical architecture for workflow automation.
+*   **Phase 1B: Incremental Build & Integration (Weeks 4-10)**
+    *   Develop automated data syncs between dispatch and CRM.
+    *   Implement targeted usability updates to the React Native driver app.
+*   **Phase 1C: Testing, Pilot & Rollout (Weeks 11-14)**
+    *   End-to-end testing of the invoicing data flow into NetSuite.
+    *   Deploy the pilot to a subset of dispatchers and drivers.
+
+*Note: The business has expressed a strong desire for a pilot in production by the end of Q3 (Sept 30). Final timeline commitments will be established once we resolve the scheduling and scope dependencies detailed in the Open Questions section below.*
+
+# Pricing Approach
+
+In alignment with the CFO's requirements, we propose a **fixed-fee engagement with milestone-based payments**. This structure transfers delivery risk to us and ensures that Northwind only pays for realized outcomes (e.g., completion of discovery, successful data sync into NetSuite, pilot launch).
+
+Based on our recent experience delivering a similar 3-month discovery and MVP build for a peer freight brokerage (which required a comparable team size of four consultants/engineers), we anticipate the cost for this Phase 1 engagement will fall within a **price band of $150,000 to $250,000**. 
+
+We will provide a finalized, exact fixed-fee quote once we have aligned on the open questions below.
+
+# Open Questions
+
+To ensure absolute alignment and a successful engagement, we must resolve a few critical discrepancies and unknowns before finalizing the Statement of Work:
+
+1.  **Budget Alignment:** We noted a discrepancy regarding the approved budget for Phase 1. Sarah Chen indicated a potential range of $250,000 to $400,000, whereas Rita Donovan stated a hard cap of $300,000. We need to confirm the exact authorized budget ceiling to appropriately scope the fixed-fee milestones.
+2.  **Core Issue Definition (Workflow vs. Platform):** There is internal disagreement on the fundamental nature of the problem. Sarah views this as an operational workflow issue that can be fixed incrementally, while Marcus Patel believes the underlying platform (Routemaster) is the core issue and must be fully replaced. We must precisely define the boundary of Phase 1 to ensure we are solving the immediate operational pain without violating the CTO's long-term architectural vision.
+3.  **Pilot Timeline Feasibility:** While Sarah and Rita require a pilot in production by the end of Q3 for budget reasons, Marcus has indicated that Q4 is a more realistic technical timeline. We need cross-functional agreement on a realistic deployment date before committing to a schedule.
+4.  **ELD Compliance & Driver App Conflicts:** The details of the upcoming federal ELD mandate update are currently unclear to our team. Furthermore, we recognize a high-confidence risk that touching the driver app may conflict with this upcoming ELD compliance work. We must schedule a deep-dive with Rajiv Mehta (Head of Compliance) to thoroughly understand the ELD requirements and ensure our driver app updates do not jeopardize Northwind's operating authority.
+
+Check three things:
+1. Are the required sections present? (Executive Summary, Understanding, Approach, Phases & Timeline, Pricing Approach, Open Questions)
+2. Does the proposal address every 'high' confidence matrix item somewhere?
+3. Are all 'contradicted' or 'low' confidence items placed explicitly in the 'Open Questions' section?
+
+Output 'PASS' if all three are met, or 'FAIL' if any are violated, followed by a brief explanation.
+
+=== RESPONSE ===
+PASS
+
+**Explanation:**
+1. **Required Sections:** All six required sections are present (Executive Summary, Understanding, Approach, Phases & Timeline, Pricing Approach, Open Questions).
+2. **High Confidence Items:** Every 'high' confidence item from the Client Matrix is addressed in the proposal (e.g., the $1.4M working capital, the 3-week finance delay, the $320k savings, the fixed-fee structure, the 30% dispatch time reduction, the Q3 pilot goal, the ELD compliance deadline, and the previous failed internal attempts). 
+3. **Contradicted/Low Confidence Items:** All three 'contradicted' items (budget discrepancy, workflow vs. platform disagreement, and Q3 pilot timeline feasibility) are explicitly called out and isolated in the "Open Questions" section to be resolved before finalizing the Statement of Work. (There were no 'low' confidence items in the matrix).

@@ -1,0 +1,167 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to data discrepancies.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Delayed invoicing is causing a significant cash flow problem.",
+        "confidence": "high",
+        "source_excerpt": "Three weeks of revenue we should have invoiced is just sitting there.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client prefers a fixed-fee structure with milestone payments.",
+        "confidence": "medium",
+        "source_excerpt": "Strong preference for fixed-fee with milestone payments over T&M.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "A pilot must be in production by the end of Q3.",
+        "confidence": "high",
+        "source_excerpt": "Pilot in production by end of Q3 (Sept 30).",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce days-sales-outstanding to the industry standard of five days.",
+        "confidence": "high",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The project should pay for itself by avoiding future headcount hires.",
+        "confidence": "medium",
+        "source_excerpt": "pays for itself in headcount we don't have to hire next year.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is skeptical of vendors and will pull funding if Q3 deadlines are missed.",
+        "confidence": "high",
+        "source_excerpt": "Otherwise the funding gets pulled into other projects.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The engagement is competitive, with two other firms in consideration.",
+        "confidence": "high",
+        "source_excerpt": "This is a competitive engagement — they are also talking to two other firms.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers must manually enter data across three disconnected systems.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The driver mobile app lacks essential features like photo uploads and messaging.",
+        "confidence": "high",
+        "source_excerpt": "They can't take photos, they can't flag issues, they can't message the dispatcher.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The technical approach should focus on incremental change rather than a full system rebuild.",
+        "confidence": "contradicted",
+        "source_excerpt": "incremental change instead of a full rebuild.",
+        "contradiction_note": "VP Ops Sarah Chen wants incremental change to meet the 6-month timeline, but CTO Marcus Patel has been pushing for a full rebuild of the dispatch tool."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The solution must avoid creating new compliance work for the ELD mandate.",
+        "confidence": "medium",
+        "source_excerpt": "avoid creating new compliance work for him",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Technical integration from two recent acquisitions remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend hours on the phone because the driver app is inadequate.",
+        "confidence": "high",
+        "source_excerpt": "spend two to three hours a day on the phone with drivers",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Finance staff are overwhelmed doing manual detective work to reconcile invoices.",
+        "confidence": "high",
+        "source_excerpt": "They have one person doing it full-time and she's drowning.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Fixing the invoicing reconciliation is the highest priority, followed by dispatcher workflow.",
+        "confidence": "high",
+        "source_excerpt": "invoicing is the bleeding wound. We need to fix that first.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce average dispatch time per load from twelve minutes to eight minutes.",
+        "confidence": "high",
+        "source_excerpt": "average dispatcher takes about twelve minutes... get that to eight minutes",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "An upcoming federal ELD compliance mandate in November could impact operations.",
+        "confidence": "medium",
+        "source_excerpt": "ELD compliance deadline in November — federal mandate update.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [],
+    "desired_state": [
+      {
+        "statement": "Start with a smaller Phase 1 engagement to prove value and earn future phases.",
+        "confidence": "medium",
+        "source_excerpt": "I'd rather come in at the lower end and earn the next phase",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Leverage the consulting firm's past experience with a peer brokerage to ensure success.",
+        "confidence": "medium",
+        "source_excerpt": "because we did similar work for a peer brokerage (Cascade Freight)",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Rapid 40% growth via acquisitions has created organizational and technical debt.",
+        "confidence": "medium",
+        "source_excerpt": "Northwind grew 40% in 2024 by acquiring two smaller brokerages.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "In the 'Approach' section, remove the phrase 'deferring larger, riskier architectural overhauls to subsequent phases' and replace it with a statement that the approach remains architecture-agnostic for the Q3 pilot.",
+    "In the 'Phases & Timeline' section under 'Phase 1A', add a specific bullet point stating that this phase will be used to evaluate and finalize the decision between iterating on the existing dispatch tool or starting a new build.",
+    "In the 'Phases & Timeline' introduction, remove the phrase '6-month' from 'rapid, 6-month Phase 1 engagement'.",
+    "In 'Phase 1D', change the timeline in the heading from '(Post-Q3 to Month 6)' to simply '(Post-Q3)' to eliminate the ambiguous 6-month timeline anchor.",
+    "Strictly limit your edits to addressing these two specific issues in the 'Approach' and 'Phases & Timeline' sections. Do not alter any other text, sections, pricing details, or formatting in the proposal."
+  ]
+}

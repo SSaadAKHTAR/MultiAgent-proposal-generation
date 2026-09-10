@@ -41,31 +41,36 @@ class ReviewAgent:
             prompt=prompt,
             schema=ReviewCritique,
             system_instruction=system_instruction,
-            model="gemini-3.1-pro-preview",
+            model="gemini-3.6-flash",
             agent_name="ReviewAgent_Critique"
         )
         
-    def translate(self, human_feedback: str, proposal_text: str, matrix: ClientMatrix) -> TranslatedFeedback:
+    def translate(self, human_feedback: str, proposal_text: str, matrix: ClientMatrix, critique: ReviewCritique) -> TranslatedFeedback:
         matrix_json = matrix.model_dump_json(indent=2)
+        critique_json = critique.model_dump_json(indent=2)
         
         prompt = (
             f"HUMAN FEEDBACK: \n{human_feedback}\n\n"
+            f"AI CRITIQUE PROVIDED TO HUMAN: \n{critique_json}\n\n"
             f"PROPOSAL DRAFT: \n{proposal_text}\n\n"
             f"CLIENT MATRIX: \n{matrix_json}\n\n"
-            "Translate the human feedback into actionable directives."
+            "Synthesize the AI Critique and the Human Feedback into a single, unified list of actionable directives."
         )
         
         system_instruction = (
-            "You are an expert Translation Agent. The human reviewer has provided free-text feedback on the current proposal.\n"
-            "Your job is to translate this raw human feedback into a structured list of clear, actionable directives "
-            "for the Proposal Agent to follow on the next iteration. Do NOT just pass the feedback through verbatim. "
-            "Interpret what it means in the context of the proposal and formulate explicit instructions.\n\n"
+            "You are an expert Synthesizer Agent. The AI Reviewer has provided a critique of the proposal, and the human reviewer has provided free-text feedback.\n"
+            "Your job is to consolidate BOTH the AI Critique and the Human Feedback into a single, unified list of clear, actionable directives "
+            "for the Proposal Agent to follow on the next iteration.\n\n"
+            "SYNTHESIS RULES:\n"
+            "1. The human has the final say. If the human explicitly tells you to ignore or override a specific AI critique, you MUST drop that critique and follow the human's instruction.\n"
+            "2. If the human says 'fix all critiques' or agrees with the AI, you must include directives to fix every issue raised in the AI Critique.\n"
+            "3. Do NOT just pass the feedback through verbatim. Interpret what it means and formulate explicit instructions.\n\n"
             "DIRECTIVE QUALITY BAR: Each directive must be specific enough that the Proposal Agent can act on it "
-            "without re-reading the human's original wording. For example, 'fix the pricing' is not acceptable; "
+            "without re-reading the original wording. For example, 'fix the pricing' is not acceptable; "
             "'Replace the price range in Pricing Approach with a single fixed number, using the midpoint of the "
-            "current range unless the Client Matrix or feedback specifies otherwise' is.\n\n"
-            "CONFLICT HANDLING: If the feedback contradicts a 'high'-confidence item in the Client Matrix, or asks "
-            "for something infeasible given the intake, do not silently comply. Write a directive that flags the "
+            "current range' is.\n\n"
+            "CONFLICT HANDLING: If the human feedback contradicts a 'high'-confidence item in the Client Matrix, or asks "
+            "for something infeasible given the intake, write a directive that flags the "
             "conflict explicitly (e.g., 'Note in Open Questions that the client's ask for X conflicts with the "
             "confirmed budget of Y') rather than quietly overriding a confirmed fact."
         )
@@ -74,6 +79,6 @@ class ReviewAgent:
             prompt=prompt,
             schema=TranslatedFeedback,
             system_instruction=system_instruction,
-            model="gemini-3.1-pro-preview",
+            model="gemini-3.6-flash",
             agent_name="ReviewAgent_Translate"
         )

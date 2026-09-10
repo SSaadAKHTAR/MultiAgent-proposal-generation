@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal commits to keeping the fixed-fee cost strictly under the $300,000 hard cap, treating a contradicted item as a fact. This directly conflicts with the Open Questions section and the Client Matrix, which notes disagreement on the budget cap between the CFO and VP Ops.",
+      "suggested_fix": "Remove the commitment to the $300,000 hard cap in the Pricing Approach. State that the final fixed fee will be determined once the budget range is clarified in the Open Questions."
+    },
+    {
+      "severity": "critical",
+      "location": "Understanding and Phases & Timeline",
+      "description": "The proposal states the Q3 deadline as an absolute necessity and schedules Phase 1C for the end of Q3, taking sides against the CTO who believes Q4 is required. Contradicted items must not be stated as confident facts or hard commitments.",
+      "suggested_fix": "Soften the language in the Understanding and Phases sections. Acknowledge the Q3 funding constraint but state that the target pilot launch date is dependent on resolving the engineering feasibility dispute outlined in the Open Questions."
+    }
+  ],
+  "risks": [
+    "Taking sides in internal stakeholder disputes (CFO/Ops vs CTO on timeline, CFO vs Ops on budget) risks alienating key decision-makers before the project even begins.",
+    "Committing to a $300k cap for a 6-month engagement while acknowledging a 3-month MVP costs $150k-$250k may severely squeeze margins or compromise delivery quality."
+  ],
+  "recommendation": "revise"
+}

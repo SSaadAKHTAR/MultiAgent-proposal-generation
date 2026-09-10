@@ -1,0 +1,249 @@
+=== PROMPT ===
+Please critique the following proposal.
+
+CLIENT MATRIX: 
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is significantly delayed on invoicing due to data discrepancies.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client wants a fixed-fee engagement with milestone-based payments.",
+        "confidence": "high",
+        "source_excerpt": "fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project should free up $1.4M in working capital by improving DSO.",
+        "confidence": "medium",
+        "source_excerpt": "frees up about $1.4M in working capital that's currently stuck in unbilled receivables.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Reduce dispatch time to avoid hiring four additional dispatchers, saving $320k.",
+        "confidence": "medium",
+        "source_excerpt": "we don't need to hire four additional dispatchers next year, which is about $320k",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is disagreement on the approved budget for the Phase 1 engagement.",
+        "confidence": "contradicted",
+        "source_excerpt": "I approved a six-month engagement up to $300k.",
+        "contradiction_note": "Rita states the cap is $300k, while Sarah claims they discussed a $250k to $400k range."
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The custom dispatch tool is old and has severe technical debt.",
+        "confidence": "medium",
+        "source_excerpt": "We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers are highly dissatisfied with the current mobile app.",
+        "confidence": "medium",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "There is disagreement on whether to fix the current workflows or replace the entire platform.",
+        "confidence": "contradicted",
+        "source_excerpt": "Sarah thinks this is a workflow problem. I think this is a platform problem.",
+        "contradiction_note": "Sarah wants to fix workflows incrementally, while Marcus wants to replace Routemaster entirely with a SaaS platform."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A majority of the Phase 1 workflow logic should survive a future platform change.",
+        "confidence": "low",
+        "source_excerpt": "I'd estimate 60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Previous internal attempts to fix the workflow issues have failed.",
+        "confidence": "medium",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers suffer from excessive manual double-entry between systems.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Resolve the upstream dispatcher workflow to fix downstream invoicing data.",
+        "confidence": "medium",
+        "source_excerpt": "dispatcher workflow because it's the upstream cause of the bad invoicing data.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Achieve a 30% reduction in dispatch time per load.",
+        "confidence": "high",
+        "source_excerpt": "a 30% reduction in dispatch time per load",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Changes to the driver app must coordinate with the upcoming ELD compliance mandate.",
+        "confidence": "medium",
+        "source_excerpt": "if we touch the driver app at all in Phase 2, we need to do it in a way that supports ELD.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Technology integration from recent company acquisitions remains unfinished.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "There is disagreement on the timeline for delivering the pilot.",
+        "confidence": "contradicted",
+        "source_excerpt": "Q3 was your commitment, not mine. I never agreed to Q3.",
+        "contradiction_note": "Sarah and Rita require a Q3 pilot for budget reasons, but Marcus believes Q4 is more realistic."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A pilot must be in production by the end of September to secure funding.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Missing the November ELD compliance deadline could result in losing operating authority.",
+        "confidence": "medium",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}
+
+PROPOSAL DRAFT: 
+# Northwind Logistics: Phase 1 Workflow & Integration Proposal
+
+## Executive Summary
+Northwind Logistics has expanded following recent acquisitions, but the underlying operational technology has not kept pace. Currently, excessive manual double-entry between your custom dispatch tool and Salesforce is severely bottlenecking your dispatchers and causing crippling downstream data discrepancies. As a result, finance is significantly delayed on invoicing, trapping approximately $1.4M in working working capital in unbilled receivables. 
+
+Based on our experience solving similar operational challenges, we propose a targeted, six-month Phase 1 engagement. Our primary objective is to streamline the upstream dispatcher workflow to resolve downstream invoicing delays. By achieving a target 30% reduction in dispatch time per load, Northwind can avoid hiring four additional dispatchers next year—yielding an estimated $320k in cost savings while accelerating cash flow. We understand the critical business requirement to target a production pilot by the end of Q3 (September 30) to secure project funding, and we will evaluate the technical feasibility of this timeline during our initial discovery phase to balance immediate operational relief with your long-term technical architecture.
+
+## Understanding
+Our understanding of Northwind’s current environment is based on conversations with your leadership team and an analysis of your operational metrics. 
+
+**Current State & Pain Points:**
+*   **Operational Friction:** Dispatchers are forced to manually bridge the gap between Salesforce and your custom dispatch tool. 
+*   **Invoicing Delays:** Because upstream data does not align, the invoicing system is delayed by up to three weeks.
+*   **Technical Debt:** The custom dispatch tool is old and has severe technical debt, preventing your engineering team from shipping new features. Previous internal attempts to resolve these workflow issues have failed twice.
+*   **Driver Dissatisfaction:** Your contracted drivers are highly dissatisfied with the current mobile app.
+*   **Incomplete Integration:** Technology integration from your two recent acquisitions remains unfinished, compounding workflow inefficiencies.
+*   **Compliance Risks:** A critical federal ELD compliance mandate is due in November. Missing this deadline could result in severe fines or the loss of operating authority in certain states.
+
+**Business Objectives:**
+*   Reduce dispatch time per load by 30%.
+*   Unlock ~$1.4M in working capital by eliminating data discrepancies and improving DSO (Days Sales Outstanding).
+*   Save ~$320k in planned headcount expansion by maximizing current dispatcher capacity.
+
+## Approach
+Our approach centers on solving the root cause of your data discrepancies: the upstream dispatcher workflow. Rather than treating the symptom in Finance, we will focus on eliminating the manual double-entry between Salesforce and the dispatch tool.
+
+1.  **Workflow Optimization & Data Alignment:** We will map the exact data discrepancies causing the three-week invoicing lag and build automated data flows between Salesforce and your custom dispatch tool to ensure the invoicing system receives clean, actionable billing data.
+2.  **Risk-Mitigated Execution:** Given that previous internal initiatives to fix this issue have stalled, we will deploy a dedicated team experienced in legacy custom dispatch tools and Salesforce integrations to ensure delivery without disrupting daily operations.
+3.  **Workflow Remediation:** We will focus exclusively on incrementally fixing the current custom dispatch tool workflows. By structuring our data models and workflow logic within the existing architecture, we ensure Phase 1 delivers immediate operational relief without introducing new technical debt.
+
+## Phases & Timeline
+We are proposing a six-month engagement for Phase 1, structured to hit your critical funding and compliance milestones:
+
+*   **Months 1-2: Discovery & Foundational Engineering**
+    *   Map the exact failure points between Salesforce, the custom dispatch tool, and the invoicing system.
+    *   Establish data validation rules to stop bad data from reaching Finance.
+*   **Month 3: Production Pilot**
+    *   Target the deployment of a functional pilot to a subset of dispatchers by the end of Q3 (September 30) to align with project funding requirements, pending technical feasibility validation during Discovery.
+    *   Validate the targeted 30% reduction in dispatch time per load.
+*   **Months 4-5: Broad Rollout & Invoicing Resolution**
+    *   Expand the workflow improvements to all dispatchers.
+    *   Monitor downstream impacts on the invoicing system to confirm the release of the $1.4M in trapped working capital.
+*   **Month 6: Phase 2 Planning & Handoff**
+    *   Finalize technical documentation.
+    *   Conduct Phase 2 Planning, which will include the strategy for driver app modifications and addressing ELD compliance requirements.
+
+## Pricing Approach
+To provide Northwind Logistics with budget predictability and mutual alignment on success, this entire six-month engagement will utilize a **single milestone-based fixed-fee structure**. 
+
+The total fixed fee for the project will be tied to the successful delivery of specific project milestones (e.g., launch of the Production Pilot and Final Rollout). This comprehensive pricing model is based on the defined scope of incrementally fixing the workflows within your current custom dispatch tool. This structure ensures our team is incentivized to deliver the business outcomes—specifically the workflow efficiencies and invoicing resolution—on schedule, while providing your finance team with complete budget certainty from day one.
+
+## Open Questions
+To finalize the statement of work and ensure complete alignment across Northwind’s leadership team, we need to resolve the following open items:
+
+*   **Phase 1 Budget Alignment:** We have received conflicting signals regarding the approved budget for this engagement. We need to clarify if the budget is capped at $300k, or if the approved range is between $250k and $400k, so we can scope the deliverables accordingly.
+*   **Pilot Timeline Feasibility Risk:** We understand the business requirement of targeting a pilot launch in Q3 (by end of September) to secure funding. However, we must manage the internal technical concerns that Q4 is a more realistic target. We will need to closely align engineering realities with this business requirement during Discovery to mitigate schedule risks.
+*   **System Evaluation Details:** We require an update on your current TMS evaluation processes to ensure our Phase 1 data models remain compatible with potential future platforms.
+
+
+=== RESPONSE ===
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Approach (Point 3) and Pricing Approach",
+      "description": "The proposal states as a definitive fact that the approach will focus exclusively on incrementally fixing the current custom dispatch tool workflows. However, the Client Matrix indicates a direct contradiction between stakeholders on whether to fix current workflows or replace the entire platform. Stating a contradicted item as a fact is a critical error.",
+      "suggested_fix": "Remove the definitive statements about exclusively fixing the current workflows. Frame the approach to evaluate the best path during discovery, and move the fix vs. replace debate to the Open Questions section."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions",
+      "description": "The contradiction regarding whether to fix the current workflows or replace the platform entirely is missing from the Open Questions section.",
+      "suggested_fix": "Add a bullet point in the Open Questions section addressing the internal disagreement between fixing the current workflows incrementally versus replacing the platform entirely."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions",
+      "description": "The low-confidence success criteria regarding 60-70 percent of Phase 1 workflow logic surviving a future platform change is missing from the Open Questions section. Low-confidence items must be clarified here.",
+      "suggested_fix": "Add a question to the Open Questions section to validate the expectation that a majority of Phase 1 workflow logic needs to survive a future platform change."
+    },
+    {
+      "severity": "low",
+      "location": "Executive Summary (Paragraph 1)",
+      "description": "There is a typo in the text: 'working working capital'.",
+      "suggested_fix": "Change 'working working capital' to 'working capital'."
+    }
+  ],
+  "risks": [
+    "The proposal takes a definitive stance on a highly contested internal debate regarding whether to fix or replace the platform, which could alienate the stakeholder advocating for a full replacement.",
+    "Multiple unresolved contradictions regarding budget, timeline, and platform strategy pose a significant risk to project scoping and successful delivery if not aligned immediately during discovery."
+  ],
+  "recommendation": "revise"
+}

@@ -38,10 +38,4 @@ class DebriefAgent:
             f"TRANSCRIPT: \n<untrusted_transcript>\n{transcript_text}\n</untrusted_transcript>\n"
         )
         
-        return self.llm.generate_structured(
-            prompt=prompt,
-            schema=ClientMatrix,
-            system_instruction=system_instruction,
-            model="gemini-3.1-pro-preview",
-            agent_name="DebriefAgent"
-        )
+        return self.llm.generate_structured(prompt=prompt, schema=ClientMatrix, system_instruction=system_instruction, model="gemini-3.1-pro-preview", agent_name="DebriefAgent")

@@ -1,7 +1,7 @@
 from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
-# --- Debrief Agent Schemas ---
+#  Debrief Agent Schemas ---
 
 class MatrixItem(BaseModel):
     statement: str = Field(..., description="The claim, 1-2 sentences.")
@@ -27,7 +27,7 @@ class ClientMatrix(BaseModel):
     operational: MatrixCategory
     strategic: MatrixCategory
 
-# --- Review Agent Schemas ---
+# Review Agent Schemas
 
 class Issue(BaseModel):
     severity: Literal["low", "medium", "high", "critical"]

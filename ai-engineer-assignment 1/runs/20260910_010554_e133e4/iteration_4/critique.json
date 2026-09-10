@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Executive Summary",
+      "description": "The proposal states that Northwind expanded by '40% in 2024'. This specific growth metric is not provided in the Client Matrix and is a hallucination.",
+      "suggested_fix": "Remove the specific '40% in 2024' metric and simply state that the company has experienced growth through strategic acquisitions."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding (Driver Experience) & Phases & Timeline (Phase 3)",
+      "description": "The proposal identifies the driver app as a 'custom React Native mobile application'. The specific technology stack (React Native) is not mentioned in the Client Matrix and is a hallucination.",
+      "suggested_fix": "Remove all references to 'React Native' and refer to it simply as the mobile application."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal references a past engagement with 'Cascade Freight' and cites specific pricing ($150,000–$250,000). This is a hallucinated case study not provided in the context.",
+      "suggested_fix": "Remove the specific reference to Cascade Freight and its associated pricing, relying instead on a general statement of past experience."
+    },
+    {
+      "severity": "medium",
+      "location": "Executive Summary & Phases & Timeline",
+      "description": "The proposal defines the project as a '6-month Phase 1 engagement'. This specific duration is not supported by the Client Matrix and could cause confusion given the unresolved pilot timeline (Q3 vs Q4).",
+      "suggested_fix": "Remove the '6-month' timeframe and leave the overall duration flexible or explicitly tied to the resolution of the pilot timeline."
+    }
+  ],
+  "risks": [
+    "The proposal includes multiple hallucinated details (growth metrics, specific tech stacks, and past clients) that would severely damage the firm's credibility if presented to the client.",
+    "Stating a definitive 6-month timeline while the pilot launch date remains an open question could create misaligned expectations regarding milestone delivery dates."
+  ],
+  "recommendation": "revise"
+}

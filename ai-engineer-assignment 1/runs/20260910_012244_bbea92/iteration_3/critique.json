@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Understanding (Business Context & Technical Context)",
+      "description": "The proposal fabricates highly specific details not found in the Client Matrix, including '$85M (2025 revenue)', 'Columbus, OH', '200 employees', '40 dispatchers', '600 contracted drivers', and '7-year-old custom Ruby on Rails 5 application maintained internally by 2 engineers'. Stating unverified information as fact is a critical failure.",
+      "suggested_fix": "Remove all hallucinated demographic, financial, and technical specifics. Only include details explicitly provided in the Client Matrix."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding / Approach",
+      "description": "The proposal omits a high-confidence risk from the Client Matrix: previous internal attempts to fix the workflow issues have failed twice. This is a meaningful gap that needs to be addressed to show the client we understand their history.",
+      "suggested_fix": "Acknowledge the two previous failed internal attempts in the Understanding section and briefly note in the Approach how the proposed methodology will avoid a similar outcome."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding (Strategic Context)",
+      "description": "The proposal mentions the ELD compliance deadline but fails to include the high-confidence business impact of missing it: potential fines or loss of operating authority.",
+      "suggested_fix": "Update the Strategic Context to explicitly mention that failure to meet ELD compliance could result in fines or loss of operating authority."
+    }
+  ],
+  "risks": [
+    "The inclusion of fabricated company and technical details severely undermines the firm's credibility and would be highly embarrassing if presented to the client.",
+    "While the proposal correctly flags the Q3 vs Q4 pilot timeline as an open question, structuring the entire Phase & Timeline section around a 'Targeted Q3 Pilot' might alienate the CTO before alignment is reached."
+  ],
+  "recommendation": "revise"
+}

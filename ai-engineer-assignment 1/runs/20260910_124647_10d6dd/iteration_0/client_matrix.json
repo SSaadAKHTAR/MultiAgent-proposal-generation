@@ -1,0 +1,156 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to mismatched data across systems.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client prefers a fixed-fee structure with milestone payments rather than time and materials.",
+        "confidence": "high",
+        "source_excerpt": "Strong preference for fixed-fee with milestone payments over T&M.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Days-sales-outstanding (DSO) should drop to the industry standard of about five days.",
+        "confidence": "high",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is skeptical of consulting engagements due to past bad experiences.",
+        "confidence": "high",
+        "source_excerpt": "Skeptical of consulting engagements; got burned by a previous vendor in 2023.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The driver mobile app lacks essential features like photo uploads and messaging.",
+        "confidence": "high",
+        "source_excerpt": "They can't take photos, they can't flag issues, they can't message the dispatcher.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Dispatchers must manually integrate data across three separate systems for a single assignment.",
+        "confidence": "high",
+        "source_excerpt": "it's three systems for one assignment, and the dispatcher is the integration layer.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The company wants to incrementally improve the existing dispatch tool rather than rebuilding it from scratch.",
+        "confidence": "contradicted",
+        "source_excerpt": "make the case for incremental change instead of a full rebuild.",
+        "contradiction_note": "Sarah (VP Ops) wants incremental change, but Marcus (CTO) has been pushing for a full rebuild for a year."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The solution should avoid creating additional compliance work for the ELD mandate.",
+        "confidence": "medium",
+        "source_excerpt": "avoid creating new compliance work for him, that's a quiet point in your favor.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is an upcoming federal ELD compliance deadline in November with unclear details.",
+        "confidence": "high",
+        "source_excerpt": "ELD compliance deadline in November (federal mandate update; details unclear",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend hours on the phone because the driver app is inadequate.",
+        "confidence": "high",
+        "source_excerpt": "spend two to three hours a day on the phone with drivers",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Finance staff must manually reconcile mismatched data for every invoice.",
+        "confidence": "high",
+        "source_excerpt": "finance is doing detective work on every single invoice.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The primary operational goal is to fix the invoicing reconciliation process first.",
+        "confidence": "high",
+        "source_excerpt": "invoicing is the bleeding wound. We need to fix that first.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Dispatch time per load needs to be reduced from twelve minutes to eight minutes.",
+        "confidence": "high",
+        "source_excerpt": "If we can get that to eight minutes",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Tech integration from recent acquisitions remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "There is internal conflict regarding whether to rebuild or incrementally improve the dispatch tool.",
+        "confidence": "high",
+        "source_excerpt": "that's a fight I've been having internally",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The VP of Operations wants to start at the lower end of the budget to prove value.",
+        "confidence": "medium",
+        "source_excerpt": "I'd rather come in at the lower end and earn the next phase",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A measurable pilot must be in production by the end of Q3 to secure funding.",
+        "confidence": "high",
+        "source_excerpt": "have something measurable in production by end of September.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The engagement is competitive, with the client evaluating two other firms.",
+        "confidence": "high",
+        "source_excerpt": "This is a competitive engagement — they are also talking to two other firms.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "If a measurable pilot isn't live by Q3, the CFO will pull the project funding.",
+        "confidence": "high",
+        "source_excerpt": "Otherwise the funding gets pulled into other projects.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Understanding",
+      "description": "The proposal hallucinates specific technologies not mentioned in the client matrix, specifically calling Routemaster a 'Rails 5 app' and mentioning 'NetSuite' and a 'React Native' driver app.",
+      "suggested_fix": "Remove references to Rails 5, NetSuite, and React Native. Refer only to the custom dispatch tool (Routemaster), Salesforce, and the driver app as stated in the provided context."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal hallucinates a past client engagement ('Cascade Freight') and specific investment amounts for that engagement which are not provided in the client matrix.",
+      "suggested_fix": "Remove the reference to Cascade Freight and the fabricated past engagement details. Base the pricing approach solely on the provided client context."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions",
+      "description": "The proposal hallucinates a specific name and title ('Head of Compliance, Rajiv Mehta') when discussing the need to learn more about ELD compliance.",
+      "suggested_fix": "Remove the hallucinated name and title, and simply state the need to engage with the appropriate internal stakeholders regarding ELD compliance."
+    },
+    {
+      "severity": "high",
+      "location": "Executive Summary, Phases & Timeline, Pricing Approach",
+      "description": "The proposal hallucinates a 'six-month' duration for Phase 1, which is not supported by the client matrix and could conflict with the ongoing Q3 vs Q4 pilot timeline discussions.",
+      "suggested_fix": "Remove the 6-month duration. State that the overall timeline will be finalized once the pilot target date is resolved."
+    }
+  ],
+  "risks": [
+    "The proposal contains multiple hallucinations (tech stack, past clients, contact names, and timeline duration) which would severely damage the firm's credibility and trust if presented to the client.",
+    "Proposing a specific fixed fee ($295,000) while simultaneously acknowledging the budget is an open question could cause confusion, though it is safely under the CFO's strict $300,000 cap."
+  ],
+  "recommendation": "revise"
+}

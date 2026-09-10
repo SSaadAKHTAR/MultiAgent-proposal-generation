@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary",
+      "description": "The proposal includes fabricated details not present in the Client Matrix, specifically revenue ('~$85M'), growth rate ('40% in 2024'), and a peer reference ('Cascade Freight'). Stating fabricated facts to a client is a critical error.",
+      "suggested_fix": "Remove the fabricated revenue, growth metrics, and peer reference. Focus the opening strictly on the rapid expansion and recent acquisitions mentioned in the matrix."
+    },
+    {
+      "severity": "critical",
+      "location": "Understanding, Approach, Phases & Timeline, Open Questions",
+      "description": "The proposal invents specific technologies (Rails 5, Salesforce, NetSuite, React Native, BI Excel, TMS) and a stakeholder name (Rajiv Mehta) not provided in the Client Matrix.",
+      "suggested_fix": "Remove all references to specific unverified technologies and fabricated names. Use generic terms supported by the matrix (e.g., 'existing dispatch tool', 'driver mobile app', 'finance systems', 'compliance leadership'). Remove the TMS question from the Open Questions section."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal fails to directly address the CFO's skepticism of consulting engagements due to being burned by a previous vendor in 2023, which is a key risk noted in the matrix.",
+      "suggested_fix": "Add explicit language acknowledging the importance of rebuilding trust and accountability, referencing the desire to overcome past negative vendor experiences through transparent, milestone-based delivery."
+    }
+  ],
+  "risks": [
+    "The proposal agent is heavily hallucinating specific business metrics, client references, and technology stacks. Presenting fabricated details to a client in a highly competitive bid (against two other firms) will likely result in immediate disqualification.",
+    "Failure to explicitly address the CFO's past negative vendor experience leaves a major stakeholder objection unmitigated, which could result in funding being pulled."
+  ],
+  "recommendation": "revise"
+}

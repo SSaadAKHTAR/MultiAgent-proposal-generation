@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Approach",
+      "description": "The approach explicitly commits to targeting bottlenecks on the 'custom dispatch tool', which implicitly sides with the VP Ops' desire for incremental fixes and ignores the CTO's desire for a SaaS replacement. You cannot propose a definitive approach that assumes one side of a contradiction is true while simultaneously listing it as an Open Question.",
+      "suggested_fix": "Revise the Approach to remain agnostic on the platform (SaaS vs. custom tool) or frame it as a decision to be made during a discovery phase, rather than committing to the legacy system upfront."
+    },
+    {
+      "severity": "critical",
+      "location": "Phases & Timeline",
+      "description": "The proposal dictates a 6-month timeline with a pilot in Weeks 17-20 (Month 5). This implicitly sides with the CTO's Q4 timeline and directly violates the CFO/VP Ops' requirement for a Q3 pilot, despite correctly identifying the timeline as an unresolved contradiction in the Open Questions.",
+      "suggested_fix": "Remove the rigid 6-month timeline and 24-week breakdown. Propose a flexible timeline or a Phase 0 discovery that will define the exact pilot delivery date based on the resolution of the Q3 vs Q4 contradiction."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal anchors a 3-month benchmark at $150k-$250k and then proposes a 6-month engagement, heavily implying a final price of $300k-$500k. This directly threatens the CFO's strict $300k budget cap and could derail the deal before the budget contradiction is even resolved.",
+      "suggested_fix": "Remove the 6-month engagement reference in the pricing section and avoid extrapolating benchmark math that exceeds the CFO's $300k stated cap. State that the fixed-fee milestone schedule will be designed to fit within the final approved budget once the scope is aligned."
+    }
+  ],
+  "risks": [
+    "The proposal attempts to define a concrete approach, timeline, and implied budget for Phase 1 before resolving fundamental contradictions between the C-suite (CTO vs CFO/VP Ops). This risks alienating stakeholders by appearing to take sides prematurely.",
+    "By proposing a 6-month timeline that mathematically pushes the pilot past Q3 and the budget past $300k, the firm risks losing the CFO's buy-in entirely."
+  ],
+  "recommendation": "revise"
+}

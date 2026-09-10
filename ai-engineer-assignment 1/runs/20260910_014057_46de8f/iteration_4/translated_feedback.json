@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "Update the Pricing Approach to explicitly cap the fixed fee at $300,000 to align with the CFO's strict budget limit, removing the $150,000–$250,000+ placeholder.",
+    "Revise the Phases & Timeline section to explicitly target a Q3 (September 30) pilot deployment to meet the CFO and VP of Operations' requirements. Add a specific Phase 1 activity to assess technical debt and mitigate the CTO's concerns about this aggressive timeline.",
+    "Assert the 'portable logic layer' in the Executive Summary and Approach as the definitive, agreed-upon strategy that satisfies both the immediate workflow needs and future platform replacement, rather than presenting it as a compromise needing validation.",
+    "Move the action item regarding ELD Compliance (conducting an alignment session with Rajiv Mehta and internal technical leads) directly into the Phase 1 activities list.",
+    "Delete the 'Open Questions' section entirely, as all four items have been resolved and integrated into the main proposal body."
+  ]
+}

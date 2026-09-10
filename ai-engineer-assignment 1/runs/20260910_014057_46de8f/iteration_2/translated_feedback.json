@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "Remove all stakeholder names and references to internal client conflicts (e.g., 'Rita Donovan vs. Sarah Chen', 'Marcus Patel vs...') from the Open Questions section, as exposing internal disagreements is unprofessional in a client-facing proposal.",
+    "Update the 'Pricing Approach' section to reflect a strict $300,000 fixed-fee budget cap, removing the $250,000–$400,000 target range to comply with the CFO's confirmed limit, and delete the budget alignment item from Open Questions.",
+    "Delete the 'Long-Term Strategic Alignment & Scope' item from Open Questions entirely, as the proposal already addresses this compromise via the 'Portable Integration Architecture' (60-70% portability) approach.",
+    "Reframe the 'Target Pilot Timeline Feasibility' open question to neutrally state that Phase 1 discovery will evaluate technical dependencies to finalize a Q3 versus Q4 pilot deployment schedule, removing any mention of internal disputes.",
+    "Reframe the 'ELD Compliance Mandate Specifics' open question to focus purely on the planned alignment session with the Head of Compliance, removing the admission that the consulting team does not currently know the technical details."
+  ]
+}

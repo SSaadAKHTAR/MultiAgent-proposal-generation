@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary, Phases & Timeline, Pricing Approach",
+      "description": "The proposal states the Q3 (September) pilot deployment as a confident fact and bakes it into the timeline and pricing milestones. However, the Client Matrix marks the feasibility of the Q3 pilot as a 'contradicted' item, as the CTO believes Q4 is more realistic. Committing to Q3 ignores the CTO's technical concerns and creates a direct contradiction with the Open Questions section, where the timeline feasibility is correctly identified as unresolved.",
+      "suggested_fix": "Remove the hard commitment to a Q3 pilot in the Executive Summary, Timeline, and Pricing sections. Frame it as a 'Targeted Q3 Pilot' that is contingent on Phase 1A discovery and CTO alignment, and adjust the Milestone 3 wording to reflect a successful pilot deployment without locking in the September 30 date as an absolute guarantee."
+    },
+    {
+      "severity": "medium",
+      "location": "Approach, Point 1",
+      "description": "The proposal states it will avoid a 'fragile, all-at-once rewrite of the legacy dispatch system.' However, the CTO's actual desire is to replace the system with a commercial SaaS platform, not rewrite it internally. This slightly mischaracterizes the alternative approach.",
+      "suggested_fix": "Change 'rewrite of the legacy dispatch system' to 'replacement of the legacy dispatch system with a new SaaS platform' to accurately reflect the CTO's position."
+    },
+    {
+      "severity": "low",
+      "location": "Open Questions, Point 1",
+      "description": "The proposal asks to confirm if the $250,000 fee satisfies the CFO's $300,000 cap, which is mathematically obvious and may sound slightly naive.",
+      "suggested_fix": "Rephrase the open question to focus on ensuring the $250,000 proposed scope meets the VP of Ops' expectations, given she originally anticipated a budget up to $400,000."
+    }
+  ],
+  "risks": [
+    "Hard-committing to a Q3 pilot timeline in the pricing and timeline sections risks setting the project up for failure and alienating the CTO, who has explicitly stated Q4 is more realistic.",
+    "Tying a $75,000 payment milestone to a specific date (September 30) for a pilot deployment that is technically disputed introduces significant financial risk for the consulting firm."
+  ],
+  "recommendation": "revise"
+}

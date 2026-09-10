@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal commits to a 'fixed-fee structure capped strictly at $300,000'. The Client Matrix explicitly marks the budget cap as a 'contradicted' item (Rita insists on a $300k cap, while Sarah expects a $250k to $400k range). Stating a contradicted item as a firm fact rather than placing it in Open Questions violates the matrix instructions and risks alienating stakeholders.",
+      "suggested_fix": "Remove the strict $300,000 cap from the Pricing Approach. Present a proposed fixed-fee structure or range, and add a specific item to the Open Questions section to resolve the budget cap discrepancy between stakeholders."
+    },
+    {
+      "severity": "critical",
+      "location": "Open Questions (Missing Item)",
+      "description": "The proposal fails to address the fundamental, 'contradicted' disagreement regarding whether to invest in a short-term workflow fix or a long-term platform replacement. While the proposal attempts to bridge this with a 'portable architecture', it completely omits this major stakeholder misalignment from the Open Questions section.",
+      "suggested_fix": "Add a new item to the Open Questions section explicitly addressing the strategic disagreement between replacing Routemaster with a SaaS platform versus incrementally fixing existing workflows. Frame the proposed 'portable logic layer' as a potential compromise to be validated during kickoff."
+    }
+  ],
+  "risks": [
+    "Committing to a strict $300k budget cap before resolving the internal client disagreement could force the consulting team to absorb costs if the scope aligns closer to the $400k expectations of other stakeholders.",
+    "Proceeding with an incremental workflow fix without explicitly acknowledging and resolving Marcus's desire for a full platform replacement risks poor adoption and lack of technical buy-in during execution."
+  ],
+  "recommendation": "revise"
+}

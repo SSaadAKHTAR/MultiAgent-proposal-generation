@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "In the 'Pricing Approach' section, replace the text deferring the price until open questions are resolved with a specific, firm fixed-fee number at or below the $300,000 strict cap set by the CFO. Explicitly state the assumptions this price is based on.",
+    "In the 'Executive Summary', remove the fabricated metrics '40% growth' and '600 contracted drivers'. Adjust the opening sentences to focus only on the rapid expansion and operational bottlenecks without using invented numbers.",
+    "In the 'Understanding' section and throughout the document (including 'Open Questions'), remove all hallucinated details: '40 dispatchers', 'React Native mobile app (last updated in 2023)', 'NetSuite', '7-year-old custom Rails 5 app', 'two internal engineers', 'Rajiv Mehta', and the 'November' ELD deadline. Use only the systems and facts explicitly named in the Client Matrix (e.g., Routemaster, Salesforce, driver app, ELD compliance).",
+    "In the 'Open Questions' section (Item 4), remove the fabricated statement that Northwind is 'currently evaluating new TMS vendors.' Revise the question to focus solely on the CTO's stated desire to replace Routemaster with a third-party SaaS platform.",
+    "Limit all revisions strictly to addressing these four specific issues. Do not introduce any new information, metrics, or structural changes to the proposal."
+  ]
+}

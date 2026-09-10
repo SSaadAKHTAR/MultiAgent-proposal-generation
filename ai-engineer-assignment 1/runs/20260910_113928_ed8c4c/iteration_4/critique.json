@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary & Phases & Timeline",
+      "description": "The proposal firmly commits to delivering a production pilot by the end of Q3 (September 30). However, the Client Matrix marks the pilot timeline as a 'contradicted' item due to internal client disagreement (Q3 vs. Q4). Contradicted items must not be stated as confident commitments.",
+      "suggested_fix": "Remove the firm commitment to a Q3 delivery from the Executive Summary and Timeline. Frame Q3 as a target business requirement that will be evaluated for technical feasibility during the Discovery phase, which aligns with how it is correctly listed in the Open Questions section."
+    },
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal states that it is not possible to provide a single fixed fee for the entire six-month engagement upfront. This directly conflicts with the client's high-confidence desired state of receiving a fixed-fee engagement with milestone-based payments.",
+      "suggested_fix": "Revise the Pricing Approach to present a single fixed-fee structure for the entire engagement with defined milestone payments. Use clear scope assumptions and boundaries to account for the 'fix vs. replace' uncertainty, rather than refusing to provide a full fixed fee."
+    }
+  ],
+  "risks": [
+    "The client has significant internal misalignment across budget, timeline, and technical strategy (fix vs. replace). Proceeding without resolving these contradictions could lead to severe scope creep and unmet expectations.",
+    "Committing to a fixed-fee structure while the core technical approach (fix vs. replace) remains undecided poses a high margin risk for the firm if the more complex 'replace' route is chosen."
+  ],
+  "recommendation": "revise"
+}

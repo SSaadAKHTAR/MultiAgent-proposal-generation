@@ -1,0 +1,156 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is significantly delayed in processing invoices due to data discrepancies.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client wants a fixed-fee engagement with milestone payments and a firm price.",
+        "confidence": "high",
+        "source_excerpt": "I want a number in the proposal. Not a range. A number.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Improve Days Sales Outstanding (DSO) to free up working capital.",
+        "confidence": "high",
+        "source_excerpt": "return to five-day DSO... frees up about $1.4M in working capital",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is a disagreement on the approved budget for the Phase 1 engagement.",
+        "confidence": "contradicted",
+        "source_excerpt": "the budget I approved is $300,000. That's the cap.",
+        "contradiction_note": "The CFO (Rita) insists the budget is strictly capped at $300k, while the VP of Ops (Sarah) claims they discussed a range of $250k to $400k."
+      },
+      {
+        "statement": "Missing the ELD compliance deadline could result in fines or loss of operating authority.",
+        "confidence": "medium",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The current dispatch tool (Routemaster) has severe technical debt, making feature development extremely slow.",
+        "confidence": "high",
+        "source_excerpt": "Technical debt in Routemaster. We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The CTO wants to completely replace the legacy dispatch tool with a third-party SaaS platform.",
+        "confidence": "medium",
+        "source_excerpt": "live on it in nine months and we'd never have to maintain Routemaster again.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Build workflow logic as a portable layer on top of the existing system.",
+        "confidence": "medium",
+        "source_excerpt": "workflow logic in a layer on top of Routemaster, talking to Salesforce and the driver app",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "A majority of the new workflow logic must be reusable if the underlying platform is replaced.",
+        "confidence": "medium",
+        "source_excerpt": "60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Changes to the driver app must be carefully coordinated with the separate ELD compliance workstream.",
+        "confidence": "high",
+        "source_excerpt": "If we're going to touch the driver app, the ELD work has to be coordinated.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers suffer from excessive manual data entry between systems.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers are highly dissatisfied with the current mobile application.",
+        "confidence": "high",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Incrementally fix specific operational workflows without waiting for a full platform replacement.",
+        "confidence": "high",
+        "source_excerpt": "fix three specific operational pain points... incrementally, within the budget",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce dispatch time to avoid the need for additional headcount.",
+        "confidence": "high",
+        "source_excerpt": "30% reduction in dispatch time means we don't need to hire four additional dispatchers",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Previous internal attempts to fix the dispatcher workflow have failed.",
+        "confidence": "high",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Leadership is fundamentally misaligned on whether the core issue is a workflow problem or a platform problem.",
+        "confidence": "high",
+        "source_excerpt": "Sarah and I have been having a parallel conversation about this for months and we don't agree",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Deploy a pilot to production by the end of Q3 to secure funding.",
+        "confidence": "high",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The proposed solution must not interfere with the upcoming ELD compliance mandate.",
+        "confidence": "high",
+        "source_excerpt": "whatever we build needs to not get in the way of the compliance work.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is disagreement on the feasibility and commitment to the Q3 pilot deadline.",
+        "confidence": "contradicted",
+        "source_excerpt": "I never agreed to Q3. I think Q4 is more realistic",
+        "contradiction_note": "The CFO and VP of Ops mandate a Q3 deadline to keep funding, but the CTO states he never agreed to it and believes Q4 is more realistic."
+      }
+    ]
+  }
+}

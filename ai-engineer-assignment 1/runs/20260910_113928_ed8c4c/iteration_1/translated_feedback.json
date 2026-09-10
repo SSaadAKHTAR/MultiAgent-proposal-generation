@@ -1,0 +1,10 @@
+{
+  "directives": [
+    "Remove the 'Open Questions' section entirely by resolving each item directly within the main proposal text.",
+    "Update the 'Pricing Approach' to specify a fixed-fee cost of exactly $300k. This resolves the internal budget conflict by satisfying Rita's $300k cap while remaining within Sarah's $250k-$400k range.",
+    "Update the 'Approach' section to address the 'Fix vs. Replace' platform strategy conflict. State that Phase 1 will begin with a technical discovery period to objectively evaluate whether to incrementally fix the custom dispatch tool or replace it entirely with a SaaS platform.",
+    "In the 'Phases & Timeline' section, firmly commit to the Q3 (September 30) pilot launch. Explicitly note that while there are internal technical concerns about this date, the Q3 timeline is being enforced because it is a strict, high-confidence business requirement to secure project funding.",
+    "Add a specific deliverable to 'Months 1-2: Discovery & Foundational Engineering' to assess and validate the assumption that 60-70% of Phase 1 workflow logic will be reusable in the event of a future platform replacement.",
+    "Add a specific deliverable to 'Months 1-2: Discovery & Foundational Engineering' to engage with Rajiv Mehta to define the exact technical requirements for the November ELD mandate and align data models with the ongoing TMS vendor evaluation."
+  ]
+}

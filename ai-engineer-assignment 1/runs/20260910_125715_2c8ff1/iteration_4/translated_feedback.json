@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Remove 'Item 1 (Budget Alignment)' from the Open Questions section entirely. Because the proposed fixed-fee price of $295,000 successfully satisfies the strict $300,000 cap mandated by Finance, there is no longer a blocking discrepancy that the client needs to resolve.",
+    "Revise 'Item 4 (Platform Strategy)' in the Open Questions section to focus solely on understanding the timeline and long-term roadmap of the potential SaaS migration. Remove the phrase stating that this timeline 'will inform how we architect the portable workflow layer,' as the portable architecture has already been explicitly defined in the Approach section.",
+    "To prevent future scope or timeline issues, retain Open Questions 2 (Pilot Timeline Feasibility) and 3 (ELD Compliance Details) exactly as they are. Ensure the Pricing Approach section continues to explicitly state that the $295,000 fixed fee is contingent upon resolving these two specific risks (the Q3 vs. Q4 timeline dispute and the unknown ELD technical requirements) without expanding the core deliverables."
+  ]
+}

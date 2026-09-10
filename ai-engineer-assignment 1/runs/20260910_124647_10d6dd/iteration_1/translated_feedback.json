@@ -1,0 +1,8 @@
+{
+  "directives": [
+    "Remove the fabricated revenue figure ('~$85M'), growth rate ('40% in 2024'), and peer reference ('Cascade Freight') from the Executive Summary. Focus the opening strictly on the rapid expansion and recent acquisitions as supported by the intake matrix.",
+    "Remove all fabricated technology names throughout the proposal (Rails 5, Salesforce, NetSuite, React Native, BI Excel, TMS) and replace them with generic terms supported by the matrix, such as 'existing dispatch tool', 'driver mobile app', and 'finance systems'.",
+    "Remove the fabricated last names for Sarah and Marcus, completely remove the fabricated compliance stakeholder name 'Rajiv Mehta', and delete the 'TMS Selection Timeline' bullet from the Open Questions section.",
+    "In the Pricing Approach section, explicitly acknowledge the CFO's skepticism stemming from a negative vendor experience in 2023. Add language emphasizing how the milestone-based, fixed-fee delivery model is specifically designed to rebuild trust, ensure accountability, and mitigate the risks experienced with past vendors."
+  ]
+}

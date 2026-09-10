@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "Remove 'Technical Approach for Routemaster' from Open Questions. Update the Approach section to explicitly recommend an incremental update to Routemaster rather than a full rebuild, justifying it as the only viable path to meet the strict Q3 pilot deadline and actively supporting the VP of Operations' internal case.",
+    "Remove 'TMS Vendor Selection' from Open Questions. Update the Approach section to specify that the data reconciliation and integration architecture will be designed to be TMS-agnostic, ensuring that work can proceed immediately without pausing for the final vendor selection.",
+    "Remove 'ELD Mandate Specifics' from Open Questions. To align with the matrix strategy of avoiding new compliance work for the client, delete the request for a technical review with the Head of Compliance. Instead, assert confidently that the solution will inherently satisfy the November mandate without requiring his time or involvement.",
+    "Remove 'Phase 1 Budget' from Open Questions. Instead of asking Finance for a budget ceiling, update the Pricing Approach to state that we will present a specific fixed-fee proposal with milestone payments tied directly to hard dollar metrics (such as DSO reduction) to satisfy the CFO's requirements.",
+    "Remove the 'Open Questions' section entirely from the proposal, as all listed items have now been resolved into definitive approaches."
+  ]
+}

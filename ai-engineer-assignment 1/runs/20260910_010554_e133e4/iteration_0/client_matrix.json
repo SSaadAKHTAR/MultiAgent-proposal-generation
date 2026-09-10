@@ -1,0 +1,162 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is significantly delayed on invoicing due to data discrepancies.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The CFO requires a fixed-fee engagement with milestone-based payments.",
+        "confidence": "high",
+        "source_excerpt": "fixed-fee proposal with milestone payments tied to specific outcomes",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project must free up working capital by returning to a five-day DSO.",
+        "confidence": "high",
+        "source_excerpt": "return to five-day DSO from where we are now frees up about $1.4M",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The budget cap for the Phase 1 engagement.",
+        "confidence": "contradicted",
+        "source_excerpt": "the budget I approved is $300,000. That's the cap.",
+        "contradiction_note": "CFO Rita insists the budget is capped at $300k, while VP Ops Sarah claims they discussed a $250k-$400k range."
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Missing the ELD deadline could result in fines and loss of operating authority.",
+        "confidence": "high",
+        "source_excerpt": "Fines, possibly losing our operating authority in some states.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The custom dispatch tool has severe technical debt preventing new feature development.",
+        "confidence": "medium",
+        "source_excerpt": "Technical debt in Routemaster. We can't ship features anymore because the codebase is too fragile.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "There is too much manual data entry between the dispatch tool and the CRM.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The core technical approach for the dispatch tool.",
+        "confidence": "contradicted",
+        "source_excerpt": "replace Routemaster with a SaaS platform",
+        "contradiction_note": "CTO Marcus wants to replace the legacy system with a SaaS platform, while VP Ops Sarah wants to incrementally fix workflows on the existing system."
+      },
+      {
+        "statement": "Workflow logic should be portable in case of a future platform change.",
+        "confidence": "medium",
+        "source_excerpt": "60-70% of the Phase 1 work survives a platform change.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The CTO must review and approve the proposed architecture.",
+        "confidence": "medium",
+        "source_excerpt": "I'd want to see the architecture before I sign off on that number.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Changes to the driver app may conflict with the separate ELD compliance workstream.",
+        "confidence": "high",
+        "source_excerpt": "If we're going to touch the driver app, the ELD work has to be coordinated.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "The current dispatcher workflow is highly inefficient and causing significant operational strain.",
+        "confidence": "high",
+        "source_excerpt": "Our dispatcher workflow is killing us.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Drivers are highly dissatisfied with the current mobile application.",
+        "confidence": "high",
+        "source_excerpt": "drivers hate the mobile app",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The timeline for delivering the pilot into production.",
+        "confidence": "contradicted",
+        "source_excerpt": "If we don't have something in production by end of September, the funding gets reallocated.",
+        "contradiction_note": "CFO Rita and VP Ops Sarah require a Q3 pilot for budget reasons, but CTO Marcus believes Q4 is more realistic and refuses to commit to Q3."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce dispatch time per load by 30% to avoid hiring additional headcount.",
+        "confidence": "high",
+        "source_excerpt": "a 30% reduction in dispatch time means we don't need to hire four additional dispatchers",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Previous internal attempts to fix the workflow issues have failed.",
+        "confidence": "high",
+        "source_excerpt": "We've tried internal projects to fix this exact thing twice and they both failed.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Technology integration from recent company acquisitions remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Achieve compliance with the upcoming federal ELD mandate update.",
+        "confidence": "high",
+        "source_excerpt": "ELD compliance deadline in November (federal mandate update",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The workflow project must not interfere with the ELD compliance initiative.",
+        "confidence": "high",
+        "source_excerpt": "whatever we build needs to not get in the way of the compliance work.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The consulting team lacks details on the ELD compliance requirements.",
+        "confidence": "high",
+        "source_excerpt": "I need to learn more about the ELD work before I can speak to that.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Update the 'Approach' and 'Phases & Timeline' sections to commit exclusively to incrementally fixing the current custom dispatch tool workflows. Remove all references to a technical discovery period aimed at evaluating a SaaS platform replacement.",
+    "Revise the 'Pricing Approach' to provide a single milestone-based fixed-fee structure for the entire six-month engagement, removing the language that delays full project pricing until after a 'fix vs. replace' decision.",
+    "Remove the 'Platform Strategy (Fix vs. Replace)' and 'Technical Reusability' bullet points from the 'Open Questions' section, as the strategic decision to fix the existing tool has now been resolved."
+  ]
+}

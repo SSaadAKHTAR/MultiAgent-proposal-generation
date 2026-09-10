@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Understanding (Bullet 4)",
+      "description": "The proposal explicitly states that the CFO 'will pull funding if this deadline is missed.' This is an internal, sensitive risk note that is too blunt and undiplomatic for a client-facing document, risking embarrassment if read by the CFO or other executives.",
+      "suggested_fix": "Soften the language to emphasize that meeting the Q3 deadline is critical to demonstrating ROI and securing continued executive sponsorship, removing the blunt threat of pulled funding."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal commits to a 'strict six-month fixed-fee timeline' but states it is contingent on deciding between an incremental approach or a full rebuild during Discovery. It is logically impossible to promise a fixed fee and a 6-month timeline when a full rebuild would vastly exceed the scope and cost of an incremental update.",
+      "suggested_fix": "Propose a fixed-fee for the Discovery phase only, with subsequent phases priced as fixed-fee once the architectural path is chosen, OR explicitly state that the 6-month fixed-fee proposal assumes an incremental approach."
+    },
+    {
+      "severity": "medium",
+      "location": "Open Questions (Bullet 4)",
+      "description": "Asking the client to confirm their 'exact fixed-fee budget ceiling' is tactless in a formal proposal and weakens the firm's negotiating position.",
+      "suggested_fix": "Remove the direct request for the budget ceiling. If budget alignment is needed, frame it around understanding investment parameters or prioritizing scope to maximize ROI."
+    }
+  ],
+  "risks": [
+    "The unresolved conflict between the VP of Ops (incremental) and the CTO (full rebuild) poses a major threat to the Q3 deadline. If a full rebuild is chosen, the 6-month timeline will likely be impossible, triggering the CFO to pull funding.",
+    "Committing to a fixed-fee structure for the entire project before the core technical architecture is decided exposes the firm to massive scope creep and financial risk."
+  ],
+  "recommendation": "revise"
+}

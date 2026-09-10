@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal suggests scaling a $150,000-$250,000 3-month baseline to a 6-month engagement. This implies a total cost that would significantly exceed the CFO's strict $300,000 budget cap, directly conflicting with the client's financial constraints.",
+      "suggested_fix": "Remove the specific baseline scaling math that implies a cost over $300,000. Instead, state that the fixed-fee milestones will be scoped to fit strictly within the final approved budget envelope once the internal budget contradiction is resolved."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding, Approach, and Phases & Timeline",
+      "description": "The proposal contains multiple hallucinated details not found in the Client Matrix. This includes fabricated company metrics (200 employees, 40 dispatchers, 600 drivers), specific technologies (Rails 5, React Native, NetSuite), and a stakeholder name (Rajiv Mehta). Presenting invented facts will embarrass the firm.",
+      "suggested_fix": "Remove all fabricated metrics, technology names, and personnel names. Replace them with the exact terms used in the matrix (e.g., 'custom dispatch tool', 'mobile application', 'compliance team', 'financial systems')."
+    },
+    {
+      "severity": "medium",
+      "location": "Executive Summary & Phases & Timeline",
+      "description": "The proposal repeatedly commits to a '6-month Phase 1 engagement'. Committing to a specific 6-month timeline is premature and potentially incompatible with the unresolved Q3 pilot deadline and the $300k budget cap.",
+      "suggested_fix": "Change '6-month Phase 1 engagement' to 'initial Phase 1 engagement' and note that the exact duration and phase lengths will be finalized once the pilot timeline and technical approach are resolved."
+    }
+  ],
+  "risks": [
+    "Presenting hallucinated facts (such as specific tech stacks, employee counts, and stakeholder names) risks severely damaging the firm's credibility and demonstrating a lack of listening.",
+    "Suggesting a pricing model that mathematically exceeds the CFO's stated budget cap could lead to immediate rejection of the proposal by financial decision-makers."
+  ],
+  "recommendation": "revise"
+}

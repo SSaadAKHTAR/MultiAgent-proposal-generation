@@ -1,0 +1,8 @@
+{
+  "directives": [
+    "Replace the price range in the Pricing Approach with a single fixed number to strictly align with the CFO's requirement for a fixed-fee proposal, ensuring the chosen price is at or below the $300,000 budget cap.",
+    "Remove hallucinated business metrics from the Executive Summary and Understanding sections that are not supported by the Client Matrix, specifically the 40% growth, $85M revenue, 40 dispatchers, and 600 contracted drivers.",
+    "Remove hallucinated technology specifics not present in the Client Matrix. Replace 'Ruby on Rails' with 'custom dispatch tool', replace 'NetSuite' with a generic 'invoicing system', and remove references to 'React Native' and 'Excel BI routines'.",
+    "Delete the fabricated reference to a past engagement with 'Cascade Freight' in the Executive Summary."
+  ]
+}

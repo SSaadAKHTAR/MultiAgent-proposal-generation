@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "medium",
+      "location": "Open Questions (TMS Vendor Selection)",
+      "description": "Suggesting that integration work might be 'paused' until a TMS vendor is selected directly threatens the strict Q3 deadline. If work is paused, the project will miss the Q3 pilot milestone, which the matrix indicates will cause the CFO to pull funding.",
+      "suggested_fix": "Rephrase the question to focus on designing current integrations to be loosely coupled or extensible so they can easily adapt to the future TMS, rather than suggesting a pause in the work."
+    },
+    {
+      "severity": "medium",
+      "location": "Phases & Timeline (Phase 1C)",
+      "description": "The proposal places the assurance that workflows satisfy the November ELD requirements in Phase 1C (Q4). Given the strict November deadline, leaving compliance assurance to Q4 leaves very little margin for error and could introduce risk to the Q3 pilot.",
+      "suggested_fix": "Move the bullet point about ensuring workflows satisfy ELD requirements from Phase 1C to Phase 1B to guarantee the Q3 pilot is fully compliant well ahead of the deadline."
+    },
+    {
+      "severity": "low",
+      "location": "Open Questions (Technical Approach for Routemaster)",
+      "description": "Explicitly stating 'We have identified a divergence in internal preferences' is politically blunt for a proposal that will be reviewed by the entire executive team (including the VP of Ops and CTO who are disagreeing).",
+      "suggested_fix": "Soften the phrasing to focus objectively on the architectural decision. For example: 'We need to evaluate the trade-offs between an incremental update (optimizing for the 6-month timeline) and a full rebuild of Routemaster.'"
+    }
+  ],
+  "risks": [
+    "The internal disagreement between the VP of Operations and the CTO regarding the Routemaster approach (incremental vs. rebuild) could stall the project kickoff if not resolved immediately, threatening the strict Q3 timeline.",
+    "The pending TMS vendor selection introduces architectural uncertainty that must be managed carefully to avoid throwaway integration work during the immediate Phase 1A invoicing fixes."
+  ],
+  "recommendation": "approve"
+}

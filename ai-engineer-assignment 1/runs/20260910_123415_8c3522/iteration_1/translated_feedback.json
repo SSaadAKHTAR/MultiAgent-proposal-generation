@@ -1,0 +1,9 @@
+{
+  "directives": [
+    "In the Understanding section, remove all fabricated names and technologies (e.g., 'Rita Donovan', 'Rajiv Mehta', 'React Native', 'Rails 5', 'NetSuite', and the lack of a centralized data warehouse/Excel reliance). Use only verified terms from the Client Matrix such as 'the CFO', 'the driver mobile app', 'custom dispatch tool', and 'accounting system'.",
+    "In the Phases & Timeline section (specifically Phase 1A and 1B), replace all mentions of 'NetSuite' with 'accounting system' and 'Rails dispatch app' with 'custom dispatch tool'.",
+    "In the Open Questions section, delete the 'TMS Evaluation Status' bullet point entirely, as it introduces a hallucinated scenario not present in the Client Matrix.",
+    "In the Executive Summary and Approach sections, strengthen the language regarding the firm's past experience with Cascade Freight. Explicitly frame this peer-brokerage experience as making the firm the lowest-risk, fastest-to-value choice to subtly mitigate the known risk of two competing vendors.",
+    "In the Pricing Approach section, explicitly state that the commitment to a strict six-month fixed-fee timeline is contingent upon first resolving the architectural dispute (incremental change vs. full rebuild) between the VP of Operations and the CTO, to mitigate delivery and financial risk."
+  ]
+}

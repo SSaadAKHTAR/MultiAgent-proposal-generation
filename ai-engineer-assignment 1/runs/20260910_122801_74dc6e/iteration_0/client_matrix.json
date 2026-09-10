@@ -1,0 +1,143 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to mismatched data across systems.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Fix the invoicing reconciliation process first to address the cash flow problem.",
+        "confidence": "high",
+        "source_excerpt": "invoicing is the bleeding wound. We need to fix that first.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce days-sales-outstanding to the industry standard of five days.",
+        "confidence": "high",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is skeptical of vendors and will pull funding if Q3 milestones are not met.",
+        "confidence": "high",
+        "source_excerpt": "Otherwise the funding gets pulled into other projects.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "The driver mobile app lacks necessary features, forcing drivers to call dispatchers.",
+        "confidence": "high",
+        "source_excerpt": "They can't take photos, they can't flag issues, they can't message the dispatcher.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Dispatchers must act as the integration layer across three disconnected systems.",
+        "confidence": "high",
+        "source_excerpt": "it's three systems for one assignment, and the dispatcher is the integration layer.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Implement incremental technical changes rather than a full system rebuild.",
+        "confidence": "contradicted",
+        "source_excerpt": "make the case for incremental change instead of a full rebuild.",
+        "contradiction_note": "The VP of Operations wants incremental change due to timeline constraints, but the CTO has been pushing for a full rebuild of the dispatch tool for a year."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The technical approach should avoid creating new ELD compliance work.",
+        "confidence": "medium",
+        "source_excerpt": "if your approach can avoid creating new compliance work for him, that's a quiet point",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "Technical integration from two recent acquisitions remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend hours on the phone because the driver app is inadequate.",
+        "confidence": "high",
+        "source_excerpt": "spend two to three hours a day on the phone with drivers because the app doesn't do what they need.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Dispatchers suffer from excessive manual double-entry between systems.",
+        "confidence": "high",
+        "source_excerpt": "Too much manual entry between our custom dispatch tool and Salesforce",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Fix the dispatcher workflow to prevent bad data from breaking invoicing.",
+        "confidence": "high",
+        "source_excerpt": "dispatcher workflow — that's the source of the bad data that breaks invoicing",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce the time it takes a dispatcher to process a load from twelve to eight minutes.",
+        "confidence": "high",
+        "source_excerpt": "get that to eight minutes — call it a thirty percent reduction",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is an upcoming federal ELD compliance deadline in November.",
+        "confidence": "high",
+        "source_excerpt": "ELD compliance deadline in November (federal mandate update",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [],
+    "desired_state": [
+      {
+        "statement": "Deliver the first phase at the lower end of the budget to earn future work.",
+        "confidence": "medium",
+        "source_excerpt": "I'd rather come in at the lower end and earn the next phase than overpromise.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project should pay for itself by avoiding the need for future headcount.",
+        "confidence": "medium",
+        "source_excerpt": "pays for itself in headcount we don't have to hire next year.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The consulting engagement is competitive, with two other firms being evaluated.",
+        "confidence": "high",
+        "source_excerpt": "This is a competitive engagement — they are also talking to two other firms.",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary, Understanding, and Pricing Approach",
+      "description": "The proposal states the budget is a firm $300,000 cap as a confident fact. However, the Client Matrix marks the budget as 'contradicted' (Rita insists on $300k, while Sarah claims a range of $250k-$400k). Contradicted items must not be stated as facts.",
+      "suggested_fix": "Remove the definitive statements about the $300,000 cap. Move the budget discrepancy to the 'Open Questions' section to align Sarah and Rita, and present the $300,000 in the Pricing Approach as a proposed baseline pending final budget alignment."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding / Approach",
+      "description": "The proposal fails to acknowledge that previous internal attempts to fix the workflow issues have failed twice. This is a high-confidence risk in the Client Matrix and omitting it makes the proposal seem naive to the historical difficulty of the problem.",
+      "suggested_fix": "Add a bullet point in the 'Understanding' section noting the two previous failed internal attempts, and briefly explain in the 'Approach' section how this external engagement is structured to avoid those past pitfalls."
+    }
+  ],
+  "risks": [
+    "Siding exclusively with Rita's $300k budget cap without acknowledging Sarah's $250k-$400k range risks alienating Sarah and potentially leaving money on the table if the true budget is higher.",
+    "The deep internal misalignment on both the pilot timeline (Q3 vs Q4) and the platform vision (SaaS vs Workflow) could severely stall Phase 1A discovery if stakeholders refuse to compromise."
+  ],
+  "recommendation": "revise"
+}

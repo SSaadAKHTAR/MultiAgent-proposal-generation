@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Replace the price range of '$150,000 and $250,000' in the Pricing Approach section with a single, specific fixed-fee amount to strictly align with the CFO's high-confidence requirement for a fixed-fee engagement.",
+    "Add a statement to the 'Technical Environment' or 'Operational Challenges' section acknowledging that two previous internal attempts to resolve these workflow issues have failed, reflecting the high-confidence risk identified in the Client Matrix.",
+    "Adjust the 'Phases & Timeline' visual and descriptions to explicitly map the Phase 1C Pilot Deployment to the end of Q3 (September) to meet the high-confidence funding deadline, rather than using generic 'Months 4-5'. Maintain the existing note in Open Questions flagging the CTO's conflicting belief that Q4 is more realistic."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "directives": [
+    "In the 'Current State & Background' section, add a point acknowledging that two previous internal attempts to fix these workflow issues have failed, emphasizing the need for an external approach.",
+    "In the 'Technical & Regulatory Environment' subsection, explicitly state that missing the November ELD compliance deadline could result in fines or the loss of operating authority.",
+    "In the 'Governance & Quality Assurance' section, explicitly address the CFO's skepticism stemming from a negative vendor experience in 2023, highlighting how the milestone-based, fixed-fee structure and transparent governance mitigate this specific risk.",
+    "Revise Open Question 1 to explicitly flag the internal budget conflict, noting that Rita insists on a $300,000 cap while Sarah mentioned a $250,000 to $400,000 range.",
+    "Revise Open Question 2 to explicitly name the conflicting stakeholders regarding the platform strategy: Marcus's desire for a full SaaS platform replacement versus Sarah's preference for incremental workflow fixes on the existing tool.",
+    "Revise Open Question 3 to explicitly state the timeline conflict: Sarah and Rita mandate a Q3 pilot for budget reasons, whereas Marcus refuses to commit to Q3 and believes Q4 is more realistic."
+  ]
+}

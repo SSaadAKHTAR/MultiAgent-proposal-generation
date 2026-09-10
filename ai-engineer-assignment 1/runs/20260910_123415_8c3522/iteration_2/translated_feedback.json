@@ -1,0 +1,6 @@
+{
+  "directives": [
+    "In the Pricing Approach section, remove the phrase 'architectural dispute' and any mention of conflict between the VP of Operations and the CTO. Instead, state that the fixed-fee timeline is 'contingent upon finalizing the technical architecture strategy (incremental enhancements vs. full rebuild) during the Discovery phase.'",
+    "In the Open Questions section, remove the phrase 'We have noted a contradiction' and do not explicitly name Sarah Chen and Marcus Patel as being at odds. Reframe the 'Technical Strategy Alignment' bullet to focus on the need to align on the optimal technical strategy for Phase 1, balancing the six-month timeline with long-term architectural goals."
+  ]
+}

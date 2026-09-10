@@ -23,7 +23,7 @@ class LLMProvider:
         if not api_key:
             raise ValueError("GEMINI_API_KEY not set in .env")
         self.client = genai.Client(api_key=api_key)
-        self.model_complex = "gemini-3.6-flash"
+        self.model_complex = "gemini-3.1-pro-preview"
         self.model_simple = "gemini-3.6-flash"
 
     def get_model_for_tier(self, tier: str, override: Optional[str] = None) -> str:
@@ -39,11 +39,7 @@ class LLMProvider:
         retry=retry_if_exception_type(Exception),
         before_sleep=print_retry_sleep
     )
-    def generate_structured(
-        self, 
-        prompt: str, 
-        schema: Type[T], 
-        system_instruction: str = "",
+    def generate_structured(self, prompt: str, schema: Type[T], system_instruction: str = "",
         model_tier: str = "complex",
         model: Optional[str] = None,
         agent_name: str = "UnknownAgent"

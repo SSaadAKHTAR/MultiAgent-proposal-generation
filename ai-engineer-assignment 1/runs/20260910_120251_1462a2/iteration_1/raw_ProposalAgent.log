@@ -1,0 +1,266 @@
+=== PROMPT ===
+Please generate the Markdown proposal based on the following context.
+
+INTAKE:
+# Client Intake Form
+
+**Company:** Northwind Logistics
+**Industry:** Mid-market freight brokerage
+**Size:** ~200 employees, 40 dispatchers, ~600 contracted drivers
+**Headquarters:** Columbus, OH
+**Annual revenue:** ~$85M (2025)
+
+## Primary Contact
+- **Name:** Sarah Chen
+- **Title:** VP Operations
+- **Email:** sarah.chen@northwindlog.com
+- **Role:** Champion. Owns the operational pain. Has CFO buy-in to fund a Phase 1 engagement.
+
+## Other Stakeholders
+- **Marcus Patel** — CTO. Required for technical sign-off. Owns the dispatch tool (custom Rails app, ~7 years old). Has been pushing internally for a full rebuild.
+- **Rita Donovan** — CFO. Controls the budget. Skeptical of consulting engagements; got burned by a previous vendor in 2023.
+- **Rajiv Mehta** — Head of Compliance (mentioned but not yet engaged). Owns ELD compliance.
+
+## Stated Ask (verbatim from intro email)
+> "Our dispatcher workflow is killing us. Too much manual entry between our custom dispatch tool and Salesforce, drivers hate the mobile app, and finance is 3 weeks behind on invoicing because the data never lines up. We need help figuring out where to start."
+
+## Budget Signal
+- CFO has approved a 6-month Phase 1 engagement.
+- No hard number disclosed in writing. (Sarah has hinted at a range in conversation.)
+- Strong preference for fixed-fee with milestone payments over T&M.
+
+## Timeline
+- Pilot in production by end of Q3 (Sept 30).
+- ELD compliance deadline in November (federal mandate update; details unclear, will be discussed on the call).
+
+## Existing Tech Stack
+- **Dispatch tool:** Custom Rails 5 app, internally maintained by 2 engineers
+- **CRM:** Salesforce (Sales Cloud)
+- **TMS (Transportation Management System):** Currently evaluating vendors. No selection made.
+- **Driver mobile app:** Custom React Native app, last major update in 2023
+- **Accounting:** NetSuite
+- **Data warehouse:** None (BI is run out of Excel exports from Salesforce)
+
+## Background Notes
+- Northwind grew 40% in 2024 by acquiring two smaller brokerages. Tech integration from those acquisitions is incomplete.
+- Sarah has asked us specifically because we did similar work for a peer brokerage (Cascade Freight) in 2024.
+- This is a competitive engagement — they are also talking to two other firms.
+
+
+CLIENT MATRIX (JSON): 
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to mismatched data, delaying revenue collection.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client wants a fixed-fee engagement with milestone payments rather than time and materials.",
+        "confidence": "medium",
+        "source_excerpt": "Strong preference for fixed-fee with milestone payments over T&M.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Reduce Days Sales Outstanding (DSO) to the industry standard of about five days.",
+        "confidence": "medium",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project must pay for itself by reducing the need for future headcount hires.",
+        "confidence": "medium",
+        "source_excerpt": "pays for itself in headcount we don't have to hire next year.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is skeptical of consulting vendors and will pull funding if Q3 milestones aren't met.",
+        "confidence": "high",
+        "source_excerpt": "Otherwise the funding gets pulled into other projects.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers must act as the integration layer between three disconnected systems.",
+        "confidence": "high",
+        "source_excerpt": "it's three systems for one assignment, and the dispatcher is the integration layer.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The driver mobile app lacks essential features like photo uploads and messaging.",
+        "confidence": "medium",
+        "source_excerpt": "They can't take photos, they can't flag issues, they can't message the dispatcher.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The technical approach for updating the Routemaster dispatch tool.",
+        "confidence": "contradicted",
+        "source_excerpt": "make the case for incremental change instead of a full rebuild.",
+        "contradiction_note": "Sarah (VP Ops) wants incremental change to meet the 6-month timeline, while Marcus (CTO) has been pushing for a full rebuild."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The technical solution should avoid creating additional compliance work for the upcoming ELD mandate.",
+        "confidence": "medium",
+        "source_excerpt": "avoid creating new compliance work for him, that's a quiet point in your favor.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The company is currently evaluating Transportation Management System (TMS) vendors but hasn't made a selection.",
+        "confidence": "medium",
+        "source_excerpt": "Currently evaluating vendors. No selection made.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend hours on the phone because the driver app is inadequate.",
+        "confidence": "medium",
+        "source_excerpt": "spend two to three hours a day on the phone with drivers",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Invoice reconciliation requires manual detective work due to mismatched data across systems.",
+        "confidence": "high",
+        "source_excerpt": "finance is doing detective work on every single invoice.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Prioritize fixing the invoicing reconciliation first, followed by the dispatcher workflow.",
+        "confidence": "high",
+        "source_excerpt": "invoicing is the bleeding wound. We need to fix that first.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce the average dispatch time per load from twelve minutes to eight minutes.",
+        "confidence": "high",
+        "source_excerpt": "If we can get that to eight minutes",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Have a measurable pilot in production by the end of Q3.",
+        "confidence": "high",
+        "source_excerpt": "have something measurable in production by end of September.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is an upcoming federal ELD compliance mandate deadline in November.",
+        "confidence": "high",
+        "source_excerpt": "ELD compliance deadline in November",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Technical integration from recent acquisitions of smaller brokerages remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The VP of Operations needs a consulting partner to help advocate for incremental improvements internally.",
+        "confidence": "medium",
+        "source_excerpt": "need a partner who can help me make the case for incremental change",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Secure CFO and CTO approval by tying technical approach to milestone payments and dollar metrics.",
+        "confidence": "medium",
+        "source_excerpt": "Rita will want to see the milestone payments and the success metrics tied to dollars.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The engagement is highly competitive, with the client actively evaluating two other consulting firms.",
+        "confidence": "high",
+        "source_excerpt": "This is a competitive engagement",
+        "contradiction_note": null
+      }
+    ]
+  }
+}
+
+
+
+=== RESPONSE ===
+# Northwind Logistics: Phase 1 Operational & Technical Optimization
+
+## Executive Summary
+Northwind Logistics has experienced impressive 40% growth over the past year, bolstering its position as a leading mid-market freight brokerage. However, this rapid expansion—along with incomplete technical integrations from recent acquisitions—has placed unsustainable strain on your dispatch and finance operations. 
+
+Our goal for this engagement is to eliminate the manual data bottlenecks that are currently slowing down your teams. By streamlining the flow of data across your systems, we aim to reduce Days Sales Outstanding (DSO) to the industry standard of approximately five days, reduce average dispatch time per load from twelve minutes to eight minutes, and ensure the project pays for itself through avoided headcount next year. Leveraging our recent experience solving similar operational challenges for peers like Cascade Freight, we commit to delivering a measurable pilot in production by the end of Q3 (September 30). 
+
+## Understanding
+Northwind currently operates with a fractured technology stack where dispatchers are forced to act as the manual integration layer between your custom Rails 5 dispatch tool (Routemaster), Salesforce, and NetSuite. 
+
+This disconnect manifests in two critical operational pain points:
+1. **The Invoicing Bottleneck:** Finance is currently three weeks behind on invoicing. Because data does not align across systems, your finance team must perform manual detective work on every single invoice, severely delaying revenue collection and inflating DSO.
+2. **Dispatcher Inefficiency:** Your dispatchers spend two to three hours a day on the phone with drivers. The current React Native driver app lacks essential capabilities—specifically photo uploads and messaging—forcing drivers and dispatchers into time-consuming manual workarounds. 
+
+## Approach
+To ensure immediate impact and secure ongoing internal support, our approach focuses on prioritization and measurable financial outcomes. 
+
+We will treat the invoicing reconciliation as the "bleeding wound," addressing it as our absolute first priority before moving on to the dispatcher workflow. We will map the data discrepancies between Salesforce, Routemaster, and NetSuite to automate the reconciliation process and remove the burden of manual detective work from the finance team. 
+
+Furthermore, we recognize the importance of upcoming regulatory deadlines. Our technical solutions will be designed to avoid creating any new compliance work for your team ahead of the November federal ELD mandate. Throughout the engagement, we will partner closely with Operations, Engineering, and Finance to ensure all solutions are tied to hard dollar metrics and clear milestones.
+
+## Phases & Timeline
+To meet the critical Q3 deadline and ensure continued funding, we propose a 6-month Phase 1 engagement structured as follows:
+
+* **Phase 1A: Invoicing & Data Reconciliation (Immediate)**
+  * Audit current data flow between Salesforce, Routemaster, and NetSuite.
+  * Implement automated data alignment to eliminate manual invoice reconciliation.
+  * **Milestone:** Measurable reduction in finance backlog and DSO.
+
+* **Phase 1B: Dispatch & Driver Workflow (Targeting Q3)**
+  * Enhance the React Native driver app with critical missing features (photo uploads, messaging).
+  * Streamline the dispatcher interface to reduce dual-entry.
+  * **Milestone:** Measurable pilot in production by September 30; dispatch time reduced toward the 8-minute-per-load target.
+
+* **Phase 1C: Compliance & Scaling (Q4)**
+  * Ensure all newly implemented workflows seamlessly support November ELD compliance requirements.
+  * Finalize integration cleanup from recent brokerage acquisitions.
+
+## Pricing Approach
+We understand that Northwind has a strong preference for predictable costs and measurable ROI. Therefore, we will structure this as a **fixed-fee engagement with milestone-based payments**, rather than a Time & Materials (T&M) model. 
+
+Payments will be tied directly to the delivery of the operational phases outlined above. This ensures that the CFO and executive team have complete visibility into what is being delivered, when it will be delivered, and how it ties back to the target success metrics (such as DSO reduction and time-per-load improvements). 
+
+## Open Questions
+To finalize the scope and technical architecture of this proposal, we need to clarify a few outstanding items:
+
+* **Technical Approach for Routemaster:** We have identified a divergence in internal preferences regarding the custom dispatch tool. There is currently an open question as to whether we should pursue an incremental update to the existing Rails 5 application (to optimize for the 6-month timeline) or execute a full rebuild. We will need to align with both Operations and Engineering to determine the best path forward.
+* **TMS Vendor Selection:** Northwind is currently evaluating Transportation Management System (TMS) vendors, but a final selection has not been made. We need to determine how the anticipated TMS will fit into the broader architecture and whether any integration work should be paused until the vendor is selected.
+* **ELD Mandate Specifics:** While we are aware of the November federal ELD compliance deadline, we need to review the specific technical requirements with your Head of Compliance to ensure our Q3 pilot does not conflict with these mandates.
+* **Phase 1 Budget:** We need to confirm the exact fixed-fee budget ceiling approved by Finance for this initial 6-month engagement.

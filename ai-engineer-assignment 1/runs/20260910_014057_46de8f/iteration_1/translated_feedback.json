@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "Remove all hallucinated metrics, technologies, and names not present in the Client Matrix. Specifically, delete references to '$85M in annual revenue', '40 dispatchers', '~600 contracted drivers', '~200 total employees', 'Rails 5', 'two internal engineers', 'NetSuite', 'React Native', '2023', 'Rajiv Mehta', and '2024 acquisitions of two smaller brokerages'. Replace them with generic terms or remove the clauses entirely.",
+    "Revise the 'Pricing Approach' section to remove the hallucinated '$150,000 – $250,000' benchmark. Instead, align the pricing narrative with the actual budget parameters discussed in the intake (the $250,000–$400,000 range and the $300,000 cap).",
+    "Update the 'Open Questions' section to explicitly name the stakeholders involved in each conflict as defined in the Client Matrix: state that Rita insists on a $300k budget cap while Sarah suggests a $250k-$400k range; note that Marcus wants to replace the platform with a SaaS TMS while Sarah wants to incrementally fix workflows; and clarify that Rita and Sarah require a Q3 pilot while Marcus believes Q4 is more realistic."
+  ]
+}

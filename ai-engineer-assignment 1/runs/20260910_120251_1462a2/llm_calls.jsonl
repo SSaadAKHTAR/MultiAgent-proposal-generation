@@ -1,0 +1,12 @@
+{"timestamp": "2026-09-10T12:03:32.197824", "agent": "DebriefAgent", "iteration": 0, "prompt_tokens": 3005, "completion_tokens": 1549, "latency_seconds": 40.22, "cost": 0.011501250000000001}
+{"timestamp": "2026-09-10T12:04:06.959455", "agent": "ProposalAgent", "iteration": 1, "prompt_tokens": 2349, "completion_tokens": 1076, "latency_seconds": 34.75, "cost": 0.008316249999999999}
+{"timestamp": "2026-09-10T12:04:46.255693", "agent": "ReviewAgent_Critique", "iteration": 1, "prompt_tokens": 3014, "completion_tokens": 427, "latency_seconds": 39.29, "cost": 0.0059025}
+{"timestamp": "2026-09-10T12:15:24.996998", "agent": "ReviewAgent_Translate", "iteration": 1, "prompt_tokens": 2882, "completion_tokens": 9, "latency_seconds": 14.58, "cost": 0.0036474999999999997}
+{"timestamp": "2026-09-10T12:15:53.770296", "agent": "ProposalAgent", "iteration": 2, "prompt_tokens": 3761, "completion_tokens": 1076, "latency_seconds": 28.77, "cost": 0.01008125}
+{"timestamp": "2026-09-10T12:16:22.500410", "agent": "ReviewAgent_Critique", "iteration": 2, "prompt_tokens": 3014, "completion_tokens": 424, "latency_seconds": 28.72, "cost": 0.0058875}
+{"timestamp": "2026-09-10T12:17:29.437181", "agent": "ReviewAgent_Translate", "iteration": 2, "prompt_tokens": 2887, "completion_tokens": 274, "latency_seconds": 26.78, "cost": 0.00497875}
+{"timestamp": "2026-09-10T12:18:01.252425", "agent": "ProposalAgent", "iteration": 3, "prompt_tokens": 3949, "completion_tokens": 1081, "latency_seconds": 31.81, "cost": 0.01034125}
+{"timestamp": "2026-09-10T12:18:50.303311", "agent": "ReviewAgent_Critique", "iteration": 3, "prompt_tokens": 3019, "completion_tokens": 301, "latency_seconds": 49.05, "cost": 0.0052787500000000005}
+{"timestamp": "2026-09-10T12:24:01.901742", "agent": "ReviewAgent_Translate", "iteration": 3, "prompt_tokens": 2887, "completion_tokens": 9, "latency_seconds": 18.67, "cost": 0.00365375}
+{"timestamp": "2026-09-10T12:24:16.646264", "agent": "ProposalAgent", "iteration": 4, "prompt_tokens": 3622, "completion_tokens": 1050, "latency_seconds": 14.74, "cost": 0.009777499999999998}
+{"timestamp": "2026-09-10T12:25:25.111716", "agent": "ReviewAgent_Critique", "iteration": 4, "prompt_tokens": 2988, "completion_tokens": 497, "latency_seconds": 68.46, "cost": 0.006220000000000001}

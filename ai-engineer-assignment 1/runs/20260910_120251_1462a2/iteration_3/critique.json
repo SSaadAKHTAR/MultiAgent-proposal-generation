@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Phases & Timeline (Introductory sentence)",
+      "description": "The phrase 'ensure continued funding' explicitly references the internal risk of the CFO pulling the budget. Stating this in a client-facing proposal is tactless and could embarrass the firm or offend the client's executive team.",
+      "suggested_fix": "Remove the phrase 'and ensure continued funding' and focus purely on meeting the critical Q3 deadline to drive rapid ROI."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions (Phase 1 Budget)",
+      "description": "Asking the client to confirm their 'exact fixed-fee budget ceiling' in a formal proposal is unprofessional and undermines the firm's pricing strategy and negotiation position.",
+      "suggested_fix": "Remove the bullet point asking for the budget ceiling. The firm should propose a price based on the scoped phases rather than asking the client for their maximum budget."
+    }
+  ],
+  "risks": [
+    "The proposal correctly navigates the internal conflict regarding the technical approach (incremental vs. rebuild) by placing it in Open Questions, but the firm needs to carefully manage this divergence during discovery to avoid alienating either the VP of Operations or the CTO.",
+    "Because this is a highly competitive engagement with two other firms evaluating, any tactless phrasing (such as mentioning funding threats or asking for budget ceilings) could easily cost the firm the deal. The document must be perfectly polished."
+  ],
+  "recommendation": "revise"
+}

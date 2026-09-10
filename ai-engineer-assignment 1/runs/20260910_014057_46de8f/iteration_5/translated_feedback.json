@@ -1,0 +1,8 @@
+{
+  "directives": [
+    "Remove the hard commitments to a September 30 (Q3) pilot deployment across the Executive Summary, Success Criteria, and Timeline sections. Add an 'Open Questions & Risks' section that explicitly flags the timeline conflict: Rita and Sarah require Q3 for budget reasons, but Marcus believes Q4 is more realistic.",
+    "In the Pricing Approach section, do not present $300,000 as a fully finalized agreement. Add a note or flag in the new 'Open Questions & Risks' section highlighting the internal budget misalignment between Rita's strict $300,000 cap and Sarah's expected $250,000 to $400,000 range.",
+    "In the Understanding section, explicitly document the strategic disagreement between Marcus (who wants a full SaaS platform replacement and views this as a 'band-aid') and Sarah (who wants incremental workflow fixes).",
+    "Revise the 'Definitive Strategy' heading and language in the Approach section to frame the portable logic layer as a strategic bridge or compromise that addresses both immediate workflow needs and future platform replacement, rather than ignoring Marcus's concerns about investing in a dying platform."
+  ]
+}

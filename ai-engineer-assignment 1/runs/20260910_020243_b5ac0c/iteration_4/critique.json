@@ -1,0 +1,14 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal hallucinates a past engagement with a 'peer freight brokerage', a specific team size (4 members), and a price band of '$150,000 to $250,000' for a 3-month build. This information is not present in the Client Matrix and introduces unverified pricing expectations that could cause friction with the client.",
+      "suggested_fix": "Remove the hallucinated past engagement, team size, and price band. Focus purely on the commitment to a fixed-fee, milestone-based structure, and state that the final price will be determined once the budget cap is clarified in the Open Questions."
+    }
+  ],
+  "risks": [
+    "Including hallucinated pricing and past project examples creates a significant risk of setting incorrect expectations and undermining the firm's credibility."
+  ],
+  "recommendation": "revise"
+}

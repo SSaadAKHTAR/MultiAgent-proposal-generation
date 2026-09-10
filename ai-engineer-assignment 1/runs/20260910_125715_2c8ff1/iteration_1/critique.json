@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach",
+      "description": "The proposal fails to provide a firm price, stating it will be provided 'Once we have resolved the open questions'. This directly conflicts with the client's high-confidence desired state: 'I want a number in the proposal. Not a range. A number.'",
+      "suggested_fix": "Provide a specific, firm fixed-fee number in the proposal (e.g., at or below the $300k strict cap mentioned by the CFO) and state the assumptions it is based on, rather than deferring the pricing entirely."
+    },
+    {
+      "severity": "high",
+      "location": "Executive Summary",
+      "description": "The section includes hallucinated metrics not found in the Client Matrix, specifically '40% growth' and '600 contracted drivers'.",
+      "suggested_fix": "Remove the fabricated metrics and focus the opening on the rapid expansion and operational bottlenecks actually supported by the provided context."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding",
+      "description": "The section invents numerous specific details not present in the Client Matrix, including '40 dispatchers', 'React Native mobile app (last updated in 2023)', 'NetSuite', '7-year-old custom Rails 5 app', 'two internal engineers', 'Rajiv Mehta', and a 'November' ELD mandate.",
+      "suggested_fix": "Remove all fabricated technologies, headcounts, names, and dates. Stick strictly to the facts provided in the Client Matrix (e.g., mention the custom dispatch tool 'Routemaster' and Salesforce, but do not invent the underlying tech stack or specific personnel)."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions (Item 4)",
+      "description": "The proposal invents a detail stating 'intake notes indicate Northwind is currently evaluating new TMS vendors'. The matrix only states the CTO wants to replace the tool with a third-party SaaS platform, not that an active evaluation is underway.",
+      "suggested_fix": "Revise the question to focus on the CTO's stated desire to move to a third-party SaaS platform without inventing a current vendor evaluation process."
+    }
+  ],
+  "risks": [
+    "Failing to include a firm price directly violates a high-confidence client requirement and risks immediate rejection of the proposal by the CFO.",
+    "The inclusion of highly specific but fabricated details (hallucinations) across multiple sections severely damages the firm's credibility and would embarrass the firm in front of the client."
+  ],
+  "recommendation": "revise"
+}

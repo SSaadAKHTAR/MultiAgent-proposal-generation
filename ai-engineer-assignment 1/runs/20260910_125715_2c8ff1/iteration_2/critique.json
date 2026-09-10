@@ -1,0 +1,15 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Open Questions - Item 1 (Budget Alignment)",
+      "description": "The proposal provides a firm fixed-fee price of $295,000 in the Pricing Approach (which correctly adheres to the CFO's strict $300k cap), but Open Question 1 asks the client to 'confirm the exact ceiling to ensure our proposed scope fits within approved financial boundaries.' This is logically inconsistent and makes the firm look uncoordinated, as the scope and firm price have already been set.",
+      "suggested_fix": "Revise Open Question 1 to acknowledge the internal budget discrepancy ($250k-$400k vs. $300k cap), but clarify that the proposal was intentionally scoped and priced at $295,000 to respect the strict $300,000 cap mandated by Finance. Remove the request to confirm the ceiling for scoping purposes."
+    }
+  ],
+  "risks": [
+    "The unresolved Q3 vs. Q4 pilot timeline is a major risk; if the Q3 deadline is missed, funding may be reallocated, but Engineering currently views Q3 as unrealistic.",
+    "The CTO's desire to completely replace Routemaster with a SaaS platform could lead to friction or a lack of internal support for this incremental, portable-layer approach if not carefully managed."
+  ],
+  "recommendation": "revise"
+}

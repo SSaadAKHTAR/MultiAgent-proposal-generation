@@ -1,0 +1,162 @@
+{
+  "business": {
+    "pain_points": [
+      {
+        "statement": "Finance is three weeks behind on invoicing due to mismatched data, delaying revenue collection.",
+        "confidence": "high",
+        "source_excerpt": "finance is 3 weeks behind on invoicing because the data never lines up.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The client wants a fixed-fee engagement with milestone payments rather than time and materials.",
+        "confidence": "medium",
+        "source_excerpt": "Strong preference for fixed-fee with milestone payments over T&M.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Reduce Days Sales Outstanding (DSO) to the industry standard of about five days.",
+        "confidence": "medium",
+        "source_excerpt": "days-sales-outstanding, which should drop from where we are now back to industry standard",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The project must pay for itself by reducing the need for future headcount hires.",
+        "confidence": "medium",
+        "source_excerpt": "pays for itself in headcount we don't have to hire next year.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The CFO is skeptical of consulting vendors and will pull funding if Q3 milestones aren't met.",
+        "confidence": "high",
+        "source_excerpt": "Otherwise the funding gets pulled into other projects.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "technical": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers must act as the integration layer between three disconnected systems.",
+        "confidence": "high",
+        "source_excerpt": "it's three systems for one assignment, and the dispatcher is the integration layer.",
+        "contradiction_note": null
+      },
+      {
+        "statement": "The driver mobile app lacks essential features like photo uploads and messaging.",
+        "confidence": "medium",
+        "source_excerpt": "They can't take photos, they can't flag issues, they can't message the dispatcher.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The technical approach for updating the Routemaster dispatch tool.",
+        "confidence": "contradicted",
+        "source_excerpt": "make the case for incremental change instead of a full rebuild.",
+        "contradiction_note": "Sarah (VP Ops) wants incremental change to meet the 6-month timeline, while Marcus (CTO) has been pushing for a full rebuild."
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "The technical solution should avoid creating additional compliance work for the upcoming ELD mandate.",
+        "confidence": "medium",
+        "source_excerpt": "avoid creating new compliance work for him, that's a quiet point in your favor.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The company is currently evaluating Transportation Management System (TMS) vendors but hasn't made a selection.",
+        "confidence": "medium",
+        "source_excerpt": "Currently evaluating vendors. No selection made.",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "operational": {
+    "pain_points": [
+      {
+        "statement": "Dispatchers spend hours on the phone because the driver app is inadequate.",
+        "confidence": "medium",
+        "source_excerpt": "spend two to three hours a day on the phone with drivers",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Invoice reconciliation requires manual detective work due to mismatched data across systems.",
+        "confidence": "high",
+        "source_excerpt": "finance is doing detective work on every single invoice.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "Prioritize fixing the invoicing reconciliation first, followed by the dispatcher workflow.",
+        "confidence": "high",
+        "source_excerpt": "invoicing is the bleeding wound. We need to fix that first.",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Reduce the average dispatch time per load from twelve minutes to eight minutes.",
+        "confidence": "high",
+        "source_excerpt": "If we can get that to eight minutes",
+        "contradiction_note": null
+      },
+      {
+        "statement": "Have a measurable pilot in production by the end of Q3.",
+        "confidence": "high",
+        "source_excerpt": "have something measurable in production by end of September.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "There is an upcoming federal ELD compliance mandate deadline in November.",
+        "confidence": "high",
+        "source_excerpt": "ELD compliance deadline in November",
+        "contradiction_note": null
+      }
+    ]
+  },
+  "strategic": {
+    "pain_points": [
+      {
+        "statement": "Technical integration from recent acquisitions of smaller brokerages remains incomplete.",
+        "confidence": "medium",
+        "source_excerpt": "Tech integration from those acquisitions is incomplete.",
+        "contradiction_note": null
+      }
+    ],
+    "desired_state": [
+      {
+        "statement": "The VP of Operations needs a consulting partner to help advocate for incremental improvements internally.",
+        "confidence": "medium",
+        "source_excerpt": "need a partner who can help me make the case for incremental change",
+        "contradiction_note": null
+      }
+    ],
+    "success_criteria": [
+      {
+        "statement": "Secure CFO and CTO approval by tying technical approach to milestone payments and dollar metrics.",
+        "confidence": "medium",
+        "source_excerpt": "Rita will want to see the milestone payments and the success metrics tied to dollars.",
+        "contradiction_note": null
+      }
+    ],
+    "risks_unknowns": [
+      {
+        "statement": "The engagement is highly competitive, with the client actively evaluating two other consulting firms.",
+        "confidence": "high",
+        "source_excerpt": "This is a competitive engagement",
+        "contradiction_note": null
+      }
+    ]
+  }
+}

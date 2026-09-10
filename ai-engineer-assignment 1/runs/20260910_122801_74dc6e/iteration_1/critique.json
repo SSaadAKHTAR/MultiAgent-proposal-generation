@@ -1,0 +1,38 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Executive Summary, Paragraph 1",
+      "description": "The proposal states Northwind expanded revenue by 40% over the past year. This specific metric is not in the Client Matrix and appears to be fabricated.",
+      "suggested_fix": "Remove the '40%' metric and refer generally to the company's growth and recent acquisitions."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding, Bullet 2 ('Dispatcher Burden')",
+      "description": "The proposal specifies a 'custom Rails dispatch app' and a 'React Native driver app'. The Client Matrix only mentions a 'custom dispatch tool' and 'driver mobile app' without specifying the underlying tech stack.",
+      "suggested_fix": "Remove the references to 'Rails' and 'React Native' to avoid assuming unverified technical details."
+    },
+    {
+      "severity": "medium",
+      "location": "Pricing Approach, Paragraph 1",
+      "description": "The proposal claims a fixed-fee agreement aligns with the CFO's preferences. The matrix notes the CFO is skeptical and focused on Q3 milestones, but does not mention a preference for fixed-fee pricing.",
+      "suggested_fix": "Rephrase to emphasize that tying delivery to Q3 milestones addresses the CFO's concerns, rather than claiming a preference for a fixed-fee structure."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions, Bullet 2 ('TMS Evaluation Status')",
+      "description": "The proposal introduces a question about a Transportation Management System (TMS) evaluation. This is not mentioned anywhere in the Client Matrix and is a complete hallucination.",
+      "suggested_fix": "Delete the entire bullet point regarding the TMS evaluation."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions, Bullet 4 ('ELD Compliance Mandate')",
+      "description": "The proposal mentions 'Rajiv Mehta's compliance roadmap'. The name Rajiv Mehta is not provided in the Client Matrix and is fabricated.",
+      "suggested_fix": "Remove the name 'Rajiv Mehta' and refer generally to the compliance team or Head of Compliance."
+    }
+  ],
+  "risks": [
+    "The proposal contains multiple hallucinations, including invented metrics, tech stacks, stakeholder names, and ongoing software evaluations. Presenting fabricated information to a client in a highly competitive bid (against two other firms) risks immediate disqualification and severe damage to the firm's credibility."
+  ],
+  "recommendation": "revise"
+}

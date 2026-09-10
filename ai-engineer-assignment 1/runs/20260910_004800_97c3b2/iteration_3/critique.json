@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Executive Summary",
+      "description": "The proposal invents company metrics (40% growth, $85M revenue) and a peer reference (Cascade Freight) that are not present in the Client Matrix.",
+      "suggested_fix": "Remove the fabricated revenue, growth metrics, and peer reference. Rely only on the business context provided in the matrix."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding and Phases & Timeline",
+      "description": "The proposal hallucinates specific technologies (Ruby on Rails, NetSuite, React Native), personnel (Rajiv Mehta, two engineers), and user counts (40 dispatchers, 600 drivers) not found in the source material.",
+      "suggested_fix": "Remove all fabricated technical, personnel, and user details. Reference only the systems explicitly provided in the matrix (Salesforce, custom dispatch tool/Routemaster)."
+    },
+    {
+      "severity": "medium",
+      "location": "Pricing Approach",
+      "description": "The proposal invents a typical price band of $150,000 to $250,000 and a 4-person consulting team based on hallucinated past experience.",
+      "suggested_fix": "Remove the fabricated price band and team size. State that the exact fixed-fee structure will be finalized once the Phase 1 budget cap is confirmed."
+    }
+  ],
+  "risks": [
+    "The extensive use of hallucinated facts regarding the client's tech stack, revenue, and personnel poses a severe risk of embarrassing the firm and losing client trust.",
+    "While contradicted items were correctly identified and placed in the Open Questions section, the sheer volume of fabricated context in the earlier sections undermines the proposal's overall credibility."
+  ],
+  "recommendation": "revise"
+}

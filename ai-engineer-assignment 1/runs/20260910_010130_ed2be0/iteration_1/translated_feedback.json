@@ -1,0 +1,8 @@
+{
+  "directives": [
+    "Replace all generic references to the 'custom Rails dispatch tool' or 'custom Rails 5 dispatch application' with the system's actual name, 'Routemaster', throughout the Executive Summary, Understanding, and Approach sections.",
+    "Update the 'Technical & Organizational Context' subsection in the Understanding section to explicitly mention that Routemaster suffers from severe technical debt (which halts feature shipping and makes changes take three times longer) and acknowledge that two previous internal attempts to fix these workflows have failed.",
+    "Remove 'Pilot Target Timeline Alignment' from the Open Questions section. The Client Matrix confirms that delivering a credible plan for a Q3 pilot is a high-confidence success criterion. Update the 'Phases & Timeline' section to explicitly commit to a Q3 pilot delivery.",
+    "In the 'Pricing Approach' section, add a statement clarifying that the proposed $150,000 – $250,000 fixed-fee range safely complies with the CFO's strict $300,000 budget cap, which addresses the internal disagreement over the budget ceiling."
+  ]
+}

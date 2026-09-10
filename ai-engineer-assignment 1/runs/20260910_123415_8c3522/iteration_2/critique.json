@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal explicitly calls out an 'architectural dispute' between the VP of Operations and the CTO. Highlighting internal client friction in the pricing contingencies is tactless and could embarrass the firm or alienate the client.",
+      "suggested_fix": "Reword the contingency to focus on the technical outcome rather than the internal conflict. For example: 'contingent upon finalizing the technical architecture strategy (incremental enhancements vs. full rebuild) during the Discovery phase.'"
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions",
+      "description": "The proposal explicitly states 'We have noted a contradiction' and names Sarah Chen and Marcus Patel as being at odds over the technical approach. This is too blunt for a client-facing document and risks embarrassing the stakeholders.",
+      "suggested_fix": "Soften the language to remove the word 'contradiction' and avoid pitting the stakeholders against each other. Frame it as a need for alignment: 'We need to align on the optimal technical strategy for Phase 1, balancing the six-month timeline with long-term architectural goals (incremental enhancements vs. a full rebuild).'"
+    }
+  ],
+  "risks": [
+    "The primary risk is the handling of the internal disagreement between Operations and IT. If the consulting firm forces this issue too bluntly, it could lose the competitive bid by alienating either the VP of Ops or the CTO.",
+    "The tight six-month timeline for a Q3 pilot is highly dependent on resolving the architecture question quickly. If the client chooses a full rebuild, the Q3 deadline is likely impossible, which would trigger the CFO pulling the funding."
+  ],
+  "recommendation": "revise"
+}

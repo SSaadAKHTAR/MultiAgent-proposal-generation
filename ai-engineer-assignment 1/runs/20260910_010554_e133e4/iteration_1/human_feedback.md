@@ -1,0 +1,1 @@
+fix all the issues and read the clearly and fix it dont make decisions from your self

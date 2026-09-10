@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Executive Summary & Phases & Timeline",
+      "description": "The proposal confidently commits to delivering a production pilot by the end of Q3 (September 30) in both the Executive Summary and the Phases & Timeline sections. However, the Client Matrix marks the pilot timeline as 'contradicted' due to internal disagreement between Q3 and Q4. Contradicted items must not be stated as confident facts.",
+      "suggested_fix": "Remove the definitive commitment to a Q3 pilot from the Executive Summary and Phases & Timeline. You can acknowledge the business requirement for a Q3 pilot to secure funding, but clarify that the actual delivery timeline is pending the resolution of the Q3 vs. Q4 feasibility disagreement outlined in the Open Questions section."
+    },
+    {
+      "severity": "high",
+      "location": "Understanding, Approach, & Open Questions",
+      "description": "The proposal includes several hallucinated specific details not present in the Client Matrix. This includes inventing a stakeholder named 'Rajiv Mehta', an ongoing 'Transportation Management System (TMS) evaluation', and specific technologies like 'NetSuite', 'Rails 5', and 'React Native'. Presenting fabricated facts to the client would severely damage the firm's credibility.",
+      "suggested_fix": "Remove all hallucinated names, projects, and technologies. Refer generally to the client's compliance team, the custom dispatch tool, the mobile app, and the invoicing system exactly as they are described in the Client Matrix."
+    }
+  ],
+  "risks": [
+    "Promising a Q3 pilot when there are known internal technical concerns about its feasibility could set the firm up for failure and damage client trust early in the engagement.",
+    "Including hallucinated stakeholders and ongoing software evaluations makes the proposal look like a careless template, which risks embarrassing the firm and losing the client's confidence."
+  ],
+  "recommendation": "revise"
+}

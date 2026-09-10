@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Understanding > Strategic & Technical Context",
+      "description": "The proposal states the existing dispatch tool is 'maintained by two engineers.' This detail is not present in the Client Matrix and is a hallucination that could damage credibility if incorrect.",
+      "suggested_fix": "Remove the phrase 'maintained by two engineers' and simply state that operations rely on the existing dispatch tool, CRM, finance systems, and custom driver app."
+    },
+    {
+      "severity": "high",
+      "location": "Phases & Timeline > Phase 1D",
+      "description": "The proposal commits to 'Support November ELD compliance transition alongside the internal team.' The matrix explicitly states the details of this mandate are unclear and the goal is merely to *avoid* creating new compliance work. Committing to actively support an undefined compliance transition under a fixed-fee model introduces severe scope risk.",
+      "suggested_fix": "Revise the bullet point to state that the team will ensure the Q3 pilot remains compliant and does not interfere with the internal team's ELD transition efforts, rather than committing to support the transition itself."
+    },
+    {
+      "severity": "medium",
+      "location": "Understanding > Strategic & Technical Context",
+      "description": "The proposal mentions avoiding additional compliance work for the 'Head of Compliance.' The Client Matrix does not mention a Head of Compliance (the pronoun 'him' in the matrix likely refers to the CTO or another known stakeholder).",
+      "suggested_fix": "Change 'Head of Compliance' to 'your team' or 'technical leadership' to avoid guessing the client's organizational structure."
+    }
+  ],
+  "risks": [
+    "Committing to a fixed-fee structure while acknowledging that the ELD mandate details are unclear and the core technical direction (rebuild vs. incremental) is unresolved creates a significant risk of scope creep and margin erosion.",
+    "The inclusion of hallucinated details (e.g., 'two engineers', 'Head of Compliance') risks undermining the firm's credibility and making it appear as though we are using boilerplate or guessing their internal structure."
+  ],
+  "recommendation": "revise"
+}

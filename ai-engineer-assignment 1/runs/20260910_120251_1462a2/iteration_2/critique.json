@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Approach (Paragraph 1)",
+      "description": "The proposal states it will \"help build the internal business case for these incremental, ROI-driven improvements.\" However, the Client Matrix marks the technical approach as 'contradicted' because the VP of Ops wants incremental change while the CTO wants a full rebuild. Stating 'incremental' as a definitive approach takes a side prematurely, alienates the CTO, and violates the rule against stating contradicted items as facts.",
+      "suggested_fix": "Remove the word 'incremental' from the Approach section. Rephrase to state that you will partner with Operations and Engineering to evaluate and build a business case for the most ROI-driven technical path, leaving the resolution of the approach to the 'Open Questions' section."
+    },
+    {
+      "severity": "low",
+      "location": "Approach (Paragraph 2)",
+      "description": "The proposal directly quotes the client's informal phrase 'bleeding wound' to describe the invoicing issue. While it shows active listening, using this colloquial/gory metaphor in a formal executive proposal lacks professional polish.",
+      "suggested_fix": "Replace 'bleeding wound' with a more professional phrasing, such as 'most critical operational bottleneck' or 'highest priority issue'."
+    }
+  ],
+  "risks": [
+    "By prematurely siding with the VP of Operations on the 'incremental' approach in the main body of the proposal, the firm risks alienating the CTO. Since securing CTO approval is a specific success criterion and the engagement is highly competitive against two other firms, this misalignment could cost the firm the bid.",
+    "The proposal correctly identifies the CFO's need for milestones to ensure continued funding, but must be careful to ensure the Q3 pilot milestone is robust enough to satisfy the CFO's high skepticism of consulting vendors."
+  ],
+  "recommendation": "revise"
+}

@@ -1,0 +1,8 @@
+{
+  "directives": [
+    "Remove all hallucinated company metrics from the Executive Summary and Understanding sections, specifically the references to '40% growth', '200 employees', '40 dispatchers', and '600 contracted drivers'. Only use data explicitly stated in the Client Matrix.",
+    "Remove the hallucinated technology stack details ('7-year-old custom Rails 5 app' and 'React Native'). Replace them with the exact terms from the Client Matrix: 'custom dispatch tool' and 'mobile application'.",
+    "Remove the hallucinated name 'Rajiv Mehta' from the Approach and Open Questions sections. Refer to the compliance contact generically, as no specific name is provided in the Client Matrix.",
+    "Remove the hallucinated peer brokerage name ('Cascade Freight') from the Executive Summary and the fabricated pricing baseline ('$150,000 to $250,000') from the Pricing Approach. Base the Pricing Approach strictly on the CFO's requirement for a fixed-fee, milestone-based structure."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Open Questions, Bullet 1",
+      "description": "The proposal includes the internal metadata tag '(Contradicted)' in the client-facing heading. Exposing internal matrix notes to the client is highly unprofessional and would embarrass the firm.",
+      "suggested_fix": "Remove the word '(Contradicted)' from the heading so it simply reads 'Strategic Direction for Dispatch Tool:'."
+    },
+    {
+      "severity": "medium",
+      "location": "Phases & Timeline",
+      "description": "The proposed timeline spans at least 13 weeks (Phase 1C starts on Week 11). Because Q3 is exactly 13 weeks long, this schedule assumes the project starts exactly on the first day of Q3. Any delay in contract signing will cause the pilot to miss the hard September 30 deadline.",
+      "suggested_fix": "Compress the proposed timeline phases or explicitly state the required project start date (e.g., 'Assuming a July 1 start') to ensure the September 30 deadline is mathematically feasible."
+    }
+  ],
+  "risks": [
+    "The internal conflict between Operations (Sarah) and Engineering (Marcus) regarding a rebuild vs. incremental update could easily delay the Phase 1A alignment. If this drags out, the strict end-of-Q3 deadline will be missed, risking the CFO pulling the budget.",
+    "The engagement is highly competitive with two other firms bidding. Given the CFO's existing skepticism of vendors, any lack of polish in the proposal (such as the metadata leak) could immediately disqualify the firm."
+  ],
+  "recommendation": "revise"
+}

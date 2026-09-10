@@ -1,0 +1,33 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Phases & Timeline (Phase 1C) and Understanding",
+      "description": "The proposal treats the Q3 funding deadline as a flexible target dependent on internal alignment ('exact timeline dependent on resolving the internal Q3 vs. Q4 debate'). The Client Matrix explicitly states that funding gets reallocated if the pilot is not in production by the end of Q3. The deadline is a hard financial constraint, not a flexible choice.",
+      "suggested_fix": "Revise Phase 1C and the Understanding section to clarify that Q3 is a hard deadline to retain funding. The internal debate is whether Engineering can realistically commit to this mandatory deadline, acknowledging that pushing to Q4 means forfeiting the current funding."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal suggests a 6-month Phase 1 engagement and quotes a reference price of $150k-$250k for a 3-month project. Extrapolating this run rate means a 6-month project would cost $300k-$500k, which directly conflicts with the CFO's hard budget cap of $300k (and the Ops upper bound of $400k).",
+      "suggested_fix": "Either reduce the proposed Phase 1 timeline to 3-4 months to align with the $250k-$400k budget reality, or explicitly explain how the team will be scaled down over 6 months to ensure the total fixed-fee cost remains under the $300k hard cap."
+    },
+    {
+      "severity": "medium",
+      "location": "Executive Summary & Understanding",
+      "description": "The proposal vaguely states Finance is 'significantly delayed' on invoicing, missing the specific, high-confidence metric from the Client Matrix.",
+      "suggested_fix": "Update the text to explicitly state that Finance is '3 weeks behind' on invoicing to demonstrate active listening."
+    },
+    {
+      "severity": "low",
+      "location": "Executive Summary",
+      "description": "The proposal mentions avoiding the need for 'additional dispatcher headcount' but omits the exact number of dispatchers.",
+      "suggested_fix": "Specify that the operational improvements will avoid the need to hire 'four additional dispatchers'."
+    }
+  ],
+  "risks": [
+    "Misrepresenting a hard financial deadline (Q3 funding reallocation) as a flexible engineering choice risks alienating the CFO and VP of Ops who are trying to secure the budget.",
+    "Proposing a 6-month timeline while providing reference pricing for a 3-month MVP creates a mathematical contradiction that suggests the final fixed-fee will exceed the client's strict budget cap, potentially causing sticker shock."
+  ],
+  "recommendation": "revise"
+}

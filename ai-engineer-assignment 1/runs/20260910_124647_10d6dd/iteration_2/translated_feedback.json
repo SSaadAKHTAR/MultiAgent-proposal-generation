@@ -1,0 +1,7 @@
+{
+  "directives": [
+    "In 'Understanding > Strategic & Technical Context', edit the 'Current Tech Stack' bullet to remove the phrase 'maintained by two engineers'. The revised bullet should simply state that operations rely on the existing dispatch tool, CRM, finance systems, and custom driver app.",
+    "In 'Phases & Timeline > Phase 1D', replace the bullet point 'Support November ELD compliance transition alongside the internal team' with a commitment to ensure the Q3 pilot remains compliant and does not interfere with the internal team's ELD transition efforts.",
+    "Search the proposal for the phrase 'Head of Compliance' (located in 'Understanding > Strategic & Technical Context' under 'Compliance Deadline', and in 'Open Questions' under 'ELD Mandate Specifics') and replace it with 'your team' or 'technical leadership' to avoid assuming the client's organizational structure."
+  ]
+}

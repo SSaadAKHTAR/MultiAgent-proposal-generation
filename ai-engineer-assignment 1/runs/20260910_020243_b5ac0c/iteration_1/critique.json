@@ -1,0 +1,34 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Understanding & Phases & Timeline",
+      "description": "The proposal states as a definitive fact that a pilot must be in production by the end of Q3 and schedules it in Phase 1C. However, the Client Matrix explicitly marks the Q3 deadline as 'contradicted' because the CTO refuses to commit to it. Promising Q3 in the timeline while simultaneously listing it as an Open Question creates a glaring internal contradiction and commits the firm to a disputed deadline.",
+      "suggested_fix": "Remove the definitive commitment to a Q3 launch from the 'Understanding' and 'Phases & Timeline' sections. Frame the timeline as flexible or dependent on the resolution of the Q3 vs. Q4 debate highlighted in the Open Questions."
+    },
+    {
+      "severity": "high",
+      "location": "Executive Summary & Understanding",
+      "description": "The proposal includes numerous highly specific hallucinations not present in the Client Matrix, including '~$85M revenue', 'two recent acquisitions', '40 dispatchers', '600 contracted drivers', 'Rails 5 app', and 'NetSuite'. Presenting fabricated business metrics and tech stacks to a client is highly risky and would embarrass the firm.",
+      "suggested_fix": "Remove all fabricated metrics, company history, and technology names. Rely strictly on the facts provided in the Client Matrix (e.g., Salesforce, Routemaster, $1.4M working capital, $320k savings)."
+    },
+    {
+      "severity": "high",
+      "location": "Pricing Approach",
+      "description": "The proposal states that a 3-month engagement costs $150k-$250k and that this 6-month engagement will 'scale accordingly'. This implies a total cost of $300k-$500k, which directly violates the CFO's hard $300k budget cap mentioned in the matrix and the Open Questions. This could immediately disqualify the proposal.",
+      "suggested_fix": "Remove the linear scaling language. Instead, state that the 6-month Phase 1 scope will be strictly tailored to fit within the final approved budget constraints once the internal budget dispute ($300k vs $400k) is resolved."
+    },
+    {
+      "severity": "medium",
+      "location": "Pricing Approach",
+      "description": "The proposal invents a specific past client ('Cascade Freight') to justify its pricing model. Fabricating case studies or client names is an unnecessary risk.",
+      "suggested_fix": "Remove the specific name 'Cascade Freight' and refer generically to 'recent engagements with peer freight brokerages' or remove the comparison entirely."
+    }
+  ],
+  "risks": [
+    "The proposal suffers from severe internal contradictions by promising a Q3 delivery in the timeline while simultaneously questioning its feasibility in the Open Questions section.",
+    "The inclusion of fabricated company data (revenue, headcount, tech stack) threatens the firm's credibility and makes the proposal look like a generic template rather than a tailored solution.",
+    "The implied pricing model mathematically exceeds the CFO's strict budget cap, creating a high risk of immediate rejection by Finance."
+  ],
+  "recommendation": "revise"
+}

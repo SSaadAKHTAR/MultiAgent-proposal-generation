@@ -1,0 +1,1 @@
+if the pricing issue has contradiction make it an open question in the proposal

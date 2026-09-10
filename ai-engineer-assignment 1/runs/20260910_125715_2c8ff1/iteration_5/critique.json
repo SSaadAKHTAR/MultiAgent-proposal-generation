@@ -1,0 +1,15 @@
+{
+  "issues": [
+    {
+      "severity": "critical",
+      "location": "Pricing Approach and Open Questions",
+      "description": "The Client Matrix identifies a contradicted budget (the CFO caps it at $300,000, while the VP of Ops expects a range of $250,000 to $400,000). The proposal fails to include this contradiction in the Open Questions section and instead confidently commits to a firm fixed fee of $295,000.",
+      "suggested_fix": "Add the budget disagreement to the Open Questions section to ensure alignment between the CFO and VP of Ops. In the Pricing Approach, clarify that the $295,000 price is proposed based on the CFO's stated cap, but remains pending final budget alignment."
+    }
+  ],
+  "risks": [
+    "Committing to a firm price without resolving the internal budget dispute could lead to scope disagreements or alienate stakeholders who expected a larger engagement.",
+    "The unresolved Q3 versus Q4 pilot timeline dispute poses a severe risk to the project's funding, as failure to deliver in Q3 may result in budget reallocation before the project is finished."
+  ],
+  "recommendation": "revise"
+}

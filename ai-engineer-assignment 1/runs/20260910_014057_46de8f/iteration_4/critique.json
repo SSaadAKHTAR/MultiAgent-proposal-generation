@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "severity": "high",
+      "location": "Open Questions, Item 4",
+      "description": "The proposal hallucinates a specific name, 'Rajiv Mehta', for the Head of Compliance, which is not provided in the Client Matrix.",
+      "suggested_fix": "Remove the fabricated name and refer simply to the 'Head of Compliance' or 'compliance team'."
+    },
+    {
+      "severity": "high",
+      "location": "Open Questions, Items 1, 2, and 3",
+      "description": "The proposal explicitly names stakeholders (Rita, Sarah, Marcus) and bluntly describes their internal conflicts and disagreements. Exposing internal politics in a client-facing document is highly unprofessional and risks embarrassing the firm and alienating the client.",
+      "suggested_fix": "Rewrite these open questions to diplomatically request alignment on budget, timeline, and strategy without naming specific individuals or explicitly stating that they are in conflict."
+    },
+    {
+      "severity": "medium",
+      "location": "Phases & Timeline",
+      "description": "The proposed timeline hardcodes a 16-week schedule, which likely pushes the pilot into Q4. This inadvertently takes a side in the unresolved Q3 vs Q4 pilot deadline conflict before the alignment discussion occurs.",
+      "suggested_fix": "Add a disclaimer that the timeline is illustrative and will be finalized once the target pilot timeline (Q3 vs Q4) is aligned upon during kickoff."
+    }
+  ],
+  "risks": [
+    "The proposal lacks diplomatic tact in addressing contradicted items, risking severe client alienation by airing their internal political disagreements in a formal document.",
+    "Hallucinating stakeholder names damages the firm's credibility and attention to detail."
+  ],
+  "recommendation": "revise"
+}
