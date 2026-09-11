@@ -31,61 +31,110 @@ Below is an overview of the directory structure and the purpose of each key file
 - **`llm_provider.py`**: Contains the `LLMProvider` class which wraps the `google-genai` SDK. It includes robust error handling and retry logic, so you don't have to worry about API rate limits in the agent scripts.
 - **`*_agent.py`**: The individual agent scripts (`debrief_agent.py`, `proposal_agent.py`, `review_agent.py`) contain the system prompts and generation logic specific to their roles.
 
+This project implements a multi-agent AI pipeline to synthesize raw client intake materials and transcripts into a polished, structured Markdown proposal.
+
 ## 1. Architecture Diagram
 
 ```mermaid
 graph TD
-    A[Intake Docs & Transcripts] --> B(Debrief Agent)
-    B -->|Generates| C[4x4 Client Matrix]
-    C --> D(Proposal Agent)
-    D -->|Generates| E[Markdown Proposal]
-    E --> F(Review Agent - Critique)
-    F -->|Outputs| G[Structured Review]
-    G --> H{Human Gate}
-    H -->|Approve| I[Final Proposal]
-    H -->|Reject w/ Feedback| J(Review Agent - Translate)
-    J -->|Generates| K[Actionable Directives]
-    K --> D
+    A[data/intake.md] --> C
+    B[data/transcript_b.md] --> C
+    
+    subgraph Iteration 0
+        C[Debrief Agent] -->|Extracts| D[(Client Matrix JSON)]
+    end
+
+    subgraph Iterations 1-5
+        D -.-> E
+        E[Proposal Agent] -->|Drafts| F[Markdown Proposal]
+        F --> G[Review Agent - Critique]
+        G -->|Critique| H{Human Review}
+        
+        H -->|Approves| I((Final Proposal))
+        H -->|Provides Feedback| J[Review Agent - Synthesize]
+        G -->|Critique| J
+        J -->|Unified Directives| E
+    end
+    
+    classDef agent fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef doc fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
+    
+    class C,E,G,J agent;
+    class A,B,D,F,I doc;
 ```
 
 ## 2. Framework Choice
-**Framework:** Native `google-genai` SDK + `tenacity` + `pydantic`
-* **Zero Magic:** Instead of abstracting away control with heavy agent frameworks (like LangChain or CrewAI), the native SDK provides precise control over function calling and strict schema adherence.
-* **Deterministic Reliability:** Pydantic models paired with Google's native structured output configuration guarantee that agent boundaries are strongly typed and won't fail unpredictably in production.
-* **Granular Error Handling:** Wrapping native API calls with `tenacity` allows us to implement deliberate, customized retry logic for transient API failures without framework interference.
+I chose to use **Raw SDK + state machine** (using the google-genai library and pydantic).
+- **Transparency:** No hidden prompt or black-box orchestration. It gives me complete control over exactly what goes into the LLM context and what not.
+- **Strict Typing:** Seamless integration with Pydantic for rigid schema validation at every comunication point between agents.
+- **Flexibility:** Building a custom for loop for the human in the loop iteration process was much simpler than using something like lang graph because i have already implemented this human in the loop concept in my Project Verimate(https://verimate.merledupk.org/) which was an agentic tool for accelerating the time consuming process of hardware verification using local LLM's because of confidential hardware specs..
 
-## 3. Why three agents and not two or four?
-Could the Debrief and Proposal agents be a single well-prompted call? In theory, yes, but in practice, doing so violates the Single Responsibility Principle and degrades output quality. 
-The Debrief Agent is optimized for *analytical extraction* (identifying contradictions and mapping data). The Proposal Agent is optimized for *creative synthesis* (writing cohesive, persuasive copy). Merging them dilutes the prompt focus, risking hallucinated consensus over the contradictions we need to preserve. We don't need a fourth agent because the Review Agent cleanly handles both critiquing and translation (since they both rely on analyzing the delta between the proposal and the matrix).
+## 3. Why Three Agents (and not two or four)?
+**Debrief and Proposal cannot be collapsed into one call.** Extracting contradictions into a structured matrix requires accuracy and high determinism (temperature=0.2). And writing a proposal requires natural language creativity (temperature=0.7). Mixing them degrades both.
+
+**The Review Agent must be independent.** If the Proposal Agent critiqued its own work in the same LLM call, it would suffer from severe confirmation bias. An independent critic acts unbiasedly to catch hallucinated text or ignored contradictions.
 
 ## 4. State Design
-**Data Flow:** The pipeline passes state forward via strongly-typed Pydantic schemas (e.g., `ClientMatrix`, `ReviewCritique`, `TranslatedFeedback`).
-**Feedback History Strategy:** *Summarized / Translated Directives.* 
-Instead of concatenating raw human feedback across iterations (which leads to bloated context windows and contradictory instructions over time), the Review Agent *translates* the human's free-text feedback into a structured list of actionable directives. This ensures the Proposal Agent only receives clear, synthesized instructions relevant to the current iteration.
+State flows linearly between boundaries using strict Pydantic schemas (ClientMatrix, ReviewCritique, TranslatedFeedback). 
+
+**Feedback History Strategy:** We feed only the latest translated directives or feedback and the prior draft into the Proposal Agent. 
+- **Justification:** Feeding the entire historical feedback history bloats the context window, confusing instructions (e.g., "Change X to Y" in Iteration 1, followed by "Change Y back to X" in Iteration 3). Providing the prior draft ensures continuity while providing only the latest feedback and ai critique ensures the agent focuses purely on the current issues.
 
 ## 5. Termination Logic
-The pipeline terminates under three conditions:
-1. **Human Approval:** The user inputs 'approve' at the Human Gate. **Note:** Even if the Review Agent scores the proposal perfectly and recommends 'approve', the pipeline intentionally bypasses auto-termination to enforce mandatory Human-in-the-Loop (HITL) sign-off.
-2. **Max Iterations:** The loop hits the default cap of 5 iterations.
-3. **Divergence Detection (Repeat-Issue Detection):** The pipeline tracks the specific issues flagged by the Review Agent across iterations. If the Review Agent flags the exact same issue (location + description) in iteration *N* that it flagged in iteration *N-1*, the pipeline forcefully terminates. This prevents infinite loops where the Proposal Agent fails to fix a persistent issue.
+The pipeline terminates under the following conditions:
+1. **Human Approval:** The user explicitly types "approve".
+2. **Iteration Cap:** Hardcoded to max_iterations = 5 to prevent infinite loops and cap costs and the LLM was generating the best proposal under that.
+3. *(Removed)* **Divergence Detection:** We originally implemented a feature that terminated the pipeline if the Proposal Agent made the exact same mistake across multiple iterations (detected via issues intersection). And also i was appending the translated text and the ai critique to the proposal agent with prior proposal and matrix. This was later updated with to make the translated text in to the correct combination of ai crtique generated by the review agent and the feedback or order or human, than it was directely sends to the proposal agent with more clean context with optimized tokens along with the prior proposal and matrix.
 
-## 6. Failure Modes Handled
-1. **Transient API Errors / Rate Limits (Handled):** The `google-genai` API (especially on free tiers) frequently throws 429 Rate Limit and 503 Unavailable errors. I wrapped all LLM calls in a `tenacity` retry decorator with a fixed 65-second wait to cleanly bypass Google's aggressive 60-second quotas without crashing the pipeline.
-2. **Schema Validation Failures (Handled):** If the LLM generates invalid JSON that violates the Pydantic schema, `pydantic` raises a validation error. Instead of immediately crashing, the pipeline catches this exception, appends the error directly into the LLM prompt (`[SYSTEM NOTIFICATION: Your previous response failed schema validation...]`), and executes an inner 3-retry loop, allowing the LLM to autonomously correct its own formatting before bubbling up to a critical failure.
-3. **Prompt Injection (Handled):** Untrusted transcripts may contain malicious instructions (e.g., "ignore previous instructions"). The Debrief Agent wraps the transcript in `<untrusted_transcript>` XML tags and includes a strict `SECURITY DIRECTIVE` in its system prompt to treat the contents purely as passive data.
+## 6. Observability
+Every LLM payload (prompts, raw outputs, latency, token usage) and Pydantic artifact is saved to disk in a timestamped runs/ directory. This ensures complete observability into what the LLM generated and why
 
-## 7. Stretch Goals Implemented
-* **Mixed Model Tiers (Cost / Intelligence Optimization):** The pipeline intelligently routes workloads to optimize cost and reasoning. The Debrief Agent (extraction) and Review Agent (critique/translation) require high intelligence and use the flagship `gemini-3.1-pro-preview`. The Proposal Agent (synthesis/writing) handles a simpler text-generation task and uses the faster, significantly cheaper `gemini-3.6-flash`. The `logger.py` dynamically tracks this with per-model pricing logic.
-* **Third Evaluation (Proposal Coherence):** Added a third LLM-as-a-judge evaluation script (`eval_proposal_coherence` in `evals.py`) to systematically verify that the generated proposal includes all 6 required sections, addresses all 'high' confidence matrix items, and strictly places 'contradicted' items in the Open Questions section.
-* **Divergence Detection:** (See Termination Logic #3).
-* **Prompt Injection Awareness:** (See Failure Modes #3).
-* **Checkpoint / Branching:** At every Human Gate, the entire pipeline state is dumped to a `checkpoint_iter_{N}.json` file. The CLI supports a `--resume <file>` flag, allowing users to branch off from any previous iteration without restarting the pipeline!
+## 7. Failure Handling & Prompt Engineering
+- **Schema Validation Failure:** In llm_provider.py, if generate_structured fails to parse the JSON in to the Pydantic schema, it catches the error and feeds it back to the LLM ([SYSTEM NOTIFICATION: Your previous response failed schema validation...]) allowing it to self correct up to 3 times before crashing.
+- **Transient API Errors & Rate Limits:** Wrapped all LLM calls in a tenacity retry block with exponential backoff to handle 429 and 503 errors seamlessly up to 5 attempts with the gap of 65 secs because when the gemini RPM(request per minute) limits hits calling the LLM again after 10 to 15 secs refresh the timeout limit back to 1 minute so to prevent that we choose the attempt to be after 65 secs
+- **Hallucination Prevention (Prompt Engineering):** To prevent hallucinations, the Proposal Agent is explicitly instructed to move contradicted items directly to the Open Questions section, rather than resolving them on its own. Furthermore, we tightly constrain the context window by only sending the delta (feedback directives) rather than the entire conversational history.
 
 ## 8. What I'd do with another 4 hours
-* Write comprehensive unit tests for the Pydantic boundary schemas to ensure edge-case transcripts don't break the JSON parsers.
-* Wire up a rich Terminal UI (using `rich` or `textual`) to make the Human Gate review process cleaner and more readable than standard `print()` statements.
+- **Parallel Critics:** Split the Review Agent into two parallel critics: a Tone critic and a Technical Accuracy critic, merging their outputs before presenting to the human.
+- **State Branching:** Save the full state to disk at every human_gate and allow the CLI to branch from a specific iteration e.g."--resume runs/iter_2.json" so a user can explore alternative proposals without losing their main draft.
+- **Real Tool Wiring:** Connect the lookup_similar_engagement tool to an actual local vector database (like Chroma) of past proposals, rather than returning fake or mock data.
 
 ## 9. What would change for a production deployment
-* **State Persistence:** Move state from local `.json` checkpoint files to a proper database (e.g., PostgreSQL or MongoDB) for distributed, asynchronous access.
-* **Queueing:** Decouple the agents using a message broker (like RabbitMQ or Redis) so that heavy Proposal Agent generation tasks don't block the main thread, allowing concurrent processing of multiple client pipelines.
-* **Observability:** Replace the local `logger.py` with Datadog or LangSmith for centralized tracing, cost monitoring, and alerting on LLM failure rates.
+- **UX:** Move from a CLI to a rich cli or web UI with real time text streaming so the user can watch the proposal being drafted.
+- **Persistence:** Replace local filesystem logging (runs/) with a managed database.
+- **Asynchronous Execution:** Offload the agent pipeline to a background task queue so long-running LLM calls do not block the web server or use multiple api keys.
+
+## 10. Model Selection
+- **Debrief & Proposal Agents:** gemini-3.1-pro-preview. These agents perform heavy reasoning tasks (detecting semantic contradictions in a 60minute transcript and generating a structured proposal).
+- **Review Agent (Critique & Synthesize):** gemini-3.6-flash. The review and synthesis or translation tasks are highly constrained formatting exercises (turning paragraphs into bulleted lists and checking for missing sections). Using Flash here significantly improves iteration latency and reduces token costs because it is cheap without sacrificing quality, as handled automatically by our PipelineLogger.
+
+## 11. Agents Overview
+1. **Debrief Agent:** Consumes raw text (intakes and transcripts) and structures it into a strict 4x4 JSON ClientMatrix. Its primary goal is to isolate high confidence facts from contradicted statements.
+2. **Proposal Agent:** Consumes the ClientMatrix and drafts a 6 section MD proposal. It enforces rules like pushing contradicted items into the "Open Questions" section.
+3. **Review Agent:** Acts as an independent critic. It first critiques the drafted proposal for rule violations (e.g., missing sections, hallucinations). It then acts as a Synthesizer/Translate to merge its own critique with the human's feedback into a clean, unified list of directives for the Proposal Agent's next draft.
+
+## 12. Evals Overview
+The evals.py suite contains automated tests to ensure the pipeline rules hold true:
+- **Eval 1 (Contradiction Recall):** Ensures the Debrief Agent correctly flags the hidden budget, timeline, and scope contradictions in transcript_b.md.
+- **Eval 2 (Loop Regression):** Verifies that the Proposal Agent correctly applies feedback to a V1 mock draft without silently rewriting unrelated sections.
+- **Eval 3 (Proposal Coherence):** Uses LLM-as-a-judge to verify that the final proposal contains all 6 required sections, addresses every high-confidence item, and properly tackles low-confidence items in Open Questions.
+
+---
+## Setup & Usage
+
+### 1. Configure Environment
+Create a virtual env and download the dependencies using requirment.txt file, Than create .env file in the ai-engeeniring directory with your API key:
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+### 2. Run the Pipeline
+```bash
+python3 pipeline.py data/intake.md data/transcript_b.md
+```
+During the human review pause, type "approve" to finish, or provide free text feedback for the next iteration. Logs, artifacts, and LLM payloads are saved in runs/.
+
+### 3. Run Evals
+```bash
+python3 evals.py
+```
