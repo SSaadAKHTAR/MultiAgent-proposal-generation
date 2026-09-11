@@ -56,7 +56,7 @@ class PipelineLogger:
         
         # Append to a raw log file for this iteration
         raw_log_file = os.path.join(iter_dir, f"raw_{agent_name}.log")
-        with open(raw_log_file, "w") as f:
+        with open(raw_log_file, "a") as f:
             f.write(f"=== PROMPT ===\n{prompt}\n\n=== RESPONSE ===\n{response_text}\n")
             
     def log_llm_call(self, agent_name: str, model_name: str, prompt_tokens: int, completion_tokens: int, latency: float):
