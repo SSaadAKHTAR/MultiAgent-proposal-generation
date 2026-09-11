@@ -1,4 +1,35 @@
-# Multi-Agent Proposal Generation Pipeline
+# Multi-Agent Client Proposal Pipeline
+
+## Directory Structure & File Overview
+
+Below is an overview of the directory structure and the purpose of each key file. All main code resides within the ai-engineer-assignment 1 directory.
+
+```text
+.
+├── ai-engineer-assignment 1/
+│   ├── data/                 # input data (intake forms, transcripts) used by the pipeline
+│   ├── runs/                 # logs, artifacts, and LLM payloads for each run
+│   ├── .env                  # Environment variable
+│   ├── pipeline.py           # The main entry point that orchestrates the entire agent pipeline
+│   ├── debrief_agent.py      # Extracts structured insights (ClientMatrix) from raw data
+│   ├── proposal_agent.py     # Drafts the Markdown proposal using the ClientMatrix
+│   ├── review_agent.py       # Critiques the draft and synthesizes human feedback into directives
+│   ├── llm_provider.py       # Handles LLM API calls, rate-limiting (tenacity), and retries
+│   ├── schemas.py            # Pydantic models (ClientMatrix, ReviewCritique, etc.) enforcing agent boundaries
+│   ├── logger.py             # Tracks token usage, costs, and saves artifacts to the runs/ directory
+│   ├── evals.py              # Automated evaluation scripts to verify pipeline accuracy and loop regression
+│   ├── requirements.txt      # Python dependencies for the project
+│   ├── README.md             # Detailed documentation for the specific assignment
+│   └── ASSIGNMENT.md         # The original assignment instructions
+├── README.md                 # This root documentation file
+└── requirements.txt          # Root level dependencies
+```
+
+**Key Files to Know:**
+- **`pipeline.py`**: Start here to understand the overarching flow. It ties the agents together, runs the loop, and manages the Human in the Loop (HITL) pause.
+- **`schemas.py`**: Defines the critical data structures (like `ClientMatrix`) that ensure strict typing between agents. If you need to change what data is passed between agents, update this file first.
+- **`llm_provider.py`**: Contains the `LLMProvider` class which wraps the `google-genai` SDK. It includes robust error handling and retry logic, so you don't have to worry about API rate limits in the agent scripts.
+- **`*_agent.py`**: The individual agent scripts (`debrief_agent.py`, `proposal_agent.py`, `review_agent.py`) contain the system prompts and generation logic specific to their roles.
 
 This project implements a multi-agent AI pipeline to synthesize raw client intake materials and transcripts into a polished, structured Markdown proposal.
 
